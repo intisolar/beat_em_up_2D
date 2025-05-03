@@ -2,6 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# Ignore Unity specific files and directories
+.vsconfig
+Packages/
+# Optionally, if you want to ignore ProjectSettings for some cases
+ ProjectSettings/
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
