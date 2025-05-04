@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public abstract class CharacterBase : MonoBehaviour
+
+/*
+ *  Description: An abstract class that defines the base structure for both player and enemy characters in the game.
+ *  
+ *  Responsibilities:
+ *  Defines common attributes like health, energy, and other stats.
+ *  Abstract methods for movement and interactions.
+ */
+public abstract class CharacterBase : MonoBehaviour, IAttackable, IDamageable
 {
-    /*
-     Description: An abstract class that defines the base structure for both player and enemy characters in the game.
+    public abstract void PerformAttack();
+    public abstract void TakeDamage(int amount);
 
-        Responsibilities:
-
-        Defines common attributes like health, energy, and other stats.
-
-        Abstract methods for movement and interactions.
-
-
-     */
     void Start()
     {
 
