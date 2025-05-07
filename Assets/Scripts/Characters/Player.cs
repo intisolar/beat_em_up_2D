@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private PlayerInput _playerInput;
-
+    
     void FixedUpdate()
     {
         Vector2 movementInput = _playerInput.actions["Move"].ReadValue<Vector2>();
