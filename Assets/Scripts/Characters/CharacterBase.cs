@@ -8,7 +8,7 @@ using UnityEngine;
  *  Defines common attributes like health, energy, and other stats.
  *  Abstract methods for movement and interactions.
  */
-public abstract class CharacterBase : MonoBehaviour, IAttackable, IDamageable
+public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
     public abstract void PerformAttack();
     public abstract void TakeDamage(int amount);
