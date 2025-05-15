@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //The ability to attack
-public interface IAttackable
+public interface IAggressive
 {
     void PerformAttack();
 }
