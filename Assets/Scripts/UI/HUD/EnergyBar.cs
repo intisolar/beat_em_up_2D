@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/// <summary>
+/// Displays the player’s energy.
+/// </summary>
 public class EnergyBar : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
