@@ -8,9 +8,6 @@ using UnityEngine;
 public abstract class PlayerCharacter : CharacterBase
 {
 
-
-
-
     /// <summary>
     /// It will give standard stats to all playerCharacters
     /// </summary>

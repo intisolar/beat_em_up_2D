@@ -10,13 +10,13 @@ using UnityEngine;
 public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
     [Header("Basic Stats")]
-    [SerializeField] protected int _maxHealth = 100;
+    [SerializeField] protected int _maxHealth;
     [SerializeField] protected int _currentHealth;
-    [SerializeField] protected int _attackPower = 10;
-    [SerializeField] protected int _defense = 5;
-    [SerializeField] protected float _moveSpeed = 5f;
-    [SerializeField] protected float _attackSpeed = 1f;
-    [SerializeField] protected float _knockbackPower = 5f;
+    [SerializeField] protected int _attackPower;
+    [SerializeField] protected int _defense;
+    [SerializeField] protected float _moveSpeed;
+    [SerializeField] protected float _attackSpeed;
+    [SerializeField] protected float _knockbackPower;
 
     protected virtual void Start()
     {
