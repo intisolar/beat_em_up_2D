@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BeerPickUp : ItemPickUp, IPickup
+public class BeerPickUp : ItemPickUp, IPickable
 {
     public void OnPickup()
     {

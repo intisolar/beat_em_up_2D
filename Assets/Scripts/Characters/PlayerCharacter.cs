@@ -7,13 +7,20 @@ using UnityEngine;
  ***/
 public abstract class PlayerCharacter : CharacterBase
 {
-    public override void PerformAttack()
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public override void TakeDamage(int amount)
+    /// <summary>
+    /// It will give standard stats to all playerCharacters
+    /// </summary>
+    protected override void InitStats()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("PlayerCharacter.InitStats");
+        _maxHealth = 100;
+        _currentHealth = _maxHealth;
+        _attackPower = 10;
+        _defense = 5;
+        _moveSpeed = 5f;
+        _attackSpeed = 1f;
+        _knockbackPower = 5f;
+
     }
 }

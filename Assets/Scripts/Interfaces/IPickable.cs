@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IPickup 
+public interface IPickable 
 {
     void OnPickup();
 }
