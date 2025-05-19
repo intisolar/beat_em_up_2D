@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlyerPickUp : ItemPickUp, IPickup
+public class FlyerPickUp : ItemPickUp, IPickable
 {
     public void OnPickup()
     {
