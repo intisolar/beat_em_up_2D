@@ -7,7 +7,8 @@
 .vsconfig
 Packages/
 # Optionally, if you want to ignore ProjectSettings for some cases
-/ProjectSettings/
+#/ProjectSettings/
+/ProjectSettings/EditorUserSettings.asset
 
 .utmp/
 /[Ll]ibrary/
