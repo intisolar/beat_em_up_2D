@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Box : Objects  
+public class Box : DestroyableObject  
 {
    
 }
