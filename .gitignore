@@ -7,7 +7,8 @@
 .vsconfig
 Packages/
 # Optionally, if you want to ignore ProjectSettings for some cases
-/ProjectSettings/
+#/ProjectSettings/
+/ProjectSettings/EditorUserSettings.asset
 
 .utmp/
 /[Ll]ibrary/
@@ -33,6 +34,7 @@ Packages/
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -79,3 +81,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+/Assets/Resources/BillingMode.json
+/Assets/Resources/BillingMode.json.meta
