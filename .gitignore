@@ -85,3 +85,39 @@ crashlytics-build.properties
 
 /Assets/Resources/BillingMode.json
 /Assets/Resources/BillingMode.json.meta
+
+## ---------------- ##
+##   WWise stuff    ##
+## ---------------- ##
+
+# project stuff
+Beat em up 2d_WwiseProject/.cache/
+Beat em up 2d_WwiseProject/*.prof
+Beat em up 2d_WwiseProject/*_WwiseProject.*.validationcache
+Beat em up 2d_WwiseProject/*_WwiseProject.*.wsettings
+Beat em up 2d_WwiseProject/**/*.akd
+Beat em up 2d_WwiseProject/.backup/
+
+/Assets/Wwise/LauncherInfo.json*
+
+
+!/Assets/Wwise/API/Runtime/Plugins/Windows/**
+/logRunSetup.txt
+
+# build stuff (unsure?)
+# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
+
+# --- Wwise Picker cache (NO debe versionarse) -----------------
+# 1) Ignora el archivo temporal que genera el Wwise Picker
+/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+# 2) ¡Pero NO ignores la .meta del directorio ni futuros archivos!
+!/Assets/Wwise/Editor/ProjectData.meta
+!/Assets/Wwise/Editor/ProjectData/**/*
+
+## --------------- ##
+## End WWise Stuff ##
+## --------------- ##
+
+# temp install files
+WwiseUnityIntegration_*_Src.zip
