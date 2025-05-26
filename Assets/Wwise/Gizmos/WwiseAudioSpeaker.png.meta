@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WwiseAudioSpeaker_0: 8810014624621942103
+      WwiseAudioSpeaker_1: -5974643028495616042
+      WwiseAudioSpeaker_2: 759061937574366576
+      WwiseAudioSpeaker_3: 1861280524254231114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

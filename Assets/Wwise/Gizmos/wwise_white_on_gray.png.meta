@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wwise_white_on_gray_0: -968835649746626577
+      wwise_white_on_gray_1: 8592035393725798727
+      wwise_white_on_gray_2: 6861906905857790459
+      wwise_white_on_gray_3: -1022122485584544178
+      wwise_white_on_gray_4: 3784707072218305806
+      wwise_white_on_gray_5: -3227234258451662790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

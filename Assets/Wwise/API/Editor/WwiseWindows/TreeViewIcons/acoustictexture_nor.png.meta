@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      acoustictexture_nor_0: -4421588137908033915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
