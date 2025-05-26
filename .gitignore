@@ -5,7 +5,18 @@
 
 # Ignore Unity specific files and directories
 .vsconfig
-Packages/
+# Ignora todo excepto los manifiestos de Package Manager
+/Packages/*
+!/Packages/manifest.json
+!/Packages/packages-lock.json
+
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+# JetBrains Rider / IntelliJ
+.idea/
+
 # Optionally, if you want to ignore ProjectSettings for some cases
 #/ProjectSettings/
 /ProjectSettings/EditorUserSettings.asset
@@ -85,3 +96,38 @@ crashlytics-build.properties
 
 /Assets/Resources/BillingMode.json
 /Assets/Resources/BillingMode.json.meta
+
+## ---------------- ##
+##   WWise stuff    ##
+## ---------------- ##
+
+# project stuff
+Beat em up 2d_WwiseProject/.cache/
+Beat em up 2d_WwiseProject/*.prof
+Beat em up 2d_WwiseProject/*_WwiseProject.*.validationcache
+Beat em up 2d_WwiseProject/*_WwiseProject.*.wsettings
+Beat em up 2d_WwiseProject/**/*.akd
+Beat em up 2d_WwiseProject/.backup/
+
+/Assets/Wwise/LauncherInfo.json*
+
+
+!/Assets/Wwise/API/Runtime/Plugins/Windows/**
+/logRunSetup.txt
+
+# build stuff (unsure?)
+# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
+
+# --- Wwise Picker cache (NO debe versionarse) -----------------
+# 1) Ignora sólo el cache del Picker
+/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+# 2) Asegura que la carpeta exista (y Unity no genere un meta nuevo)
+!/Assets/Wwise/Editor/ProjectData.meta
+
+## --------------- ##
+## End WWise Stuff ##
+## --------------- ##
+
+# temp install files
+WwiseUnityIntegration_*_Src.zip

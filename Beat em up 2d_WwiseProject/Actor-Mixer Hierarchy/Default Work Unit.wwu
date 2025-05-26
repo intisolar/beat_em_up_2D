@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5D71938D-0054-4B81-99E1-4127E462E492}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{5D71938D-0054-4B81-99E1-4127E462E492}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Ambient" ID="{D3E35CE7-1E42-4BE2-A243-F15302D63E42}" ShortID="701878109">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

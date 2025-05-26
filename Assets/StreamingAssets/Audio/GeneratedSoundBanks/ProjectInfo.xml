@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Beat em up 2d_WwiseProject" GUID="{233A46A6-838C-4B3F-9E46-8C6B68E5074A}" Generator="2023.1.5.8522"/>
+	<CacheRoot>../../../../Beat em up 2d_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{7A7D3CDA-FEC3-41A6-B9C0-CCE389B46889}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../Beat em up 2d_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{9AD5568D-0965-4BB9-8CEF-3686F56E97D8}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Beat em up 2d_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{7C0D794F-DFB5-4E52-A891-B7E14B288657}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{AC1A00F3-E785-01DA-EB91-3CD2DAEDBF1E}</FileHash>
+</ProjectInfo>
