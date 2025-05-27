@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f751dbdcdbaae14b94d153589fee17b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerLife: 100
   _speed: 5
   _rigidbody: {fileID: 387086900}
   _playerInput: {fileID: 387086902}
@@ -475,6 +476,7 @@ GameObject:
   - component: {fileID: 603675496}
   - component: {fileID: 603675495}
   - component: {fileID: 603675494}
+  - component: {fileID: 603675497}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -602,6 +604,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603675497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603675493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2260288016338e34f81e2d2a41f1ef41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20
 --- !u!1 &611680896
 GameObject:
   m_ObjectHideFlags: 0
