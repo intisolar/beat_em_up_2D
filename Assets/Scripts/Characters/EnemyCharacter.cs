@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /***
  * Representa un personaje enemigo.
@@ -25,7 +26,7 @@ public class EnemyCharacter : CharacterBase
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
-        if (player != null)
+        if(player != null && !Keyboard.current.fKey.isPressed)
         {
             Debug.Log($"{name} hit {player.name}, dealing {damageAmount} damage.");
             player.TakeDamage(damageAmount);
