@@ -23,4 +23,15 @@ public abstract class DestroyableObject : MonoBehaviour, IDamageable
             }
         }
     }
+
+    /// <summary>
+    /// public method to update an object health
+    /// </summary>
+    /// <param name="currentHealth"></param>
+    /// <param name="damageTaken"></param>
+    /// <returns></returns>
+    public int UpdateHealth(int currentHealth, int damageTaken)
+    {
+        return currentHealth -= damageTaken;
+    }
 }

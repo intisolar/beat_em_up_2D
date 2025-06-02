@@ -23,6 +23,9 @@ public class GuitarPlayer : PlayerCharacter
     {
         HandleAttack();
     }
+    public override void PerformAttack()
+    {
+    }
 
     void FixedUpdate()
     {
