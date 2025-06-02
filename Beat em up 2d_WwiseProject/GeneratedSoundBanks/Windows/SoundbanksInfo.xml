@@ -9,10 +9,6 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{A64ECA8C-C361-5306-97AA-AFDA0C287B7E}">
-			<ShortName>Ambient</ShortName>
-			<Path>Ambient.bnk</Path>
-		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,6 +22,37 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{907F166C-CA7A-7A1A-6C76-F02C1D797DEC}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="171208303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hit_player_gtr.01.wav</ShortName>
+					<CachePath>SFX/hit_player_gtr.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="322130508" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>wlk_pasto.02.wav</ShortName>
+					<CachePath>SFX/wlk_pasto.02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="544112833" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>wlk_pasto.01.wav</ShortName>
+					<CachePath>SFX/wlk_pasto.01_EC29B7DD.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2783266843" Name="Play_hit_player_gtr_01" DurationType="OneShot" DurationMin="1.0937415" DurationMax="1.0937415">
+					<MediaRefs>
+						<MediaRef Id="171208303"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1589278981" Name="Play_Walk" DurationType="OneShot" DurationMin="0.30081633" DurationMax="0.32733735">
+					<MediaRefs>
+						<MediaRef Id="322130508"/>
+						<MediaRef Id="544112833"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{01339841-EDE1-0019-12FA-51DE17F9C623}</FileHash>
+	<FileHash>{A3663709-4DCF-456B-F9C3-A3FED35A714A}</FileHash>
 </SoundBanksInfo>

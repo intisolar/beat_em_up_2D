@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1589278981	Play_Walk			\Default Work Unit\Play_Walk	
+	2783266843	Play_hit_player_gtr_01			\Default Work Unit\Play_hit_player_gtr_01	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	171208303	hit_player_gtr_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\hit_player_gtr.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Players\GuitarPlayer\hit_player_gtr_01		193032
+	322130508	wlk_pasto_02	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\wlk_pasto.02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Players\PlayerCharacter\Walk\wlk_pasto_02		53160
+	544112833	wlk_pasto_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\wlk_pasto.01_EC29B7DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Players\PlayerCharacter\Walk\wlk_pasto_01		57840
+
