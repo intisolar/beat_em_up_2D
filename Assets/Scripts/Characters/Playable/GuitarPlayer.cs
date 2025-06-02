@@ -23,8 +23,11 @@ public class GuitarPlayer : PlayerCharacter
     {
         HandleAttack();
     }
+    public override void PerformAttack()
+    {
+    }
 
-    void FixedUpdate()
+        void FixedUpdate()
     {
         Vector2 movementInput = _playerInput.actions["Move"].ReadValue<Vector2>();
         _rigidbody.linearVelocity = movementInput * _speed;
