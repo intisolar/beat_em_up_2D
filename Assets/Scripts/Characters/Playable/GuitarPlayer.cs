@@ -27,7 +27,7 @@ public class GuitarPlayer : PlayerCharacter
     {
     }
 
-        void FixedUpdate()
+    void FixedUpdate()
     {
         Vector2 movementInput = _playerInput.actions["Move"].ReadValue<Vector2>();
         _rigidbody.linearVelocity = movementInput * _speed;
