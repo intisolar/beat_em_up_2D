@@ -7,7 +7,7 @@ using UnityEngine;
  ***/
 public abstract class PlayerCharacter : CharacterBase
 {
-    public override void PerformAttack()
+    public override bool PerformAttack()
     {
         throw new System.NotImplementedException();
     }

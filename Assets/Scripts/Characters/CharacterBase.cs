@@ -10,7 +10,7 @@ using UnityEngine;
  */
 public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
-    public abstract void PerformAttack();
+    public abstract bool PerformAttack();
     public abstract void TakeDamage(int amount);
 
     void Start()
