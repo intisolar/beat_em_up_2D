@@ -5,7 +5,7 @@ public abstract class DestroyableObject : MonoBehaviour, IDamageable
 {
     [SerializeField] protected int _life = 100;
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Transform t)
     {
         //reduceLife
     }
