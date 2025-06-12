@@ -20,7 +20,7 @@ public abstract class PlayerCharacter : CharacterBase
     {
         Debug.Log("PlayerCharacter.InitStats");
         _maxHealth = 100;
-        _currentHealth = _maxHealth;
+        _currentHealth = MaxHealth;
         _attackPower = 10;
         _defense = 5;
         _moveSpeed = 5f;

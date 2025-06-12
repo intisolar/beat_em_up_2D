@@ -18,6 +18,11 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     [SerializeField] protected float _moveSpeed;
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _knockbackPower;
+    [Header("Attack Data")]
+    [SerializeField] protected LayerMask _targetLayers;
+    [SerializeField] protected Transform _weapon;
+    [SerializeField] protected float _range;
+
 
     protected virtual void Start()
     {
@@ -25,10 +30,10 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     }
 
     public abstract bool PerformAttack();
-    public virtual void TakeDamage(int amount)
+    public virtual void TakeDamage(int amount, Transform t )
     {
         int damageTaken = Mathf.Max(amount - _defense, 0);
-        _currentHealth -= damageTaken;
+       UpdateHealth(_currentHealth, damageTaken);
 
         if (_currentHealth <= 0)
         {
@@ -48,14 +53,14 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     protected virtual void InitStats()
     {
         Debug.Log("WARNING: CharacterBase.InitStats - it should not come here. Stats handled by children");
-        _maxHealth = 100;
-        _currentHealth = _maxHealth;
+        MaxHealth = 100;
+        _currentHealth = MaxHealth;
         _attackPower = 10;
         _defense = 5;
         _moveSpeed = 5f;
         _attackSpeed = 1f;
         _knockbackPower = 5f;
-
+        _range = 0.5f;
     }
     /// <summary>
     /// public method to update a character's health
@@ -67,4 +72,14 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     {
         return currentHealth -= damageTaken;
     }
+
+    //Getters && Setters
+    public int MaxHealth { get => _maxHealth; protected set => _maxHealth = value; }
+    public int CurrentHealth { get => _currentHealth; set => _currentHealth = value; }
+    public int AttackPower { get => _attackPower; private set => _attackPower = value; }
+    public int Defense { get => _defense; private set => _defense = value; }
+    public float MoveSpeed { get => _moveSpeed; private set => _moveSpeed = value; }
+    public float AttackSpeed { get => _attackSpeed; private set => _attackSpeed = value; }
+    public float KnockbackPower { get => _knockbackPower; private set => _knockbackPower = value; }
+    public Transform Weapon { get => _weapon; set => _weapon = value; }
 }

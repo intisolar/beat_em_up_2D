@@ -31,4 +31,33 @@ public class StateController
 
     /// <summary>It calls OnState() of the active state; must be invoked once per frame.</summary>
     public void UpdateState() => _current?.OnState();
+
+    public void OnStateTick() => _current?.OnTick();
+
+    public void DetectPlayer(EnemyCharacter enemy)
+    {
+        Debug.Log(" Detecting player ");
+        Collider2D target = Physics2D.OverlapCircle(enemy.transform.position,
+                                         enemy.VisionRadius, LayerMask.GetMask("Player"));
+
+        if (target && target.TryGetComponent<PlayerCharacter>(out var playerTarget))
+        {
+            Debug.Log("Player detected");
+            ChangeState(new ChaseState(enemy, playerTarget.transform));
+        }
+        else
+        {
+            Debug.Log(" Player NOT detected. ");
+            if (GetCurrentState() is not PatrolState)
+            {
+                ChangeState(StartPatrolling(enemy, 0f));
+            }
+        }
+    }
+
+
+    public PatrolState StartPatrolling(EnemyCharacter enemy, float offset)
+    {
+        return new PatrolState(enemy, offset, enemy.InitialDirection);
+    }
 }

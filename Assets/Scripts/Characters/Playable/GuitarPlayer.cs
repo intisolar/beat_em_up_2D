@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,9 +15,11 @@ public class GuitarPlayer : PlayerCharacter
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _fist;
 
-    private void Start()
+    protected override void Start()
     {
+        base.InitStats();
         _remainingAttackTime = _attackDuration;
+
     }
 
     private void Update()
@@ -32,12 +35,14 @@ public class GuitarPlayer : PlayerCharacter
 
     void HandleAttack()
     {
-        if (!_isAttacking && _playerInput.actions["Attack"].triggered)
+        if (!_isAttacking && _playerInput.actions["Attack"].triggered) //esta habilitado para atacar? _isAttackEnabled ? if true:
         {
             _isAttacking = true;
             _fist.SetActive(true);
             _remainingAttackTime = _attackDuration;
-        }
+            //AttackCoolDown()
+            //StartCoroutine(AttackCoolDown());
+        } //else 
 
         if (_isAttacking)
         {
@@ -49,4 +54,10 @@ public class GuitarPlayer : PlayerCharacter
             }
         }
     }
+    IEnumerator AttackCoolDown()
+    {
+        yield return new WaitForSeconds(2);
+        //_isAttackEnabled = true;
+    }
+    
 }
