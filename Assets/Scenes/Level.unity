@@ -285,18 +285,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f751dbdcdbaae14b94d153589fee17b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 0
-  _currentHealth: 0
-  _attackPower: 0
-  _defense: 0
-  _moveSpeed: 0
-  _attackSpeed: 0
-  _knockbackPower: 0
+  _maxHealth: -1
+  _currentHealth: -1
+  _attackPower: -1
+  _defense: -1
+  _moveSpeed: -1
+  _attackSpeed: -1
+  _knockbackPower: -1
   _targetLayers:
     serializedVersion: 2
     m_Bits: 0
   _weapon: {fileID: 413350141}
-  _range: 0
+  _range: -1
   _speed: 1.33
   _rigidbody: {fileID: 387086900}
   _playerInput: {fileID: 387086902}
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358713071336221276, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
       propertyPath: initialDirection.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6358713071336221276, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
       propertyPath: initialDirection.y
@@ -975,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358713071336221276, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
       propertyPath: initialDirection.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1657,18 +1657,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1845474360}
     m_Modifications:
     - target: {fileID: 33916639123157744, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33916639123157744, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33916639123157744, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 33916639123157744, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.097
       objectReference: {fileID: 0}
@@ -1711,10 +1699,6 @@ PrefabInstance:
     - target: {fileID: 521917077899291636, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6358713071336221276, guid: fcedcefec729e7f43a50ba00a4414053, type: 3}
-      propertyPath: initialDirection.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

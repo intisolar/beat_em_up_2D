@@ -33,21 +33,22 @@ public class StateController
     public void UpdateState() => _current?.OnState();
 
     public void OnStateTick() => _current?.OnTick();
+    public void OnFixedUpdateTick() => _current?.OnFixedUpdateTick();
 
     public void DetectPlayer(EnemyCharacter enemy)
     {
-        Debug.Log(" Detecting player ");
+        Debug.Log(enemy.name + " Detecting player ");
         Collider2D target = Physics2D.OverlapCircle(enemy.transform.position,
                                          enemy.VisionRadius, LayerMask.GetMask("Player"));
 
         if (target && target.TryGetComponent<PlayerCharacter>(out var playerTarget))
         {
-            Debug.Log("Player detected");
+            Debug.Log(enemy.name + " Player detected");
             ChangeState(new ChaseState(enemy, playerTarget.transform));
         }
         else
         {
-            Debug.Log(" Player NOT detected. ");
+            Debug.Log(enemy.name + " Player NOT detected. ");
             if (GetCurrentState() is not PatrolState)
             {
                 ChangeState(StartPatrolling(enemy, 0f));

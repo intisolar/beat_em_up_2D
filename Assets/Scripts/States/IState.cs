@@ -6,4 +6,5 @@ public interface IState
     void OnState(); // runs each frame while the state is active
     void OnExit(); // runs when exiting the state
     void OnTick();
+    void OnFixedUpdateTick(); //runs with co-routine simulating fixedUpdate execution
 }

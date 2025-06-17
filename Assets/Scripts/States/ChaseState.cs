@@ -3,18 +3,18 @@ using UnityEngine;
 public class ChaseState : IState
 {
 
-    private EnemyCharacter _owner;
+    private EnemyCharacter enemy;
     private Transform _playerTransform;
 
     public ChaseState(EnemyCharacter owner, Transform playerTransform)
     {
-        _owner = owner;
+        enemy = owner;
         _playerTransform = playerTransform;
     }
 
     public void OnEnter()
     {
-        Debug.Log(" In ChaseState");
+        Debug.Log(enemy.name + " In ChaseState");
     }
 
     public void OnExit()
@@ -23,14 +23,23 @@ public class ChaseState : IState
 
     public void OnState()
     {
-
-        Vector2 playerPosition = _playerTransform.position;
-        Vector2 direction = (playerPosition - _owner.Rigidbody.position).normalized;
-        Vector2 newPosition = _owner.Rigidbody.position + direction * _owner.MoveSpeed * Time.deltaTime;
-        _owner.Rigidbody.MovePosition(newPosition);
     }
 
     public void OnTick()
     {
     }
+
+    public void OnFixedUpdateTick()
+    {
+        Vector2 playerPosition = _playerTransform.position;
+        Vector2 direction = (playerPosition - enemy.Rigidbody.position).normalized;
+
+        if (enemy.MoveSpeed == -1f)
+        {
+            throw new System.Exception(" Careful, _moveSpeed is null in" + enemy.name);
+        }
+        Vector2 newPosition = enemy.Rigidbody.position + direction * enemy.MoveSpeed * Time.fixedDeltaTime;
+        enemy.Rigidbody.MovePosition(newPosition);
+    }
+
 }

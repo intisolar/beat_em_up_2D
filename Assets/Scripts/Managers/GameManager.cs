@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(Tick());
+        StartCoroutine(FixedUpdateTick());  // Lógica frecuente (movimiento físico)
     }
 
     // Update is called once per frame
@@ -46,14 +47,31 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Co-rutine for game updates longer than frame by frame
     /// </summary>
-    public static Action OnTick;
+    public static Action OnTick1s;
     IEnumerator Tick()
     {
         while (true)
         {
             yield return new WaitForSeconds(1);
-            OnTick?.Invoke();
+            OnTick1s?.Invoke();
         }
     }
+
+    /// <summary>
+    /// Co-rutine to use the same time than fixedUpdate for non-monobehaviour classes (like states)
+    /// </summary>
+    public static Action OnFixedUpdateTick;
+
+    IEnumerator FixedUpdateTick()
+    {
+        var wait = new WaitForSeconds(Time.fixedDeltaTime); // ~0.02s por defecto
+        while (true)
+        {
+            yield return wait;
+            OnFixedUpdateTick?.Invoke();
+        }
+    }
+
+
 
 }
