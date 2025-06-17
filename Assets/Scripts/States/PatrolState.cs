@@ -4,7 +4,7 @@ public class PatrolState : IState
 {
     private enum SubState { WaitingStart, Moving, Idle }
 
-    private readonly EnemyCharacter character;
+    private readonly EnemyCharacter enemy;
 
     private Vector2 currentDirection;
     private float timer;
@@ -16,12 +16,12 @@ public class PatrolState : IState
 
     public PatrolState(EnemyCharacter character, float initialDelay, Vector2 initialDirection)
     {
-        Debug.Log(" In PatrolState");
-        this.character = character;
+        this.enemy = character;
+        Debug.Log(enemy.name + " In PatrolState");
         this.initialDelay = initialDelay;
-        if (initialDirection == null)
+        if (initialDirection == Vector2.zero)
         {
-            currentDirection = Vector3.left;
+            currentDirection = Vector2.left;
         }
         else
         {
@@ -71,7 +71,7 @@ public class PatrolState : IState
                 break;
 
             case SubState.Moving:
-                Move();
+                
                 //if it has moved enough 
                 if (timer >= moveTime)
                 {
@@ -96,11 +96,16 @@ public class PatrolState : IState
 
     private void Move()
     {
-        Vector2 pos = character.Rigidbody.position
-    + currentDirection
-      * Time.deltaTime
-      * character.MoveSpeed;
-        character.Rigidbody.MovePosition(pos);
+        if (enemy.MoveSpeed == -1f)
+        {
+            throw new System.Exception(" Careful, _moveSpeed is null in" + enemy.name);
+        }
+        Vector2 newPosition = enemy.Rigidbody.position
+            + currentDirection
+            * Time.fixedDeltaTime
+            * enemy.MoveSpeed;
+
+        enemy.Rigidbody.MovePosition(newPosition);
     }
 
     private void ChangeDirection()
@@ -115,5 +120,9 @@ public class PatrolState : IState
         timer = 0f;
     }
 
-
+    public void OnFixedUpdateTick()
+    {
+        if (subState == SubState.Moving)
+            Move(); // it only moves in fixedUpdate time
+    }
 }

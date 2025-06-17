@@ -11,24 +11,27 @@ using UnityEngine;
 public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
     [Header("Basic Stats")]
-    [SerializeField] protected int _maxHealth;
-    [SerializeField] protected int _currentHealth;
-    [SerializeField] protected int _attackPower;
-    [SerializeField] protected int _defense;
-    [SerializeField] protected float _moveSpeed;
-    [SerializeField] protected float _attackSpeed;
-    [SerializeField] protected float _knockbackPower;
+    [SerializeField] protected int _maxHealth = -1;
+    [SerializeField] protected int _currentHealth = -1;
+    [SerializeField] protected int _attackPower = -1;
+    [SerializeField] protected int _defense = -1;
+    [SerializeField] protected float _moveSpeed = -1f;
+    [SerializeField] protected float _attackSpeed = -1f;
+    [SerializeField] protected float _knockbackPower = -1f;
     [Header("Attack Data")]
     [SerializeField] protected LayerMask _targetLayers;
     [SerializeField] protected Transform _weapon;
-    [SerializeField] protected float _range;
+    [SerializeField] protected float _range = -1f;
 
 
     protected virtual void Start()
     {
+
+    }
+    protected virtual void Awake()
+    {
         InitStats();
     }
-
     public abstract bool PerformAttack();
     public virtual void TakeDamage(int amount, Transform t )
     {
@@ -53,14 +56,14 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     protected virtual void InitStats()
     {
         Debug.Log("WARNING: CharacterBase.InitStats - it should not come here. Stats handled by children");
-        MaxHealth = 100;
-        _currentHealth = MaxHealth;
-        _attackPower = 10;
-        _defense = 5;
-        _moveSpeed = 5f;
-        _attackSpeed = 1f;
-        _knockbackPower = 5f;
-        _range = 0.5f;
+        if (_maxHealth <= 0) _maxHealth = 100;
+        if (_currentHealth <= 0) _currentHealth = _maxHealth;
+        if (_attackPower <= 0) _attackPower = 10;
+        if (_defense <= 0) _defense = 5;
+        if (_moveSpeed <= 0f) _moveSpeed = 5f;
+        if (_attackSpeed <= 0f) _attackSpeed = 1f;
+        if (_knockbackPower <= 0f) _knockbackPower = 5f;
+        if (_range <= 0f) _range = 0.5f;
     }
     /// <summary>
     /// public method to update a character's health

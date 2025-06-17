@@ -26,6 +26,7 @@ public class EnemyAIController : MonoBehaviour
         // random delay
         float offset = Random.Range(Owner.InitialDelayMin, Owner.InitialDelayMax);
 
+        Debug.Log(Owner.name + " offset:" + offset + " Owner.InitialDirection:" + Owner.InitialDirection);
         stateController = new StateController(new PatrolState(Owner, offset, Owner.InitialDirection));
         SinchronizeEventsToOnTick();
     }
@@ -53,7 +54,9 @@ public class EnemyAIController : MonoBehaviour
 
     private void SinchronizeEventsToOnTick()
     {
-        GameManager.OnTick += DetectPlayer; //suscribed to timer instead of updating frame by frame
-        GameManager.OnTick += stateController.OnStateTick;
+        GameManager.OnTick1s += DetectPlayer; //suscribed to timer instead of updating frame by frame
+        GameManager.OnTick1s += stateController.OnStateTick;
+        GameManager.OnFixedUpdateTick += stateController.OnFixedUpdateTick; 
+
     }
 }

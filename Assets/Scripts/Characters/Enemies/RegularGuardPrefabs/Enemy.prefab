@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.57, y: -3.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 967476275518151519}
@@ -158,7 +158,7 @@ MonoBehaviour:
   _currentHealth: 0
   _attackPower: 0
   _defense: 0
-  _moveSpeed: 2
+  _moveSpeed: 0.5
   _attackSpeed: 0
   _knockbackPower: 0
   _targetLayers:
@@ -166,6 +166,10 @@ MonoBehaviour:
     m_Bits: 128
   _weapon: {fileID: 967476275518151519}
   _range: 0
+  initialDelayMin: 0
+  initialDelayMax: 3
+  visionRadius: 1
+  initialDirection: {x: 1, y: 0}
 --- !u!114 &307732630656176238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae17e552b4feec8418948fb6ad95851c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDirection: {x: -1, y: 0, z: 0}
-  initialDelayMin: 0
-  initialDelayMax: 3
-  visionRadius: 4
 --- !u!50 &6153035094188821035
 Rigidbody2D:
   serializedVersion: 5

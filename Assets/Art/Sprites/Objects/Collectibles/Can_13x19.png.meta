@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: a7ad55f727fac6c47b7dba23ad6dd281
+guid: d24ec39a88d0dbe47ab0342726c26eef
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 7275060340620153910
-    second: UI (8 Height)_0
-  - first:
-      213: 4185171419851246601
-    second: UI (8 Height)_1
-  - first:
-      213: 4167460565944412940
-    second: UI (8 Height)_2
-  - first:
-      213: -1582981544905732801
-    second: UI (8 Height)_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -62,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -109,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI (8 Height)_0
+      name: Player_52x63_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
-        height: 8
+        width: 52
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 634523ab5d436f460800000000000000
-      internalID: 7275060340620153910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI (8 Height)_1
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 0
-        width: 26
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90cc95c7b37b41a30800000000000000
-      internalID: 4185171419851246601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI (8 Height)_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 0
-        width: 18
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0ba098fd4bc5d930800000000000000
-      internalID: 4167460565944412940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI (8 Height)_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 0
-        width: 25
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3d05e10cae180ae0800000000000000
-      internalID: -1582981544905732801
+      spriteID: ba0c9479381e67950800000000000000
+      internalID: 6446587871922602155
       vertices: []
       indices: 
       edges: []
@@ -210,10 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI (8 Height)_0: 7275060340620153910
-      UI (8 Height)_1: 4185171419851246601
-      UI (8 Height)_2: 4167460565944412940
-      UI (8 Height)_3: -1582981544905732801
+      Player_52x63_0: 6446587871922602155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

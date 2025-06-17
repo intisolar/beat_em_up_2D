@@ -14,15 +14,16 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
     [Header("Patrol and Detect")]
     [SerializeField] private float initialDelayMin = 0f;
     [SerializeField] private float initialDelayMax = 3f;
-    [SerializeField] private float visionRadius = 4f;
+    [SerializeField] private float visionRadius = 1f;
     [SerializeField] private Vector2 initialDirection;
     public float VisionRadius { get => visionRadius; private set => visionRadius = value; }
     public float InitialDelayMin { get => initialDelayMin; set => initialDelayMin = value; }
     public float InitialDelayMax { get => initialDelayMax; set => initialDelayMax = value; }
     public Vector2 InitialDirection { get => initialDirection; set => initialDirection = value; }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Rigidbody = GetComponent<Rigidbody2D>();
     }
     public bool isLucky()
