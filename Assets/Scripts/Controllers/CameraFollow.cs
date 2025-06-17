@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Description: Smoothly follows the active player enemy.
+/// Description: Smoothly follows the active player character.
 /// Responsibilities:
 /// Ensures the camera always stays focused on the player during gameplay, with smooth transitions for movement.
 /// </summary>
