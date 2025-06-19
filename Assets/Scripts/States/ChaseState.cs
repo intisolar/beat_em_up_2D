@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ChaseState : IState
 {
-
     private EnemyCharacter enemy;
     private Transform _playerTransform;
 
@@ -19,14 +18,17 @@ public class ChaseState : IState
 
     public void OnExit()
     {
+
     }
 
     public void OnState()
     {
+
     }
 
     public void OnTick()
     {
+
     }
 
     public void OnFixedUpdateTick()
@@ -41,5 +43,4 @@ public class ChaseState : IState
         Vector2 newPosition = enemy.Rigidbody.position + direction * enemy.MoveSpeed * Time.fixedDeltaTime;
         enemy.Rigidbody.MovePosition(newPosition);
     }
-
 }

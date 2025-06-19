@@ -4,5 +4,4 @@ using UnityEngine;
 public interface IAggressive
 {
     bool PerformAttack();
-
 }

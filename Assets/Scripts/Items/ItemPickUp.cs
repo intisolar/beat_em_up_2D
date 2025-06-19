@@ -1,4 +1,5 @@
 using UnityEngine;
+
 /// <summary>
 /// Description: Base class for items that the player can pick up.
 /// </summary>

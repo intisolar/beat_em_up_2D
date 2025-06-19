@@ -56,7 +56,6 @@ public class StateController
         }
     }
 
-
     public PatrolState StartPatrolling(EnemyCharacter enemy, float offset)
     {
         return new PatrolState(enemy, offset, enemy.InitialDirection);

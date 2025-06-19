@@ -7,7 +7,6 @@ using UnityEngine;
  ***/
 public abstract class PlayerCharacter : CharacterBase
 {
-
     public override bool PerformAttack()
     {
         return true;

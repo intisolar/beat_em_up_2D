@@ -27,5 +27,4 @@ public class RegularGuard : EnemyCharacter
         if (_knockbackPower <= 0f) _knockbackPower = 5f;
         if (_range <= 0f) _range = 0.5f;
     }
-
 }

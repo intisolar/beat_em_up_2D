@@ -9,9 +9,7 @@ public class EnemyAIController : MonoBehaviour
     private EnemyCharacter _owner;
     private Rigidbody2D _rigidbody;
 
-
     public EnemyCharacter Owner { get => _owner; private set => _owner = value; }
-
 
     private void Awake()
     {
@@ -31,13 +29,11 @@ public class EnemyAIController : MonoBehaviour
         SinchronizeEventsToOnTick();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
 
     }
 
-    // Update is called once per frame
     private void Update()
     {
         stateController.UpdateState();
@@ -51,12 +47,10 @@ public class EnemyAIController : MonoBehaviour
         stateController.DetectPlayer(Owner);
     }
 
-
     private void SinchronizeEventsToOnTick()
     {
         GameManager.OnTick1s += DetectPlayer; //suscribed to timer instead of updating frame by frame
         GameManager.OnTick1s += stateController.OnStateTick;
         GameManager.OnFixedUpdateTick += stateController.OnFixedUpdateTick; 
-
     }
 }

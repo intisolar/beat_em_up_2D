@@ -12,6 +12,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    
     /// <summary>
     /// Initialize class attributes
     /// </summary>
@@ -31,14 +32,12 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(Tick());
-        StartCoroutine(FixedUpdateTick());  // Lógica frecuente (movimiento físico)
+        StartCoroutine(FixedUpdateTick());  // Lï¿½gica frecuente (movimiento fï¿½sico)
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -71,7 +70,4 @@ public class GameManager : MonoBehaviour
             OnFixedUpdateTick?.Invoke();
         }
     }
-
-
-
 }

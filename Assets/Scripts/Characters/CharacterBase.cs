@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 /*
  *  Description: An abstract class that defines the base structure for both player and enemy characters in the game.
  *  
@@ -18,25 +17,28 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     [SerializeField] protected float _moveSpeed = -1f;
     [SerializeField] protected float _attackSpeed = -1f;
     [SerializeField] protected float _knockbackPower = -1f;
+
     [Header("Attack Data")]
     [SerializeField] protected LayerMask _targetLayers;
     [SerializeField] protected Transform _weapon;
     [SerializeField] protected float _range = -1f;
 
-
     protected virtual void Start()
     {
 
     }
+
     protected virtual void Awake()
     {
         InitStats();
     }
+
     public abstract bool PerformAttack();
-    public virtual void TakeDamage(int amount, Transform t )
+    
+    public virtual void TakeDamage(int amount, Transform t)
     {
         int damageTaken = Mathf.Max(amount - _defense, 0);
-       UpdateHealth(_currentHealth, damageTaken);
+        UpdateHealth(_currentHealth, damageTaken);
 
         if (_currentHealth <= 0)
         {
@@ -65,12 +67,14 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
         if (_knockbackPower <= 0f) _knockbackPower = 5f;
         if (_range <= 0f) _range = 0.5f;
     }
+    
     /// <summary>
     /// public method to update a character's health
     /// </summary>
     /// <param name="currentHealth"></param>
     /// <param name="damageTaken"></param>
     /// <returns></returns>
+    /// 
     public int UpdateHealth(int currentHealth, int damageTaken)
     {
         return currentHealth -= damageTaken;

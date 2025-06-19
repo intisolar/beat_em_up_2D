@@ -7,15 +7,14 @@ using UnityEngine;
  ***/
 public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
 {
-
     public Rigidbody2D Rigidbody { get; private set; }
-
 
     [Header("Patrol and Detect")]
     [SerializeField] private float initialDelayMin = 0f;
     [SerializeField] private float initialDelayMax = 3f;
     [SerializeField] private float visionRadius = 1f;
     [SerializeField] private Vector2 initialDirection;
+
     public float VisionRadius { get => visionRadius; private set => visionRadius = value; }
     public float InitialDelayMin { get => initialDelayMin; set => initialDelayMin = value; }
     public float InitialDelayMax { get => initialDelayMax; set => initialDelayMax = value; }
@@ -26,6 +25,7 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
         base.Awake();
         Rigidbody = GetComponent<Rigidbody2D>();
     }
+    
     public bool isLucky()
     {
         return false;
@@ -35,8 +35,9 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
     {
 
     }
+
     /// <summary>
-    /// cómo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en dirección contraria? 
+    /// cï¿½mo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en direcciï¿½n contraria? 
     /// </summary>
     /// <param name="direction"></param>
     public void Patrol(string direction)
@@ -53,5 +54,4 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
     {
       
     }
-
 }
