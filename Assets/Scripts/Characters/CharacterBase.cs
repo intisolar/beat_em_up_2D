@@ -9,7 +9,7 @@ using UnityEngine;
  */
 public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
-    [Header("Basic Stats")]
+    [Header("Stats")]
     [SerializeField] protected int _maxHealth = -1;
     [SerializeField] protected int _currentHealth = -1;
     [SerializeField] protected int _attackPower = -1;

@@ -4,15 +4,17 @@ using UnityEngine.InputSystem;
 
 public class GuitarPlayer : PlayerCharacter
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float _speed = 5f;
+    [Header("Movement")]
+    [SerializeField] private float _speed = 1f;
+    [SerializeField] private float _maxYPosition = 0.5f;
+    [SerializeField] private float _minYPosition = -1f;
 
     [Header("Dependencies")]
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _fist;
 
-    [Header("Attack Settings")]
+    [Header("Attack")]
     [SerializeField] private float _attackDuration = 0.25f;
 
     private bool _isAttacking = false;
@@ -27,23 +29,27 @@ public class GuitarPlayer : PlayerCharacter
     private void Update()
     {
         HandleAttack();
-        SyncDepthToYAxis();
     }
 
     private void FixedUpdate()
     {
         MovePlayer();
+        SyncDepthToYAxis();
     }
 
     private void MovePlayer()
     {
         Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
-        _rigidbody.linearVelocity = input * _speed;
+        Vector3 velocity = new Vector3(input.x * _speed, input.y * _speed, 0);
+
+        velocity.y = Mathf.Clamp(velocity.y, _minYPosition, _maxYPosition);
+
+        _rigidbody.linearVelocity = velocity;
     }
 
     private void HandleAttack()
     {
-        if (!_isAttacking && _playerInput.actions["Attack"].triggered) //esta habilitado para atacar? _isAttackEnabled ? if true:
+        if (!_isAttacking && _playerInput.actions["Attack"].triggered)
         {
             StartAttack();
         }
