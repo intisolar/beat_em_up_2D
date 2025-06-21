@@ -34,16 +34,20 @@ public class GuitarPlayer : PlayerCharacter
     private void FixedUpdate()
     {
         MovePlayer();
-        SyncDepthToYAxis();
     }
 
     private void MovePlayer()
     {
         Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
-        Vector3 velocity = new Vector3(input.x * _speed, input.y * _speed, 0);
 
-        velocity.y = Mathf.Clamp(velocity.y, _minYPosition, _maxYPosition);
+        Vector3 currentPosition = _rigidbody.position;
 
+        float clampedY = Mathf.Clamp(currentPosition.y + input.y * _speed * Time.fixedDeltaTime, _minYPosition, _maxYPosition);
+        float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
+
+        float zVelocity = verticalVelocity;
+
+        Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, zVelocity);
         _rigidbody.linearVelocity = velocity;
     }
 
@@ -83,11 +87,5 @@ public class GuitarPlayer : PlayerCharacter
     {
         yield return new WaitForSeconds(2f);
         //_isAttackEnabled = true;
-    }
-
-    private void SyncDepthToYAxis()
-    {
-        Vector3 position = _rigidbody.position;
-        _rigidbody.MovePosition(new Vector3(position.x, position.y, position.y));
     }
 }

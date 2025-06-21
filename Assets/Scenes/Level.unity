@@ -270,7 +270,7 @@ MonoBehaviour:
     m_Bits: 128
   _weapon: {fileID: 413350141}
   _range: -1
-  _speed: 5
+  _speed: 1
   _maxYPosition: 0.5
   _minYPosition: -1
   _rigidbody: {fileID: 387086904}
