@@ -6,6 +6,7 @@ public class CombatTests
     [SetUp]
     public void Setup()
     {
+
     }
 
     [TearDown]
@@ -18,8 +19,6 @@ public class CombatTests
     [Test]
     public void Test_ResolveCombat_EnemyAttackSucceeds()
     {
-
-
 
     }
 }

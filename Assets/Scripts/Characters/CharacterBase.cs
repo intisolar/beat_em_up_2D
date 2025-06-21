@@ -35,7 +35,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 
     public abstract bool PerformAttack();
     
-    public virtual void TakeDamage(int amount, Transform t)
+    public virtual void TakeDamage(int amount, Transform attackerTransform)
     {
         int damageTaken = Mathf.Max(amount - _defense, 0);
         UpdateHealth(_currentHealth, damageTaken);
@@ -48,7 +48,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 
     protected virtual void Die()
     {
-        Debug.Log(gameObject.name + " died.");
+        Debug.Log($"{gameObject.name} died.");
         Destroy(gameObject);
     }
 

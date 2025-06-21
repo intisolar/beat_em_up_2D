@@ -14,17 +14,8 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

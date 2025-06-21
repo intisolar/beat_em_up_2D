@@ -29,11 +29,6 @@ public class EnemyAIController : MonoBehaviour
         SinchronizeEventsToOnTick();
     }
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         stateController.UpdateState();

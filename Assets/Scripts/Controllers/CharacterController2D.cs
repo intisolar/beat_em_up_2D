@@ -9,13 +9,5 @@ using UnityEngine;
  ***/
 public class CharacterController2D : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    
 }

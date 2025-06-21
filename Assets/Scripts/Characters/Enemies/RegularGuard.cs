@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class RegularGuard : EnemyCharacter
 {
-    protected override void Start()
-    {
-
-    }
-
     /// <summary>
     /// It will give standard stats to a RegularGuard
     /// </summary>
     protected override void InitStats()
     {
-        Debug.Log(gameObject.name + " RegularGuard.InitStats");
+        Debug.Log($"{name} RegularGuard.InitStats");
 
         if (_maxHealth <= 0)
         {

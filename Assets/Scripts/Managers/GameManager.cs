@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -36,11 +37,6 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(Tick());
         StartCoroutine(FixedUpdateTick());  // L�gica frecuente (movimiento f�sico)
-    }
-
-    void Update()
-    {
-
     }
 
     /// <summary>

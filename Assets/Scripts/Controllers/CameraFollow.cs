@@ -9,13 +9,5 @@ using UnityEngine;
 /// </summary>
 public class CameraFollow : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    
 }
