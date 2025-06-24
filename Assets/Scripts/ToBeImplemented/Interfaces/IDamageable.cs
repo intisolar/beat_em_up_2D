@@ -1,8 +1,7 @@
 using UnityEngine;
 
-//It makes it possible to take damage
 public interface IDamageable 
 {
-    void TakeDamage(int amount, Transform transform);
+    void TakeDamage(byte damageAmount, Transform attackerTransform);
     int UpdateHealth(int currentHealth, int damageTaken);
 }

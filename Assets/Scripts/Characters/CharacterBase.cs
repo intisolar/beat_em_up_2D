@@ -9,6 +9,7 @@ using UnityEngine;
  */
 public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
+    #region Variables
     [Header("Stats")]
     [SerializeField] protected int _maxHealth = -1;
     [SerializeField] protected int _currentHealth = -1;
@@ -22,28 +23,29 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     [SerializeField] protected LayerMask _targetLayers;
     [SerializeField] protected Transform _weapon;
     [SerializeField] protected float _range = -1f;
+    #endregion
 
-    protected virtual void Start()
-    {
-
-    }
-
+    #region Unity Methods
     protected virtual void Awake()
     {
         InitStats();
     }
+    #endregion
 
-    public abstract bool PerformAttack();
-    
-    public virtual void TakeDamage(int amount, Transform attackerTransform)
+    #region Status Life
+    public void TakeDamage(byte amount, Transform attackerTransform)
     {
-        int damageTaken = Mathf.Max(amount - _defense, 0);
-        UpdateHealth(_currentHealth, damageTaken);
+        _currentHealth = UpdateHealth(_currentHealth, amount);
 
         if (_currentHealth <= 0)
         {
-            Die();
+            Destroy(gameObject);
         }
+    }
+
+    public int UpdateHealth(int currentHealth, int damageTaken)
+    {
+        return currentHealth - damageTaken;
     }
 
     protected virtual void Die()
@@ -51,7 +53,11 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
         Debug.Log($"{gameObject.name} died.");
         Destroy(gameObject);
     }
+    #endregion
 
+    public abstract bool PerformAttack();
+
+    #region Properties
     /// <summary>
     /// It will give standard stats to a character but they will be ideally handled by the children
     /// </summary>
@@ -68,19 +74,6 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
         if (_range <= 0f) _range = 0.5f;
     }
     
-    /// <summary>
-    /// public method to update a character's health
-    /// </summary>
-    /// <param name="currentHealth"></param>
-    /// <param name="damageTaken"></param>
-    /// <returns></returns>
-    /// 
-    public int UpdateHealth(int currentHealth, int damageTaken)
-    {
-        return currentHealth -= damageTaken;
-    }
-
-    //Getters && Setters
     public int MaxHealth { get => _maxHealth; protected set => _maxHealth = value; }
     public int CurrentHealth { get => _currentHealth; set => _currentHealth = value; }
     public int AttackPower { get => _attackPower; private set => _attackPower = value; }
@@ -89,4 +82,5 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     public float AttackSpeed { get => _attackSpeed; private set => _attackSpeed = value; }
     public float KnockbackPower { get => _knockbackPower; private set => _knockbackPower = value; }
     public Transform Weapon { get => _weapon; set => _weapon = value; }
+    #endregion
 }

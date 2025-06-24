@@ -40,7 +40,6 @@ public class AkSoundEngineInitialization
 
 	public bool InitializeSoundEngine()
 	{
-
 		UnityEngine.Debug.LogFormat("WwiseUnity: Wwise(R) SDK Version {0}.", AkSoundEngine.WwiseVersion);
 
 		var ActivePlatformSettings = AkWwiseInitializationSettings.ActivePlatformSettings;
@@ -131,7 +130,6 @@ public class AkSoundEngineInitialization
 	{
 		AkBankManager.Reset();
 	}
-
 
 	public bool ResetSoundEngine(bool isInPlayMode)
 	{

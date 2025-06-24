@@ -37,7 +37,7 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
     }
 
     /// <summary>
-    /// c�mo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en direcci�n contraria? 
+    /// Cómo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en dirección contraria? 
     /// </summary>
     /// <param name="direction"></param>
     public void Patrol(string direction)

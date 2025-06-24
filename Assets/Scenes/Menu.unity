@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &6 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5186661721658455305, guid: 542a06594e4345746aba8e886415d110, type: 3}
-  m_PrefabInstance: {fileID: 6535343754657668966}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861085841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &27214541
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +319,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!1 &455272784
+--- !u!1 &1589927849
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,8 +327,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 455272786}
-  - component: {fileID: 455272785}
+  - component: {fileID: 1589927851}
+  - component: {fileID: 1589927850}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -347,13 +336,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &455272785
+--- !u!114 &1589927850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455272784}
+  m_GameObject: {fileID: 1589927849}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bf4a287b4175904a9cef1a2b265e6a5, type: 3}
@@ -372,13 +361,13 @@ MonoBehaviour:
   spatialAudioPoolSize: 0
   maxSoundPropagationDepth: 0
   engineLogging: 0
---- !u!4 &455272786
+--- !u!4 &1589927851
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455272784}
+  m_GameObject: {fileID: 1589927849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -387,37 +376,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1753411103 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4833272739848962407, guid: 542a06594e4345746aba8e886415d110, type: 3}
-  m_PrefabInstance: {fileID: 6535343754657668966}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1861085841 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5832674269496266089, guid: 542a06594e4345746aba8e886415d110, type: 3}
-  m_PrefabInstance: {fileID: 6535343754657668966}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1861085843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861085841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aacb3114cf1b734db9c76ff7352dd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _textFPS: {fileID: 1753411103}
-  _decimals: 0
-  _playerInput: {fileID: 6}
 --- !u!1 &1910538959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,14 +3216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6749935819153787135, guid: 542a06594e4345746aba8e886415d110, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5832674269496266089, guid: 542a06594e4345746aba8e886415d110, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1861085843}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542a06594e4345746aba8e886415d110, type: 3}
 --- !u!222 &6552358993402054129
 CanvasRenderer:
@@ -4939,5 +4893,5 @@ SceneRoots:
   - {fileID: 7915070050205040340}
   - {fileID: 6535343754657668966}
   - {fileID: 1910538961}
-  - {fileID: 455272786}
+  - {fileID: 1589927851}
   - {fileID: 27214544}

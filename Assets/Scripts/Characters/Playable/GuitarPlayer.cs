@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 
 public class GuitarPlayer : PlayerCharacter
 {
+    [Header("Attack")]
+    [SerializeField] private float _attackDuration = 0.25f;
+
     [Header("Movement")]
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _maxYPosition = 0.5f;
@@ -12,18 +15,11 @@ public class GuitarPlayer : PlayerCharacter
     [Header("Dependencies")]
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private GameObject _fist;
+    [SerializeField] private GameObject _attack;
 
-    [Header("Attack")]
-    [SerializeField] private float _attackDuration = 0.25f;
-
-    private bool _isAttacking = false;
-    private float _remainingAttackTime;
-
-    protected override void Start()
+    protected void Start()
     {
         base.InitStats();
-        _remainingAttackTime = _attackDuration;
     }
 
     private void Update()
@@ -53,39 +49,9 @@ public class GuitarPlayer : PlayerCharacter
 
     private void HandleAttack()
     {
-        if (!_isAttacking && _playerInput.actions["Attack"].triggered)
+        if (_playerInput.actions["Attack"].triggered)
         {
-            StartAttack();
+            CombatHandler.ExecuteMeleeAttack(this, _attack, _attackDuration);
         }
-
-        if (_isAttacking)
-        {
-            _remainingAttackTime -= Time.deltaTime;
-            if (_remainingAttackTime <= 0f)
-            {
-                EndAttack();
-            }
-        }
-    }
-
-    private void StartAttack()
-    {
-        _isAttacking = true;
-        _fist.SetActive(true);
-        _remainingAttackTime = _attackDuration;
-        //AttackCoolDown()
-        //StartCoroutine(AttackCoolDown());
-    }
-
-    private void EndAttack()
-    {
-        _isAttacking = false;
-        _fist.SetActive(false);
-    }
-
-    private IEnumerator AttackCoolDown()
-    {
-        yield return new WaitForSeconds(2f);
-        //_isAttackEnabled = true;
     }
 }
