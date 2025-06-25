@@ -13,9 +13,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     
-    /// <summary>
-    /// Initialize class attributes
-    /// </summary>
     private void Init()
     {
         if (Instance != null && Instance != this)
@@ -36,7 +33,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(Tick());
-        StartCoroutine(FixedUpdateTick());  // L�gica frecuente (movimiento f�sico)
+        StartCoroutine(FixedUpdateTick());  // Lógica frecuente (movimiento físico)
     }
 
     /// <summary>

@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 /***
@@ -7,7 +8,7 @@ using UnityEngine;
  ***/
 public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
 {
-    public Rigidbody2D Rigidbody { get; private set; }
+    public Rigidbody Rigidbody { get; private set; }
 
     [Header("Patrol and Detect")]
     [SerializeField] private float initialDelayMin = 0f;
@@ -23,7 +24,7 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
     protected override void Awake()
     {
         base.Awake();
-        Rigidbody = GetComponent<Rigidbody2D>();
+        Rigidbody = GetComponent<Rigidbody>();
     }
     
     public bool isLucky()
@@ -31,27 +32,16 @@ public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
         return false;
     }
 
-    public void OnDrop()
-    {
-
-    }
+    public void OnDrop() { }
 
     /// <summary>
     /// Cómo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en dirección contraria? 
     /// </summary>
     /// <param name="direction"></param>
-    public void Patrol(string direction)
-    {
-
-    }
+    public void Patrol(string direction) { }
 
     public override bool PerformAttack()
     {
         throw new System.NotImplementedException();
-    }
-
-    private void OnEnable()
-    {
-      
     }
 }

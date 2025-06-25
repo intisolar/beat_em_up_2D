@@ -17,7 +17,6 @@ public abstract class PlayerCharacter : CharacterBase
     /// </summary>
     protected override void InitStats()
     {
-        Debug.Log("PlayerCharacter.InitStats");
         _maxHealth = 100;
         _currentHealth = MaxHealth;
         _attackPower = 10;

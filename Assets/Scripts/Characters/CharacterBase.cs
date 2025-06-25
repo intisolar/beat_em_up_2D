@@ -64,6 +64,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     protected virtual void InitStats()
     {
         Debug.Log("WARNING: CharacterBase.InitStats - it should not come here. Stats handled by children");
+        
         if (_maxHealth <= 0) _maxHealth = 100;
         if (_currentHealth <= 0) _currentHealth = _maxHealth;
         if (_attackPower <= 0) _attackPower = 10;

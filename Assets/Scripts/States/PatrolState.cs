@@ -4,125 +4,87 @@ public class PatrolState : IState
 {
     private enum SubState { WaitingStart, Moving, Idle }
 
-    private readonly EnemyCharacter enemy;
+    private readonly EnemyCharacter _enemyCharacter;
+    private Vector3 _movementDirection;
+    private float _stateTimer;
+    private SubState _currentSubState;
 
-    private Vector2 currentDirection;
-    private float timer;
-    private SubState subState;
+    private readonly float _initialDelayDuration;
+    private readonly float _idleWaitDuration = 3f;
+    private readonly float _movementDuration = 3f;
 
-    private readonly float initialDelay;
-    private readonly float waitTime = 3f;  // how much time it must wait
-    private readonly float moveTime = 3f; // how much time it must move on a direction
-
-    public PatrolState(EnemyCharacter character, float initialDelay, Vector2 initialDirection)
+    public PatrolState(EnemyCharacter enemyCharacter, float initialDelayDuration, Vector3 initialMovementDirection)
     {
-        this.enemy = character;
-        Debug.Log(enemy.name + " In PatrolState");
-        this.initialDelay = initialDelay;
-        if (initialDirection == Vector2.zero)
+        _enemyCharacter = enemyCharacter;
+        _initialDelayDuration = initialDelayDuration;
+        _movementDirection = initialMovementDirection;
+
+        if (_movementDirection == Vector3.zero)
         {
-            currentDirection = Vector2.left;
+            _movementDirection = Vector3.left;
         }
-        else
-        {
-            currentDirection = initialDirection;
-        }
-        OnEnter();
     }
 
     public void OnEnter()
     {
-        ResetTimer();
+        _stateTimer = 0f;
 
-        if (initialDelay > 0f)
+        if (_initialDelayDuration > 0f)
         {
-            subState = SubState.WaitingStart;
+            _currentSubState = SubState.WaitingStart;
         }
         else
         {
-            subState = SubState.Moving;
+            _currentSubState = SubState.Moving;
         }
-
-    }
-
-    public void OnExit()
-    {
-        //reset or clean as needed
-    }
-
-    public void OnTick()
-    {
-        timer++;
     }
 
     public void OnState()
     {
-        // Update timer every time the state gets updated
+        _stateTimer += Time.deltaTime;
 
-        switch (subState)
+        if (_currentSubState == SubState.WaitingStart && _stateTimer >= _initialDelayDuration)
         {
-            case SubState.WaitingStart:
-                // wait for initial offset 
-                if (timer >= initialDelay)
-                {
-                    ResetTimer();
-                    subState = SubState.Moving;
-                }
-                break;
-
-            case SubState.Moving:
-                
-                //if it has moved enough 
-                if (timer >= moveTime)
-                {
-                    subState = SubState.Idle;
-                    ResetTimer();
-                }
-                break;
-
-            case SubState.Idle:
-                // Do nothing until time's up
-                if (timer >= waitTime)
-                {
-                    ChangeDirection();
-                    subState = SubState.Moving;
-                    ResetTimer();
-                }
-                break;
-            default:
-                throw new System.Exception(" PatrolState.Substate not recongnized.");
+            StartMoving();
         }
+        else if (_currentSubState == SubState.Moving)
+        {
+            Move();
+            if (_stateTimer >= _movementDuration)
+            {
+                StartIdling();
+            }
+        }
+        else if (_currentSubState == SubState.Idle && _stateTimer >= _idleWaitDuration)
+        {
+            ChangeDirectionAndMove();
+        }
+    }
+
+    public void OnExit() { }
+
+    private void StartMoving()
+    {
+        _stateTimer = 0f;
+        _currentSubState = SubState.Moving;
+    }
+
+    private void StartIdling()
+    {
+        _stateTimer = 0f;
+        _currentSubState = SubState.Idle;
+    }
+
+    private void ChangeDirectionAndMove()
+    {
+        _movementDirection = -_movementDirection;
+        _stateTimer = 0f;
+        _currentSubState = SubState.Moving;
     }
 
     private void Move()
     {
-        if (enemy.MoveSpeed == -1f)
-        {
-            throw new System.Exception(" Careful, _moveSpeed is null in" + enemy.name);
-        }
-        Vector2 newPosition = enemy.Rigidbody.position
-            + currentDirection
-            * Time.fixedDeltaTime
-            * enemy.MoveSpeed;
-
-        enemy.Rigidbody.MovePosition(newPosition);
-    }
-
-    private void ChangeDirection()
-    {
-        currentDirection = (currentDirection == Vector2.left)
-            ? Vector2.right
-            : Vector2.left;
-    }
-
-    private void ResetTimer()
-    {
-        timer = 0f;
-    }
-
-    public void OnFixedUpdateTick()
-    {
-        if (subState == SubState.Moving)
-            Move(); // it only moves in fixedUpdate time
+        Vector3 movement = _movementDirection.normalized * _enemyCharacter.MoveSpeed * Time.deltaTime;
+        _enemyCharacter.Rigidbody.MovePosition(_enemyCharacter.Rigidbody.position + movement);
     }
 }

@@ -2,45 +2,40 @@ using UnityEngine;
 
 public class ChaseState : IState
 {
-    private EnemyCharacter enemy;
-    private Transform _playerTransform;
+    private readonly EnemyCharacter _enemy;
+    private readonly Transform _playerTransform;
 
-    public ChaseState(EnemyCharacter owner, Transform playerTransform)
+    public ChaseState(EnemyCharacter enemy, Transform playerTransform)
     {
-        enemy = owner;
+        _enemy = enemy;
         _playerTransform = playerTransform;
     }
 
-    public void OnEnter()
-    {
-        Debug.Log(enemy.name + " In ChaseState");
-    }
-
-    public void OnExit()
-    {
-
-    }
+    public void OnEnter() { }
 
     public void OnState()
     {
-
-    }
-
-    public void OnTick()
-    {
-
-    }
-
-    public void OnFixedUpdateTick()
-    {
-        Vector2 playerPosition = _playerTransform.position;
-        Vector2 direction = (playerPosition - enemy.Rigidbody.position).normalized;
-
-        if (enemy.MoveSpeed == -1f)
+        if (_playerTransform == null || _enemy.Rigidbody == null)
         {
-            throw new System.Exception(" Careful, _moveSpeed is null in" + enemy.name);
+            return;
         }
-        Vector2 newPosition = enemy.Rigidbody.position + direction * enemy.MoveSpeed * Time.fixedDeltaTime;
-        enemy.Rigidbody.MovePosition(newPosition);
+
+        if (_enemy.MoveSpeed <= 0f)
+        {
+            Debug.LogWarning($"{_enemy.name} has invalid MoveSpeed.");
+            return;
+        }
+
+        MoveTowardsTarget();
+    }
+
+    public void OnExit() { }
+
+    private void MoveTowardsTarget()
+    {
+        Vector3 direction = (_playerTransform.position - _enemy.Rigidbody.position).normalized;
+        Vector3 movement = direction * _enemy.MoveSpeed * Time.deltaTime;
+
+        _enemy.Rigidbody.MovePosition(_enemy.Rigidbody.position + movement);
     }
 }
