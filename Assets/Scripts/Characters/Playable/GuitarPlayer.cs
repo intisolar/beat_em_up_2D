@@ -45,6 +45,20 @@ public class GuitarPlayer : PlayerCharacter
 
         Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, zVelocity);
         _rigidbody.linearVelocity = velocity;
+
+        FlipCharacter(input.x);
+    }
+
+    private void FlipCharacter(float horizontalInput)
+    {
+        if (horizontalInput < 0)
+        {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        }
+        else if (horizontalInput > 0)
+        {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private void HandleAttack()
