@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91d07bf5a444b174e9619cb66f4df5c1
+guid: f7ed806a57492e34886b1724a651f3e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,23 +97,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_52x63_0
+      name: Crate_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 52
-        height: 63
+        x: 1
+        y: 1
+        width: 38
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ba0c9479381e67950800000000000000
-      internalID: 6446587871922602155
+      spriteID: 8f5f41565e072974d94a6e7b4750466e
+      internalID: 1167740416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crate_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc26bfcc23693445a59fb304c94cab3
+      internalID: -1673933336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crate_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a835e847cce4ce409756cb887f25b3c
+      internalID: 1457460931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crate_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d3545bd250e6243a72e41e743c6c67
+      internalID: -2077807215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crate_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54031d1eafb8e254dbf804bf155f4736
+      internalID: 772271819
       vertices: []
       indices: 
       edges: []
@@ -132,6 +220,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Crate_0: 1167740416
+      Crate_1: -1673933336
+      Crate_2: 1457460931
+      Crate_3: -2077807215
+      Crate_4: 772271819
       Player_52x63_0: 6446587871922602155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
