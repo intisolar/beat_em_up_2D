@@ -60,6 +60,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "21a123d9-5f61-43c7-b2cf-cd01b0e54848",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "FPS",
                     "type": "Button",
                     "id": "4785d43e-c79d-490a-aea6-250188fe4cf4",
@@ -309,6 +318,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "FPS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf87ee88-7829-457d-8bdd-94fa59516abc",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
