@@ -22,14 +22,24 @@ public class GuitarPlayer : PlayerCharacter
     private bool _canMoveY = false;
     private Vector3 _lastPosition;
 
+    private MovementHandler _movementHandler;
+    private AnimationHandler _animationHandler;
+    private AttackHandler _attackHandler;
+
     protected void Start()
     {
         base.InitStats();
+        _movementHandler = new MovementHandler(_rigidbody, _speed, _minPosition, _maxPosition);
+        _animationHandler = new AnimationHandler(_animator);
+        _attackHandler = new AttackHandler(_animationHandler, _attackHitBox, _attackDelay, _attackDuration);
     }
 
     private void Update()
     {
-        HandleAttack();
+        if (_playerInput.actions["Attack"].triggered)
+        {
+            StartCoroutine(_attackHandler.ExecuteAttack());
+        }
     }
 
     private void FixedUpdate()
@@ -38,7 +48,7 @@ public class GuitarPlayer : PlayerCharacter
 
         if (!_canMoveY)
         {
-            HandleIdleState();
+            _movementHandler.HandleIdleState(_rigidbody.position);
         }
 
         _lastPosition = _rigidbody.position;
@@ -49,47 +59,15 @@ public class GuitarPlayer : PlayerCharacter
         Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
         Vector3 currentPosition = _rigidbody.position;
 
-        float zVelocity = input.y * _speed;
-
         _canMoveY = Mathf.Abs(currentPosition.z - _lastPosition.z) > Mathf.Epsilon;
 
-        float clampedZ = Mathf.Clamp(currentPosition.z + zVelocity * Time.fixedDeltaTime, _minPosition, _maxPosition);
-        float clampedY = CalculateClampedY(currentPosition);
-
-        float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
-
-        Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, (clampedZ - currentPosition.z) / Time.fixedDeltaTime);
+        Vector3 velocity = _movementHandler.CalculateVelocity(input, currentPosition, _lastPosition, _canMoveY);
         _rigidbody.linearVelocity = velocity;
 
         FlipCharacter(input.x);
 
-        if (Mathf.Abs(input.x) > Mathf.Epsilon || Mathf.Abs(zVelocity) > Mathf.Epsilon)
-        {
-            _animator.SetBool("isWalk", true);
-        }
-        else
-        {
-            _animator.SetBool("isWalk", false);
-        }
-    }
-
-    private float CalculateClampedY(Vector3 currentPosition)
-    {
-        if (_canMoveY)
-        {
-            float deltaZ = currentPosition.z - _lastPosition.z;
-            float deltaY = deltaZ * (_maxPosition - _minPosition) / (_maxPosition - _minPosition);
-            return Mathf.Clamp(currentPosition.y + deltaY, _minPosition, _maxPosition);
-        }
-
-        return currentPosition.y;
-    }
-
-    private void HandleIdleState()
-    {
-        Vector3 currentPosition = _rigidbody.position;
-        float clampedY = Mathf.Clamp(currentPosition.z, _minPosition, _maxPosition);
-        _rigidbody.position = new Vector3(currentPosition.x, clampedY, currentPosition.z);
+        bool isWalking = Mathf.Abs(input.x) > Mathf.Epsilon || Mathf.Abs(input.y) > Mathf.Epsilon;
+        _animationHandler.UpdateWalkAnimation(isWalking);
     }
 
     private void FlipCharacter(float horizontalInput)
@@ -103,19 +81,91 @@ public class GuitarPlayer : PlayerCharacter
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
     }
+}
 
-    private void HandleAttack()
+public class MovementHandler
+{
+    private readonly Rigidbody _rigidbody;
+    private readonly float _speed;
+    private readonly float _minPosition;
+    private readonly float _maxPosition;
+
+    public MovementHandler(Rigidbody rigidbody, float speed, float minPosition, float maxPosition)
     {
-        if (_playerInput.actions["Attack"].triggered)
-        {
-            StartCoroutine(ExecuteAttackWithDelay());
-        }
+        _rigidbody = rigidbody;
+        _speed = speed;
+        _minPosition = minPosition;
+        _maxPosition = maxPosition;
     }
 
-    private IEnumerator ExecuteAttackWithDelay()
+    public Vector3 CalculateVelocity(Vector2 input, Vector3 currentPosition, Vector3 lastPosition, bool canMoveY)
+    {
+        float zVelocity = input.y * _speed;
+        float clampedZ = Mathf.Clamp(currentPosition.z + zVelocity * Time.fixedDeltaTime, _minPosition, _maxPosition);
+        float clampedY = CalculateClampedY(currentPosition, lastPosition, canMoveY);
+        float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
+
+        return new Vector3(input.x * _speed, verticalVelocity, (clampedZ - currentPosition.z) / Time.fixedDeltaTime);
+    }
+
+    private float CalculateClampedY(Vector3 currentPosition, Vector3 lastPosition, bool canMoveY)
+    {
+        if (canMoveY)
+        {
+            float deltaZ = currentPosition.z - lastPosition.z;
+            float deltaY = deltaZ * (_maxPosition - _minPosition) / (_maxPosition - _minPosition);
+            return Mathf.Clamp(currentPosition.y + deltaY, _minPosition, _maxPosition);
+        }
+
+        return currentPosition.y;
+    }
+
+    public void HandleIdleState(Vector3 currentPosition)
+    {
+        float clampedY = Mathf.Clamp(currentPosition.z, _minPosition, _maxPosition);
+        _rigidbody.position = new Vector3(currentPosition.x, clampedY, currentPosition.z);
+    }
+}
+
+public class AnimationHandler
+{
+    private readonly Animator _animator;
+
+    public AnimationHandler(Animator animator)
+    {
+        _animator = animator;
+    }
+
+    public void UpdateWalkAnimation(bool isWalking)
+    {
+        _animator.SetBool("isWalk", isWalking);
+    }
+
+    public void TriggerAttackAnimation()
     {
         _animator.SetTrigger("isAttack");
+    }
+}
+
+public class AttackHandler
+{
+    private readonly AnimationHandler _animationHandler;
+    private readonly GameObject _attackHitBox;
+    private readonly float _attackDelay;
+    private readonly float _attackDuration;
+
+    public AttackHandler(AnimationHandler animationHandler, GameObject attackHitBox, float attackDelay, float attackDuration)
+    {
+        _animationHandler = animationHandler;
+        _attackHitBox = attackHitBox;
+        _attackDelay = attackDelay;
+        _attackDuration = attackDuration;
+    }
+
+    public IEnumerator ExecuteAttack()
+    {
+        _animationHandler.TriggerAttackAnimation();
         yield return new WaitForSeconds(_attackDelay);
-        CombatHandler.ExecuteMeleeAttack(this, _attackHitBox, _attackDuration);
+        CombatHandler.ExecuteMeleeAttack(null, _attackHitBox, _attackDuration);
     }
 }
