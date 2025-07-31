@@ -8,8 +8,8 @@ public class GuitarPlayer : PlayerCharacter
 
     [Header("Movement")]
     [SerializeField] private float _speed = 1f;
-    [SerializeField] private float _maxYPosition = 0.5f;
-    [SerializeField] private float _minYPosition = -1f;
+    [SerializeField] private float _maxPosition = 0.5f;
+    [SerializeField] private float _minPosition = -1f;
 
     [Header("Dependencies")]
     [SerializeField] private Rigidbody _rigidbody;
@@ -50,10 +50,12 @@ public class GuitarPlayer : PlayerCharacter
 
         _canMoveY = Mathf.Abs(currentPosition.z - _lastPosition.z) > Mathf.Epsilon;
 
+        float clampedZ = Mathf.Clamp(currentPosition.z + zVelocity * Time.fixedDeltaTime, _minPosition, _maxPosition);
         float clampedY = CalculateClampedY(currentPosition);
+
         float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
 
-        Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, zVelocity);
+        Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, (clampedZ - currentPosition.z) / Time.fixedDeltaTime);
         _rigidbody.linearVelocity = velocity;
 
         FlipCharacter(input.x);
@@ -64,8 +66,8 @@ public class GuitarPlayer : PlayerCharacter
         if (_canMoveY)
         {
             float deltaZ = currentPosition.z - _lastPosition.z;
-            float deltaY = deltaZ * (_maxYPosition - _minYPosition) / (_maxYPosition - _minYPosition);
-            return Mathf.Clamp(currentPosition.y + deltaY, _minYPosition, _maxYPosition);
+            float deltaY = deltaZ * (_maxPosition - _minPosition) / (_maxPosition - _minPosition);
+            return Mathf.Clamp(currentPosition.y + deltaY, _minPosition, _maxPosition);
         }
 
         return currentPosition.y;
@@ -74,7 +76,7 @@ public class GuitarPlayer : PlayerCharacter
     private void HandleIdleState()
     {
         Vector3 currentPosition = _rigidbody.position;
-        float clampedY = Mathf.Clamp(currentPosition.z, _minYPosition, _maxYPosition);
+        float clampedY = Mathf.Clamp(currentPosition.z, _minPosition, _maxPosition);
         _rigidbody.position = new Vector3(currentPosition.x, clampedY, currentPosition.z);
     }
 
