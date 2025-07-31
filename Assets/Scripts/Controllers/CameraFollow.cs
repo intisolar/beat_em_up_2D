@@ -40,5 +40,15 @@ public class CameraFollow : MonoBehaviour
             lastX = currentX;
             transform.position = new Vector3(currentX + offsetX, fixedY, transform.position.z);
         }
+        else
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null)
+            {
+                _player = playerObject.transform;
+            }
+
+            LateUpdate();
+        }
     }
 }

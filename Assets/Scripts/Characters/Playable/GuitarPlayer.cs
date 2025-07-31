@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,7 +6,8 @@ public class GuitarPlayer : PlayerCharacter
 {
     [Header("Attack")]
     [SerializeField] private float _attackDuration = 0.25f;
-    [SerializeField] private GameObject _attack;
+    [SerializeField] private float _attackDelay = 0.1f;
+    [SerializeField] private GameObject _attackHitBox;
 
     [Header("Movement")]
     [SerializeField] private float _speed = 1f;
@@ -106,9 +108,14 @@ public class GuitarPlayer : PlayerCharacter
     {
         if (_playerInput.actions["Attack"].triggered)
         {
-            CombatHandler.ExecuteMeleeAttack(this, _attack, _attackDuration);
-            
-            _animator.SetTrigger("isAttack");
+            StartCoroutine(ExecuteAttackWithDelay());
         }
+    }
+
+    private IEnumerator ExecuteAttackWithDelay()
+    {
+        _animator.SetTrigger("isAttack");
+        yield return new WaitForSeconds(_attackDelay);
+        CombatHandler.ExecuteMeleeAttack(this, _attackHitBox, _attackDuration);
     }
 }

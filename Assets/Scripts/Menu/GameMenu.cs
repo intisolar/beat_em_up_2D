@@ -9,13 +9,20 @@ public class GameMenu : MonoBehaviour
     [SerializeField] PlayerInput _playerInput;
     
     bool _isGamePaused = false;
-    
+
     void Update()
     {
-        if(_playerInput.actions["Pause"].WasPressedThisFrame())
+        if (_playerInput.actions["Pause"].WasPressedThisFrame())
         {
-            _isGamePaused = !_isGamePaused;
-            PauseGame();
+            if (_playerInput != null)
+            {
+                _isGamePaused = !_isGamePaused;
+                PauseGame();
+            }
+            else
+            {
+                _playerInput = Object.FindFirstObjectByType<PlayerInput>();
+            }
         }
     }
 
