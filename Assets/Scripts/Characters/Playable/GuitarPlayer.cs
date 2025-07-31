@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +15,8 @@ public class GuitarPlayer : PlayerCharacter
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _attack;
+
+    private bool _isColliding = false;
 
     protected void Start()
     {
@@ -38,7 +39,16 @@ public class GuitarPlayer : PlayerCharacter
 
         Vector3 currentPosition = _rigidbody.position;
 
-        float clampedY = Mathf.Clamp(currentPosition.y + input.y * _speed * Time.fixedDeltaTime, _minYPosition, _maxYPosition);
+        float clampedY;
+        if (_isColliding)
+        {
+            clampedY = currentPosition.y;
+        }
+        else
+        {
+            clampedY = Mathf.Clamp(currentPosition.y + input.y * _speed * Time.fixedDeltaTime, _minYPosition, _maxYPosition);
+        }
+
         float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
 
         float zVelocity = verticalVelocity;
@@ -66,6 +76,22 @@ public class GuitarPlayer : PlayerCharacter
         if (_playerInput.actions["Attack"].triggered)
         {
             CombatHandler.ExecuteMeleeAttack(this, _attack, _attackDuration);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            _isColliding = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            _isColliding = false;
         }
     }
 }

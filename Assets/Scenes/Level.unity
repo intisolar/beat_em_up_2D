@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 387086898}
   - component: {fileID: 387086897}
   - component: {fileID: 387086902}
-  - component: {fileID: 387086904}
+  - component: {fileID: 387086906}
   - component: {fileID: 387086905}
   - component: {fileID: 387086903}
   m_Layer: 7
@@ -275,36 +275,9 @@ MonoBehaviour:
   _speed: 1
   _maxYPosition: 0.5
   _minYPosition: -1
-  _rigidbody: {fileID: 387086904}
+  _rigidbody: {fileID: 387086906}
   _playerInput: {fileID: 387086902}
   _attack: {fileID: 1010849275}
---- !u!54 &387086904
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387086896}
-  serializedVersion: 4
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 1
 --- !u!65 &387086905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -326,6 +299,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.275, y: 0.5, z: 0.1}
   m_Center: {x: -0.025, y: 0, z: 0}
+--- !u!54 &387086906
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387086896}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &393858849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,13 +1372,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1488790767}
   - component: {fileID: 1488790766}
-  - component: {fileID: 1488790770}
   - component: {fileID: 1488790769}
   - component: {fileID: 1488790768}
   - component: {fileID: 1488790771}
   m_Layer: 0
   m_Name: Crate
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1447,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 1488790764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -0.15, z: 0}
+  m_LocalPosition: {x: -0.65, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1487,33 +1486,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.38, y: 0.33, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1488790770
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488790764}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!95 &1488790771
 Animator:
   serializedVersion: 7
@@ -1871,7 +1843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1845474360
 Transform:
   m_ObjectHideFlags: 0
@@ -2138,7 +2110,7 @@ GameObject:
   - component: {fileID: 2335258022448059593}
   - component: {fileID: 1120849785468495468}
   - component: {fileID: 2449131515349714764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

@@ -3383,6 +3383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5832674269496266089, guid: 542a06594e4345746aba8e886415d110, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
