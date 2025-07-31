@@ -3,8 +3,11 @@ using UnityEngine.InputSystem;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField] PlayerInput _playerInput;
     [SerializeField] GameObject _pausePanel;
+
+    [Header("Dependencies")]
+    [SerializeField] PlayerInput _playerInput;
+    
     bool _isGamePaused = false;
     
     void Update()

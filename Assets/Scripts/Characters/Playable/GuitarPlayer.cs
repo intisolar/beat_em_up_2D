@@ -5,16 +5,17 @@ public class GuitarPlayer : PlayerCharacter
 {
     [Header("Attack")]
     [SerializeField] private float _attackDuration = 0.25f;
+    [SerializeField] private GameObject _attack;
 
     [Header("Movement")]
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _maxPosition = 0.5f;
     [SerializeField] private float _minPosition = -1f;
-
-    [Header("Dependencies")]
-    [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private GameObject _attack;
+    [SerializeField] private Rigidbody _rigidbody;
+
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
 
     private bool _canMoveY = false;
     private Vector3 _lastPosition;
@@ -59,6 +60,15 @@ public class GuitarPlayer : PlayerCharacter
         _rigidbody.linearVelocity = velocity;
 
         FlipCharacter(input.x);
+
+        if (Mathf.Abs(input.x) > Mathf.Epsilon || Mathf.Abs(zVelocity) > Mathf.Epsilon)
+        {
+            _animator.SetBool("isWalk", true);
+        }
+        else
+        {
+            _animator.SetBool("isWalk", false);
+        }
     }
 
     private float CalculateClampedY(Vector3 currentPosition)
@@ -97,6 +107,8 @@ public class GuitarPlayer : PlayerCharacter
         if (_playerInput.actions["Attack"].triggered)
         {
             CombatHandler.ExecuteMeleeAttack(this, _attack, _attackDuration);
+            
+            _animator.SetTrigger("isAttack");
         }
     }
 }
