@@ -16,7 +16,8 @@ public class GuitarPlayer : PlayerCharacter
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _attack;
 
-    private bool _isColliding = false;
+    private bool _canMoveY = false;
+    private Vector3 _lastPosition;
 
     protected void Start()
     {
@@ -30,33 +31,51 @@ public class GuitarPlayer : PlayerCharacter
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        Move();
+
+        if (!_canMoveY)
+        {
+            HandleIdleState();
+        }
+
+        _lastPosition = _rigidbody.position;
     }
 
-    private void MovePlayer()
+    private void Move()
     {
         Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
-
         Vector3 currentPosition = _rigidbody.position;
 
-        float clampedY;
-        if (_isColliding)
-        {
-            clampedY = currentPosition.y;
-        }
-        else
-        {
-            clampedY = Mathf.Clamp(currentPosition.y + input.y * _speed * Time.fixedDeltaTime, _minYPosition, _maxYPosition);
-        }
+        float zVelocity = input.y * _speed;
 
+        _canMoveY = Mathf.Abs(currentPosition.z - _lastPosition.z) > Mathf.Epsilon;
+
+        float clampedY = CalculateClampedY(currentPosition);
         float verticalVelocity = (clampedY - currentPosition.y) / Time.fixedDeltaTime;
-
-        float zVelocity = verticalVelocity;
 
         Vector3 velocity = new Vector3(input.x * _speed, verticalVelocity, zVelocity);
         _rigidbody.linearVelocity = velocity;
 
         FlipCharacter(input.x);
+    }
+
+    private float CalculateClampedY(Vector3 currentPosition)
+    {
+        if (_canMoveY)
+        {
+            float deltaZ = currentPosition.z - _lastPosition.z;
+            float deltaY = deltaZ * (_maxYPosition - _minYPosition) / (_maxYPosition - _minYPosition);
+            return Mathf.Clamp(currentPosition.y + deltaY, _minYPosition, _maxYPosition);
+        }
+
+        return currentPosition.y;
+    }
+
+    private void HandleIdleState()
+    {
+        Vector3 currentPosition = _rigidbody.position;
+        float clampedY = Mathf.Clamp(currentPosition.z, _minYPosition, _maxYPosition);
+        _rigidbody.position = new Vector3(currentPosition.x, clampedY, currentPosition.z);
     }
 
     private void FlipCharacter(float horizontalInput)
@@ -76,22 +95,6 @@ public class GuitarPlayer : PlayerCharacter
         if (_playerInput.actions["Attack"].triggered)
         {
             CombatHandler.ExecuteMeleeAttack(this, _attack, _attackDuration);
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            _isColliding = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            _isColliding = false;
         }
     }
 }
