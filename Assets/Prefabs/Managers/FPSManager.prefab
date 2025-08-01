@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6058cb5343f19524d86244f4c035f1ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxFPS: 120
   _textFPS: {fileID: 4833272739848962407}
   _decimals: 0
   _playerInput: {fileID: 5186661721658455305}

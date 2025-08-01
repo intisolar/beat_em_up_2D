@@ -4,6 +4,9 @@ using TMPro;
 
 public class FPSCounter : MonoBehaviour
 {
+    [SerializeField] private int _maxFPS = 120;
+
+    [Header("UI")]
     [SerializeField] private TextMeshProUGUI _textFPS;
     float _elapsedTime = 0.5f;
 
@@ -20,11 +23,13 @@ public class FPSCounter : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        _textFPS.gameObject.SetActive(false);
     }
 
     private void Start()
     {
         _decimalString = "F" + _decimals;
+        Application.targetFrameRate = _maxFPS;
     }
 
     private void Update()
