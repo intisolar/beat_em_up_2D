@@ -6,6 +6,11 @@ namespace Handlers
     {
         private byte _attackPower;
 
+        private void Awake()
+        {
+            gameObject.SetActive(false);
+        }
+
         public void SetAttackPower(byte attackPower)
         {
             _attackPower = attackPower;

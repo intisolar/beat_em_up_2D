@@ -193,7 +193,7 @@ TextureImporter:
         width: 42
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,6 +202,28 @@ TextureImporter:
       bones: []
       spriteID: 3aaab3a3a9c03c447903b3fd0cad0c73
       internalID: -159148778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vending_Machine_42x64_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ecf5fed5fc7d343beaad79a2036358
+      internalID: 214115944
       vertices: []
       indices: 
       edges: []
@@ -226,6 +248,7 @@ TextureImporter:
       Vending_Machine_3: -1370250734
       Vending_Machine_4: 1230396491
       Vending_Machine_42x64_0: -159148778
+      Vending_Machine_42x64_1: 214115944
       Vending_Machine_5: -993793488
       Vending_Machine_6: 326784868
   mipmapLimitGroupName: 
