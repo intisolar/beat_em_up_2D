@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f0513e95bb6933549b214a26d9b53793
+guid: 720eab06e694ce0448796c47828b3252
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,23 +97,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_52x63_0
+      name: Vending_Machine_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 52
-        height: 63
+        x: 1
+        y: 1
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf17ce0e9019efe4ca0c16553503b624
+      internalID: -1643090503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vending_Machine_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25348671c4abaf94cb7aea23af11e910
+      internalID: -82773360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vending_Machine_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6e0c1c760c39b4eb4fe8cbe85146b5
+      internalID: 944360848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vending_Machine_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4d1b604532ed8498bf772677c5fcb6
+      internalID: -1370250734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vending_Machine_42x64_0
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1
+        width: 42
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ba0c9479381e67950800000000000000
-      internalID: 6446587871922602155
+      spriteID: 3aaab3a3a9c03c447903b3fd0cad0c73
+      internalID: -159148778
       vertices: []
       indices: 
       edges: []
@@ -132,7 +220,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player_52x63_0: 6446587871922602155
+      Vending_Machine_0: -1643090503
+      Vending_Machine_1: -82773360
+      Vending_Machine_2: 944360848
+      Vending_Machine_3: -1370250734
+      Vending_Machine_4: 1230396491
+      Vending_Machine_42x64_0: -159148778
+      Vending_Machine_5: -993793488
+      Vending_Machine_6: 326784868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
