@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 632857209208681506}
   - component: {fileID: 8547676830306867861}
   m_Layer: 5
-  m_Name: Comenzar - Button
+  m_Name: Elegir - Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nivel 1
+  m_text: Elegir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25da73142c2e0bf4185b6270b8a832c5, type: 2}
   m_sharedMaterial: {fileID: 4013364493399990960, guid: 25da73142c2e0bf4185b6270b8a832c5, type: 2}
@@ -821,7 +821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 150, y: 33.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8547676830306867861
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1743916001619521129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fca2e48f7e71714b8986fb93e5f1b23, type: 3}
+  m_Script: {fileID: 11500000, guid: 1910545e87bf1ef4d9063883a6daef9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
