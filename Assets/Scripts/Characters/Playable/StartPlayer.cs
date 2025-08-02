@@ -41,6 +41,6 @@ public class StartPlayer : MonoBehaviour
         }
 
         newParent.transform.position = transform.position;
-        transform.SetParent(newParent.transform);
+        newParent.transform.SetParent(transform);
     }
 }
