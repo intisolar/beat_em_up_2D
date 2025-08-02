@@ -27,16 +27,6 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     [Header("Movement Stats")]
     [SerializeField] private float _moveSpeed = 1f;
     public float MoveSpeed { get; private set; }
-    [SerializeField] private float _attackSpeed = 1f;
-    public float AttackSpeed { get; private set; }
-
-    [Header("Attack Data")]
-    [SerializeField] private LayerMask _targetLayers;
-    public LayerMask TargetLayers { get; private set; }
-    [SerializeField] private Transform _weapon;
-    public Transform Weapon { get; private set; }
-    [SerializeField] private float _range = 0.5f;
-    public float Range { get; private set; }
     #endregion
 
     #region Unity Methods
@@ -47,11 +37,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
         AttackPower = _attackPower;
         Defense = _defense;
         MoveSpeed = _moveSpeed;
-        AttackSpeed = _attackSpeed;
         KnockbackPower = _knockbackPower;
-        TargetLayers = _targetLayers;
-        Weapon = _weapon;
-        Range = _range;
     }
     #endregion
 

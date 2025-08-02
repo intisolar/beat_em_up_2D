@@ -4,19 +4,18 @@ using Handlers;
 
 public class GuitarPlayer : PlayerCharacter
 {
+    [Header("Movement Limits")]
+    [SerializeField] private float _maxPosition = 0.5f;
+    [SerializeField] private float _minPosition = -1f;
+
     [Header("Attack")]
     [SerializeField] private float _attackDuration = 0.25f;
     [SerializeField] private float _attackDelay = 0.1f;
     [SerializeField] private GameObject _attackHitBox;
 
-    [Header("Movement")]
-    [SerializeField] private float _speed = 1f;
-    [SerializeField] private float _maxPosition = 0.5f;
-    [SerializeField] private float _minPosition = -1f;
+    [Header("Dependencies")]
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private Rigidbody _rigidbody;
-
-    [Header("Animation")]
     [SerializeField] private Animator _animator;
 
     private bool _canMoveY = false;
@@ -28,7 +27,7 @@ public class GuitarPlayer : PlayerCharacter
 
     protected void Start()
     {
-        _movementHandler = new MovementHandler(_rigidbody, _speed, _minPosition, _maxPosition);
+        _movementHandler = new MovementHandler(_rigidbody, MoveSpeed, _minPosition, _maxPosition);
         _animationHandler = new AnimationHandler(_animator);
         _attackHandler = new AttackHandler(_animationHandler, _attackHitBox, _attackDelay, _attackDuration);
     }
