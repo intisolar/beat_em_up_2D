@@ -13,7 +13,6 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     [Header("Health Stats")]
     [SerializeField] private int _maxHealth = 10;
     public int MaxHealth { get; private set; }
-    [SerializeField] private int _currentHealth;
     public int CurrentHealth { get; private set; }
 
     [Header("Combat Stats")]
@@ -33,7 +32,6 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     protected virtual void Awake()
     {
         MaxHealth = _maxHealth;
-        CurrentHealth = _currentHealth;
         AttackPower = _attackPower;
         Defense = _defense;
         MoveSpeed = _moveSpeed;
