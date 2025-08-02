@@ -11,35 +11,35 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 {
     #region Variables
     [Header("Stats")]
-    [SerializeField] protected int _maxHealth = -1;
-    [SerializeField] protected int _currentHealth = -1;
-    [SerializeField] protected int _attackPower = -1;
-    [SerializeField] protected int _defense = -1;
-    [SerializeField] protected float _moveSpeed = -1f;
-    [SerializeField] protected float _attackSpeed = -1f;
-    [SerializeField] protected float _knockbackPower = -1f;
+    [field: SerializeField] public int MaxHealth { get; private set; } = 10;
+    [field: SerializeField] public int CurrentHealth { get; set; }
+    [field: SerializeField] public float AttackPower { get; private set; } = 10;
+    [field: SerializeField] public float Defense { get; private set; } = 5;
+    [field: SerializeField] public float MoveSpeed { get; private set; } = 1f;
+    [field: SerializeField] public float AttackSpeed { get; private set; } = 1f;
+    [field: SerializeField] public float KnockbackPower { get; private set; } = 5f;
 
     [Header("Attack Data")]
-    [SerializeField] protected LayerMask _targetLayers;
-    [SerializeField] protected Transform _weapon;
-    [SerializeField] protected float _range = -1f;
+    [field: SerializeField] public LayerMask TargetLayers { get; private set; }
+    [field: SerializeField] public Transform Weapon { get; private set; }
+    [field: SerializeField] public float Range { get; private set; } = 0.5f;
     #endregion
 
     #region Unity Methods
     protected virtual void Awake()
     {
-        InitStats();
+        
     }
     #endregion
 
     #region Status Life
     public void TakeDamage(byte amount, Transform attackerTransform)
     {
-        _currentHealth = UpdateHealth(_currentHealth, amount);
+        CurrentHealth = UpdateHealth(CurrentHealth, amount);
 
-        if (_currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -58,30 +58,5 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     public abstract bool PerformAttack();
 
     #region Properties
-    /// <summary>
-    /// It will give standard stats to a character but they will be ideally handled by the children
-    /// </summary>
-    protected virtual void InitStats()
-    {
-        Debug.Log("WARNING: CharacterBase.InitStats - it should not come here. Stats handled by children");
-        
-        if (_maxHealth <= 0) _maxHealth = 100;
-        if (_currentHealth <= 0) _currentHealth = _maxHealth;
-        if (_attackPower <= 0) _attackPower = 10;
-        if (_defense <= 0) _defense = 5;
-        if (_moveSpeed <= 0f) _moveSpeed = 5f;
-        if (_attackSpeed <= 0f) _attackSpeed = 1f;
-        if (_knockbackPower <= 0f) _knockbackPower = 5f;
-        if (_range <= 0f) _range = 0.5f;
-    }
-    
-    public int MaxHealth { get => _maxHealth; protected set => _maxHealth = value; }
-    public int CurrentHealth { get => _currentHealth; set => _currentHealth = value; }
-    public int AttackPower { get => _attackPower; private set => _attackPower = value; }
-    public int Defense { get => _defense; private set => _defense = value; }
-    public float MoveSpeed { get => _moveSpeed; private set => _moveSpeed = value; }
-    public float AttackSpeed { get => _attackSpeed; private set => _attackSpeed = value; }
-    public float KnockbackPower { get => _knockbackPower; private set => _knockbackPower = value; }
-    public Transform Weapon { get => _weapon; set => _weapon = value; }
     #endregion
 }

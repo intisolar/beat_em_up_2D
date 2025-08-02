@@ -2028,18 +2028,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905fb3349695641449c773d252e692b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 0
-  _currentHealth: 0
-  _attackPower: 0
-  _defense: 0
-  _moveSpeed: 0.5
-  _attackSpeed: 0
-  _knockbackPower: 0
-  _targetLayers:
+  <MaxHealth>k__BackingField: 10
+  <CurrentHealth>k__BackingField: 10
+  <AttackPower>k__BackingField: 10
+  <Defense>k__BackingField: 5
+  <MoveSpeed>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 1
+  <KnockbackPower>k__BackingField: 5
+  <TargetLayers>k__BackingField:
     serializedVersion: 2
-    m_Bits: 128
-  _weapon: {fileID: 0}
-  _range: 0
+    m_Bits: 0
+  <Weapon>k__BackingField: {fileID: 0}
+  <Range>k__BackingField: 0.5
   initialDelayMin: 0
   initialDelayMax: 3
   visionRadius: 1

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Handlers;
@@ -29,7 +28,6 @@ public class GuitarPlayer : PlayerCharacter
 
     protected void Start()
     {
-        base.InitStats();
         _movementHandler = new MovementHandler(_rigidbody, _speed, _minPosition, _maxPosition);
         _animationHandler = new AnimationHandler(_animator);
         _attackHandler = new AttackHandler(_animationHandler, _attackHitBox, _attackDelay, _attackDuration);

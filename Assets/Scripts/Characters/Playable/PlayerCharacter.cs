@@ -11,18 +11,4 @@ public abstract class PlayerCharacter : CharacterBase
     {
         return true;
     }
-
-    /// <summary>
-    /// It will give standard stats to all playerCharacters
-    /// </summary>
-    protected override void InitStats()
-    {
-        _maxHealth = 100;
-        _currentHealth = MaxHealth;
-        _attackPower = 10;
-        _defense = 5;
-        _moveSpeed = 5f;
-        _attackSpeed = 1f;
-        _knockbackPower = 5f;
-    }
 }

@@ -15,8 +15,9 @@ public class ChaseState : IState
 
     public void OnState()
     {
-        if (_playerTransform == null || _enemy.Rigidbody == null)
+        if (_playerTransform == null || _enemy == null || _enemy.Rigidbody == null)
         {
+            Debug.LogWarning("ChaseState: Missing references or Rigidbody is null.");
             return;
         }
 
