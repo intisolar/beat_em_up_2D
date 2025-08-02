@@ -2032,13 +2032,13 @@ MonoBehaviour:
   _currentHealth: 0
   _attackPower: 10
   _defense: 5
+  _knockbackPower: 5
   _moveSpeed: 1
   _attackSpeed: 1
-  _knockbackPower: 5
   _targetLayers:
     serializedVersion: 2
     m_Bits: 0
-  _weapon: {fileID: 0}
+  _weapon: {fileID: 489005087}
   _range: 0.5
   initialDelayMin: 0
   initialDelayMax: 3
