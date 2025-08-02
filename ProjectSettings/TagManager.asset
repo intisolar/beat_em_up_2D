@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Attack
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,8 +12,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
-  - Player
+  - 
+  - 
   - 
   - 
   - 

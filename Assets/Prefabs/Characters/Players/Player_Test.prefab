@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5005844744981951739}
   - component: {fileID: 2177735240864138365}
   - component: {fileID: 5862325038097080115}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: First
-  m_TagString: Attack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,18 +327,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f751dbdcdbaae14b94d153589fee17b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: -1
-  _currentHealth: -1
-  _attackPower: -1
-  _defense: -1
-  _moveSpeed: -1
-  _attackSpeed: -1
-  _knockbackPower: -1
-  _targetLayers:
+  <MaxHealth>k__BackingField: 10
+  <CurrentHealth>k__BackingField: 0
+  <AttackPower>k__BackingField: 10
+  <Defense>k__BackingField: 5
+  <MoveSpeed>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 1
+  <KnockbackPower>k__BackingField: 5
+  <TargetLayers>k__BackingField:
     serializedVersion: 2
-    m_Bits: 128
-  _weapon: {fileID: 0}
-  _range: -1
+    m_Bits: 0
+  <Weapon>k__BackingField: {fileID: 0}
+  <Range>k__BackingField: 0.5
   _attackDuration: 0.25
   _attackDelay: 0.2
   _attackHitBox: {fileID: 2614287518544926260}
