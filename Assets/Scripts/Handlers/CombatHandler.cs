@@ -19,11 +19,13 @@ namespace Handlers
         private static IEnumerator AttackCoroutine(GameObject hitboxObject, float duration, byte attackPower)
         {
             hitboxObject.SetActive(true);
-            var hitBoxComponent = hitboxObject.GetComponent<HitBoxComponent>();
+            var hitBoxComponent = hitboxObject.GetComponent<AttackHitBox>();
+
             if (hitBoxComponent != null)
             {
                 hitBoxComponent.SetAttackPower(attackPower);
             }
+            
             yield return new WaitForSeconds(duration);
             hitboxObject.SetActive(false);
         }

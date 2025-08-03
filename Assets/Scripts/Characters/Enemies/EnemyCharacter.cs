@@ -5,7 +5,7 @@ using UnityEngine;
  * 
  * It manages generic behavior of enemy subclasses
  ***/
-public abstract class EnemyCharacter : CharacterBase, IOnGuard, IGenerous
+public abstract class EnemyCharacter : CharacterBase
 {
     public Rigidbody Rigidbody { get; private set; }
 

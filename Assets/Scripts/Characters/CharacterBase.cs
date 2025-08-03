@@ -7,7 +7,7 @@ using UnityEngine;
  *  Defines common attributes like health, energy, and other stats.
  *  Abstract methods for movement and interactions.
  */
-public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
+public abstract class CharacterBase : MonoBehaviour
 {
     #region Variables
     [Header("Health Stats")]
@@ -20,7 +20,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
     public float AttackPower { get; private set; }
     [SerializeField] private float _defense = 5;
     public float Defense { get; private set; }
-    [SerializeField] private float _knockbackPower = 5f;
+    [SerializeField] private float _knockBackPower = 5f;
     public float KnockbackPower { get; private set; }
 
     [Header("Movement Stats")]
@@ -35,7 +35,7 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
         AttackPower = _attackPower;
         Defense = _defense;
         MoveSpeed = _moveSpeed;
-        KnockbackPower = _knockbackPower;
+        KnockbackPower = _knockBackPower;
     }
     #endregion
 
@@ -57,7 +57,6 @@ public abstract class CharacterBase : MonoBehaviour, IAggressive, IDamageable
 
     protected virtual void Die()
     {
-        Debug.Log($"{gameObject.name} died.");
         Destroy(gameObject);
     }
     #endregion

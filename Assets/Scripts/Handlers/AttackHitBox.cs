@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Handlers
 {
-    public class HitBoxComponent : MonoBehaviour
+    public class AttackHitBox : MonoBehaviour
     {
         private byte _attackPower;
 
