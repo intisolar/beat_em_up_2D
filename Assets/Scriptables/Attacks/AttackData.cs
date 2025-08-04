@@ -7,10 +7,20 @@ public class AttackData : ScriptableObject
     [System.Serializable]
     public class Attack
     {
-        public string AttackName;
+        public CommonAttackType AttackType;
         public byte AttackPower;
         public float AttackDuration;
         public float AttackDelay;
+    }
+
+    public enum CommonAttackType
+    {
+        Punch,
+        Kick,
+        Uppercut,
+        SpecialMove,
+        Grab,
+        Throw
     }
 
     public List<Attack> Attacks;
