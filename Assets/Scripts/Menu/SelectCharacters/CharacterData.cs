@@ -7,7 +7,7 @@ public class CharacterData : ScriptableObject
     [System.Serializable]
     public class Character
     {
-        public GameObject _player;
+        public GameObject Player;
         public Sprite Image;
     }
     public List<Character> Characters;

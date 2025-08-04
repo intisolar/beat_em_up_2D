@@ -20,11 +20,11 @@ public class StartPlayer : MonoBehaviour
 
         if (_characterData != null && _indexPlayer < _characterData.Characters.Count && _indexPlayer >= 0)
         {
-            newParent = Instantiate(_characterData.Characters[_indexPlayer]._player);
+            newParent = Instantiate(_characterData.Characters[_indexPlayer].Player);
         }
         else
         {
-            newParent = Instantiate(_characterData.Characters[0]._player);
+            newParent = Instantiate(_characterData.Characters[0].Player);
 
             if (_characterData == null)
             {

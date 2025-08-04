@@ -14,8 +14,7 @@ public abstract class PlayerCharacter : CharacterBase
     [SerializeField] private float _minPosition = -1f;
 
     [Header("Attack")]
-    [SerializeField] private float _attackDuration = 0.25f;
-    [SerializeField] private float _attackDelay = 0.1f;
+    [SerializeField] private AttackData _attackData;
     [SerializeField] private GameObject _attackHitBox;
 
     private AttackHandler _attackHandler;
@@ -36,14 +35,14 @@ public abstract class PlayerCharacter : CharacterBase
         _animationHandler = new AnimationHandler(_animator);
         
         _movementHandler = new MovementHandler(_rigidbody, MoveSpeed, _minPosition, _maxPosition);
-        _attackHandler = new AttackHandler(_animationHandler, _attackHitBox, _attackDelay, _attackDuration);
+        _attackHandler = new AttackHandler(_animationHandler, _attackHitBox);
     }
 
     private void Update()
     {
         if (_playerInput.actions["Attack"].triggered)
         {
-            StartCoroutine(_attackHandler.ExecuteAttack(1));
+            StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0));
         }
     }
 
@@ -85,10 +84,5 @@ public abstract class PlayerCharacter : CharacterBase
         {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
-    }
-
-    public override bool PerformAttack()
-    {
-        return true;
     }
 }

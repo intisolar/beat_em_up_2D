@@ -38,9 +38,4 @@ public abstract class EnemyCharacter : CharacterBase
     /// </summary>
     /// <param name="direction"></param>
     public void Patrol(string direction) { }
-
-    public override bool PerformAttack()
-    {
-        throw new System.NotImplementedException();
-    }
 }

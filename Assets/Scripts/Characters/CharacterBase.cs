@@ -60,8 +60,4 @@ public abstract class CharacterBase : MonoBehaviour
         Destroy(gameObject);
     }
     #endregion
-
-    #region Movements
-    public abstract bool PerformAttack();
-    #endregion
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2177735240864138365}
   - component: {fileID: 5862325038097080115}
   m_Layer: 0
-  m_Name: First
+  m_Name: Guitar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,23 +328,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
-  _currentHealth: 0
   _attackPower: 10
   _defense: 5
-  _knockbackPower: 5
+  _knockBackPower: 5
   _moveSpeed: 1
-  _attackSpeed: 1
-  _targetLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  _weapon: {fileID: 5268932531034169904}
-  _range: 0.5
-  _attackDuration: 0.25
-  _attackDelay: 0.2
-  _attackHitBox: {fileID: 2614287518544926260}
-  _speed: 1
   _maxPosition: 0.5
   _minPosition: -1
+  _attackData: {fileID: 11400000, guid: 7da66823b7552a6488141251d57fe171, type: 2}
+  _attackHitBox: {fileID: 2614287518544926260}
   _playerInput: {fileID: 7429457434887231096}
   _rigidbody: {fileID: 1103861090347909396}
   _animator: {fileID: 1683023680169870211}
