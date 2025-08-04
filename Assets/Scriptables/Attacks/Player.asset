@@ -15,5 +15,5 @@ MonoBehaviour:
   Attacks:
   - AttackName: Guitar
     AttackPower: 1
-    AttackDuration: 1
+    AttackDuration: 0.25
     AttackDelay: 0.2
