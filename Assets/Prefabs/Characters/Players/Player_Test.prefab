@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 2152410633540062239}
   m_Layer: 0
   m_Name: Player_Test
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,9 +328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
-  _attackPower: 10
-  _defense: 5
-  _knockBackPower: 5
   _moveSpeed: 1
   _maxPosition: 0.5
   _minPosition: -1

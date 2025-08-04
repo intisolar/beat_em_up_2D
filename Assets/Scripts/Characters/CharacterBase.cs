@@ -7,7 +7,7 @@ using UnityEngine;
  *  Defines common attributes like health, energy, and other stats.
  *  Abstract methods for movement and interactions.
  */
-public abstract class CharacterBase : MonoBehaviour
+public abstract class CharacterBase : MonoBehaviour, IDamageable
 {
     #region Variables
     [Header("Health Stats")]
@@ -25,6 +25,7 @@ public abstract class CharacterBase : MonoBehaviour
     {
         MaxHealth = _maxHealth;
         MoveSpeed = _moveSpeed;
+        CurrentHealth = MaxHealth;
     }
     #endregion
 

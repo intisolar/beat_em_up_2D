@@ -23,11 +23,14 @@ public abstract class EnemyCharacter : CharacterBase
 
     public bool DetectPlayer(EnemyAIController aiController, out Transform playerTransform)
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, aiController.VisionRadius, LayerMask.GetMask("Player"));
-        if (hits.Length > 0 && hits[0].TryGetComponent<PlayerCharacter>(out var player))
+        Collider[] hits = Physics.OverlapSphere(transform.position, aiController.VisionRadius);
+        foreach (var hit in hits)
         {
-            playerTransform = player.transform;
-            return true;
+            if (hit.CompareTag("Player") && hit.TryGetComponent<PlayerCharacter>(out var player))
+            {
+                playerTransform = player.transform;
+                return true;
+            }
         }
 
         playerTransform = null;
