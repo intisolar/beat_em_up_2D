@@ -27,8 +27,8 @@ public abstract class PlayerCharacter : CharacterBase
     private bool _canMoveY = false;
     private Vector3 _lastPosition;
 
-    private MovementHandler _movementHandler;
     private AnimationHandler _animationHandler;
+    private MovementHandler _movementHandler;    
 
     protected void Start()
     {

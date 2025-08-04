@@ -922,7 +922,7 @@ GameObject:
   m_Layer: 0
   m_Name: PositionPlayer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1207,7 +1207,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2014,6 +2014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae17e552b4feec8418948fb6ad95851c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialDelayMin: 0
+  initialDelayMax: 3
+  visionRadius: 1
+  initialDirection: {x: 0, y: 0}
   _owner: {fileID: 8871842239759352837}
   _rigidbody: {fileID: 3834620287929089879}
 --- !u!114 &8871842239759352837
@@ -2029,21 +2033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
-  _currentHealth: 0
-  _attackPower: 10
-  _defense: 5
-  _knockbackPower: 5
   _moveSpeed: 1
-  _attackSpeed: 1
-  _targetLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  _weapon: {fileID: 489005087}
-  _range: 0.5
-  initialDelayMin: 0
-  initialDelayMax: 3
-  visionRadius: 1
-  initialDirection: {x: 1, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

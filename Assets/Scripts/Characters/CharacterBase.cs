@@ -15,14 +15,6 @@ public abstract class CharacterBase : MonoBehaviour
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get; private set; }
 
-    [Header("Combat Stats")]
-    [SerializeField] private float _attackPower = 10;
-    public float AttackPower { get; private set; }
-    [SerializeField] private float _defense = 5;
-    public float Defense { get; private set; }
-    [SerializeField] private float _knockBackPower = 5f;
-    public float KnockbackPower { get; private set; }
-
     [Header("Movement Stats")]
     [SerializeField] private float _moveSpeed = 1f;
     public float MoveSpeed { get; private set; }
@@ -32,10 +24,7 @@ public abstract class CharacterBase : MonoBehaviour
     protected virtual void Awake()
     {
         MaxHealth = _maxHealth;
-        AttackPower = _attackPower;
-        Defense = _defense;
         MoveSpeed = _moveSpeed;
-        KnockbackPower = _knockBackPower;
     }
     #endregion
 

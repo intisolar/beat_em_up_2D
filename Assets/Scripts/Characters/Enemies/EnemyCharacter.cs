@@ -9,33 +9,28 @@ public abstract class EnemyCharacter : CharacterBase
 {
     public Rigidbody Rigidbody { get; private set; }
 
-    [Header("Patrol and Detect")]
-    [SerializeField] private float initialDelayMin = 0f;
-    [SerializeField] private float initialDelayMax = 3f;
-    [SerializeField] private float visionRadius = 1f;
-    [SerializeField] private Vector2 initialDirection;
-
-    public float VisionRadius { get => visionRadius; private set => visionRadius = value; }
-    public float InitialDelayMin { get => initialDelayMin; set => initialDelayMin = value; }
-    public float InitialDelayMax { get => initialDelayMax; set => initialDelayMax = value; }
-    public Vector2 InitialDirection { get => initialDirection; set => initialDirection = value; }
-
     protected override void Awake()
     {
         base.Awake();
         Rigidbody = GetComponent<Rigidbody>();
     }
-    
-    public bool isLucky()
+
+    public void Patrol(Vector3 direction, float moveSpeed, float duration)
     {
-        return false;
+        Vector3 movement = direction.normalized * moveSpeed * Time.deltaTime;
+        Rigidbody.MovePosition(Rigidbody.position + movement);
     }
 
-    public void OnDrop() { }
+    public bool DetectPlayer(EnemyAIController aiController, out Transform playerTransform)
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, aiController.VisionRadius, LayerMask.GetMask("Player"));
+        if (hits.Length > 0 && hits[0].TryGetComponent<PlayerCharacter>(out var player))
+        {
+            playerTransform = player.transform;
+            return true;
+        }
 
-    /// <summary>
-    /// Cómo hago para que se mueva por determinado tiempo y pare? o pare si colisiona con algo y se detenga unos segundos y arranque en dirección contraria? 
-    /// </summary>
-    /// <param name="direction"></param>
-    public void Patrol(string direction) { }
+        playerTransform = null;
+        return false;
+    }
 }

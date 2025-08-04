@@ -30,9 +30,9 @@ public class StateController
         }
     }
 
-    public void DetectPlayer(EnemyCharacter enemy)
+    public void DetectPlayer(EnemyAIController aiController, EnemyCharacter enemy)
     {
-        Collider[] hits = Physics.OverlapSphere(enemy.transform.position, enemy.VisionRadius, LayerMask.GetMask("Player"));
+        Collider[] hits = Physics.OverlapSphere(enemy.transform.position, aiController.VisionRadius, LayerMask.GetMask("Player"));
 
         if (hits.Length > 0 && hits[0].TryGetComponent<PlayerCharacter>(out var player))
         {
@@ -40,7 +40,7 @@ public class StateController
         }
         else if (_currentState is not PatrolState)
         {
-            ChangeState(new PatrolState(enemy, 0f, enemy.InitialDirection));
+            ChangeState(new PatrolState(enemy, 0f, aiController.InitialDirection));
         }
     }
 }
