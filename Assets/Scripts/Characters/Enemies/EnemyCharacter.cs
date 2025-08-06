@@ -7,6 +7,7 @@ using UnityEngine;
  ***/
 public abstract class EnemyCharacter : CharacterBase
 {
+    [SerializeField] private int scoreValue = 100;
     public Rigidbody Rigidbody { get; private set; }
 
     protected override void Awake()
