@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8aec23db4be1430438c95a78a445aa1d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Obfuscator/Editor/BuildPostProcessor.cs
+  uploadId: 774162

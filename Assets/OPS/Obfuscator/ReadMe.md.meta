@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ca7f6488a1eedf9488a4117c71c8cd89
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Obfuscator/ReadMe.md
+  uploadId: 774162

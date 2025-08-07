@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 941d6d2e4fdb0f641835be01a9c65a5e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Obfuscator/Plugins/OPS.Obfuscator.asmdef
+  uploadId: 774162

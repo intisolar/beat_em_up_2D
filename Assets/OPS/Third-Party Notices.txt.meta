@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c99db18367334ec4cad6e2bdb458afff
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Third-Party Notices.txt
+  uploadId: 774162

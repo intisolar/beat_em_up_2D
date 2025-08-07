@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7e1bf1a295971944f9b892ea8d72ed5c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Obfuscator/Settings/Obfuscator_Settings.json
+  uploadId: 774162
