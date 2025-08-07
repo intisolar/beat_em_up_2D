@@ -7,7 +7,7 @@ using Handlers;
  * 
  * It manages generic behavior of player subclasses
  ***/
-public abstract class PlayerCharacter : CharacterBase
+public class PlayerCharacter : CharacterBase
 {
     [Header("Movement Limits")]
     [SerializeField] private float _maxPosition = 0.5f;
@@ -21,7 +21,6 @@ public abstract class PlayerCharacter : CharacterBase
 
     [Header("Dependencies")]
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Animator _animator;
 
     private bool _canMoveY = false;
@@ -32,9 +31,25 @@ public abstract class PlayerCharacter : CharacterBase
 
     protected void Start()
     {
+        InitializeComponents();
+    }
+
+    private void InitializeComponents()
+    {
+        if (_playerInput == null)
+        {
+            _playerInput = GetComponent<PlayerInput>();
+            Debug.LogWarning("PlayerInput no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
+
+        if (_animator == null)
+        {
+            _animator = GetComponent<Animator>();
+            Debug.LogWarning("Animator no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
+
         _animationHandler = new AnimationHandler(_animator);
-        
-        _movementHandler = new MovementHandler(_rigidbody, MoveSpeed, _minPosition, _maxPosition);
+        _movementHandler = new MovementHandler(Rigidbody, MoveSpeed, _minPosition, _maxPosition);
         _attackHandler = new AttackHandler(_animationHandler, _attackHitBox);
     }
 
@@ -52,21 +67,21 @@ public abstract class PlayerCharacter : CharacterBase
 
         if (!_canMoveY)
         {
-            _movementHandler.HandleIdleState(_rigidbody.position);
+            _movementHandler.HandleIdleState(Rigidbody.position);
         }
 
-        _lastPosition = _rigidbody.position;
+        _lastPosition = Rigidbody.position;
     }
 
     private void Move()
     {
         Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
-        Vector3 currentPosition = _rigidbody.position;
+        Vector3 currentPosition = Rigidbody.position;
 
         _canMoveY = Mathf.Abs(currentPosition.z - _lastPosition.z) > Mathf.Epsilon;
 
         Vector3 velocity = _movementHandler.CalculateVelocity(input, currentPosition, _lastPosition, _canMoveY);
-        _rigidbody.linearVelocity = velocity;
+        Rigidbody.linearVelocity = velocity;
 
         FlipCharacter(input.x);
 

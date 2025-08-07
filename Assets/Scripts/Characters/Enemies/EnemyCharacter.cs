@@ -5,15 +5,14 @@ using UnityEngine;
  * 
  * It manages generic behavior of enemy subclasses
  ***/
-public abstract class EnemyCharacter : CharacterBase
+public class EnemyCharacter : CharacterBase
 {
+    [Header("Points")]
     [SerializeField] private int scoreValue = 100;
-    public Rigidbody Rigidbody { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
-        Rigidbody = GetComponent<Rigidbody>();
     }
 
     public void Patrol(Vector3 direction, float moveSpeed, float duration)
@@ -36,5 +35,10 @@ public abstract class EnemyCharacter : CharacterBase
 
         playerTransform = null;
         return false;
+    }
+
+    public override void TakeDamage(byte amount, Transform attackerTransform)
+    {
+        base.TakeDamage(amount, attackerTransform);
     }
 }

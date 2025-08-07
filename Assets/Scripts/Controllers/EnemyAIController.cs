@@ -21,6 +21,8 @@ public class EnemyAIController : MonoBehaviour
 
     private void Awake()
     {
+        InitializeComponents();
+
         float offset = Random.Range(initialDelayMin, initialDelayMax);
         StateController = new StateController(new PatrolState(_owner, offset, initialDirection));
     }
@@ -29,5 +31,20 @@ public class EnemyAIController : MonoBehaviour
     {
         StateController.UpdateState();
         StateController.DetectPlayer(this, _owner);
+    }
+
+    private void InitializeComponents()
+    {
+        if (_rigidbody == null)
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+            Debug.LogWarning("Rigidbody no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
+
+        if (_owner == null)
+        {
+            _owner = GetComponent<EnemyCharacter>();
+            Debug.LogWarning("EnemyCharacter no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
     }
 }

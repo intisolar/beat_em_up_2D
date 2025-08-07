@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c26fca82419bcf46aa63c54b18de65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLife: 5
+  _life: 10
   _animator: {fileID: 1488790771}
   _stateCount: 5
 --- !u!65 &1488790769
@@ -1934,7 +1934,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9db7996e8cdc68c4a9e03ed572baa2b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d8add0b566bc094ca55f1b2e3646d60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2063,11 +2063,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2602951439515698605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905fb3349695641449c773d252e692b0, type: 3}
+  m_Script: {fileID: 11500000, guid: fa45da693d000d7458c30e34a3f30a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10
+  _maxLife: 1
   _moveSpeed: 1
+  _rigidbody: {fileID: 3834620287929089879}
+  scoreValue: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

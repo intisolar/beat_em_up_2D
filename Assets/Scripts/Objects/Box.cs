@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Box : DestroyableObject  
+public class Crate : DestroyableObject  
 {
     private void Start()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class DestroyableObject : MonoBehaviour, IDamageable
 {
     [Header("Stats")]
-    [SerializeField] protected int _currentLife = 10;
+    [SerializeField] protected int _life = 10;
     private int _maxLife;
     
     [Header("Animation")]
@@ -13,9 +13,13 @@ public abstract class DestroyableObject : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        _maxLife = _currentLife;
+        _maxLife = _life;
 
-        if (_animator != null)
+        if (_animator == null)
+        {
+            _animator = GetComponent<Animator>();
+        }
+        else
         {
             _animator.enabled = false;
         }
@@ -23,14 +27,14 @@ public abstract class DestroyableObject : MonoBehaviour, IDamageable
 
     public virtual void TakeDamage(byte amount, Transform attackerTransform)
     {
-        _currentLife = UpdateHealth(_currentLife, amount);
+        _life = UpdateHealth(_life, amount);
 
         if (_animator != null)
         {
             _animator.enabled = false;
         }
 
-        if (_currentLife <= 0)
+        if (_life <= 0)
         {
             Destroy(gameObject);
         }
@@ -54,7 +58,7 @@ public abstract class DestroyableObject : MonoBehaviour, IDamageable
         if (_animator == null) return;
 
         int lifePerState = Mathf.CeilToInt((float)_maxLife / _stateCount);
-        int stateIndex = Mathf.Clamp((_maxLife - _currentLife) / lifePerState, 0, _stateCount - 1);
+        int stateIndex = Mathf.Clamp((_maxLife - _life) / lifePerState, 0, _stateCount - 1);
         string stateName = $"{_animationPrefix}_State_{stateIndex}";
 
         if (_animator.HasState(0, Animator.StringToHash(stateName)))

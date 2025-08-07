@@ -324,7 +324,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2899891666890468426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f751dbdcdbaae14b94d153589fee17b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ade0f6defa3c8d44a7a4769bcea85bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
