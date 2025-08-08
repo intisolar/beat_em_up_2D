@@ -3,14 +3,14 @@ using UnityEngine;
 public class StateController
 {
     private IState _currentState;
-    private bool _isRotated = false; // Variable para controlar si ya se ha rotado
-    private float _previousX; // Variable para almacenar la posición anterior en X
+    private bool _isRotated = false;
+    private float _previousX;
 
     public StateController(IState initialState)
     {
         _currentState = initialState;
         _currentState.OnEnter();
-        _previousX = 0f; // Inicializar la posición anterior en X
+        _previousX = 0f;
     }
 
     public void ChangeState(IState newState)

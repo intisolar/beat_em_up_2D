@@ -100,4 +100,10 @@ public class PlayerCharacter : CharacterBase
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
     }
+
+    public override void TakeDamage(byte amount, Transform attackerTransform)
+    {
+        base.TakeDamage(amount, attackerTransform);
+        Debug.Log($"{gameObject.name} ha recibido {amount} de daño. Salud actual: {CurrentHealth}");
+    }
 }
