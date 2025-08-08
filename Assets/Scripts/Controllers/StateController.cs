@@ -3,11 +3,14 @@ using UnityEngine;
 public class StateController
 {
     private IState _currentState;
+    private bool _isRotated = false; // Variable para controlar si ya se ha rotado
+    private float _previousX; // Variable para almacenar la posición anterior en X
 
     public StateController(IState initialState)
     {
         _currentState = initialState;
         _currentState.OnEnter();
+        _previousX = 0f; // Inicializar la posición anterior en X
     }
 
     public void ChangeState(IState newState)
@@ -42,5 +45,18 @@ public class StateController
         {
             ChangeState(new PatrolState(enemy, 0f, aiController.InitialDirection));
         }
+
+        if (enemy.transform.position.x < _previousX && !_isRotated)
+        {
+            enemy.transform.Rotate(0, -180, 0);
+            _isRotated = true;
+        }
+        else if (enemy.transform.position.x > _previousX && _isRotated)
+        {
+            enemy.transform.Rotate(0, 180, 0);
+            _isRotated = false;
+        }
+
+        _previousX = enemy.transform.position.x;
     }
 }

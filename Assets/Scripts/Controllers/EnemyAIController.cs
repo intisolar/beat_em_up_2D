@@ -5,15 +5,15 @@ public class EnemyAIController : MonoBehaviour
     public StateController StateController { get; private set; }
 
     [Header("Patrol and Detect")]
-    [SerializeField] private float initialDelayMin = 0f;
-    [SerializeField] private float initialDelayMax = 3f;
-    [SerializeField] private float visionRadius = 1f;
-    [SerializeField] private Vector2 initialDirection;
+    [SerializeField] private float _initialDelayMin = 0f;
+    [SerializeField] private float _initialDelayMax = 3f;
+    [SerializeField] private float _visionRadius = 1f;
+    [SerializeField] private Vector2 _initialDirection;
 
-    public float VisionRadius => visionRadius;
-    public float InitialDelayMin => initialDelayMin;
-    public float InitialDelayMax => initialDelayMax;
-    public Vector2 InitialDirection => initialDirection;
+    public float VisionRadius => _visionRadius;
+    public float InitialDelayMin => _initialDelayMin;
+    public float InitialDelayMax => _initialDelayMax;
+    public Vector2 InitialDirection => _initialDirection;
 
     [Header("Dependencies")]
     [SerializeField] private EnemyCharacter _owner;
@@ -23,8 +23,8 @@ public class EnemyAIController : MonoBehaviour
     {
         InitializeComponents();
 
-        float offset = Random.Range(initialDelayMin, initialDelayMax);
-        StateController = new StateController(new PatrolState(_owner, offset, initialDirection));
+        float offset = Random.Range(_initialDelayMin, _initialDelayMax);
+        StateController = new StateController(new PatrolState(_owner, offset, _initialDirection));
     }
 
     private void Update()

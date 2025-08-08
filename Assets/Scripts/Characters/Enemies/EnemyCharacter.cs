@@ -8,7 +8,7 @@ using UnityEngine;
 public class EnemyCharacter : CharacterBase
 {
     [Header("Points")]
-    [SerializeField] private int scoreValue = 100;
+    [SerializeField] private int _scoreValue = 100;
 
     protected override void Awake()
     {
@@ -40,5 +40,11 @@ public class EnemyCharacter : CharacterBase
     public override void TakeDamage(byte amount, Transform attackerTransform)
     {
         base.TakeDamage(amount, attackerTransform);
+    }
+
+    protected override void Die()
+    {
+        UIManager.Instance.AddScore(_scoreValue);
+        base.Die();
     }
 }

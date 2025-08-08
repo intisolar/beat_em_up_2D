@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 /***
@@ -13,54 +11,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     
-    private void Init()
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-        
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void Awake()
-    {
-        Init();
-    }
-
-    void Start()
-    {
-        StartCoroutine(Tick());
-        StartCoroutine(FixedUpdateTick());  // Lógica frecuente (movimiento físico)
-    }
-
-    /// <summary>
-    /// Co-rutine for game updates longer than frame by frame
-    /// </summary>
-    public static Action OnTick1s;
-    IEnumerator Tick()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            OnTick1s?.Invoke();
-        }
-    }
-
-    /// <summary>
-    /// Co-rutine to use the same time than fixedUpdate for non-monobehaviour classes (like states)
-    /// </summary>
-    public static Action OnFixedUpdateTick;
-
-    IEnumerator FixedUpdateTick()
-    {
-        var wait = new WaitForSeconds(Time.fixedDeltaTime); // ~0.02s por defecto
-        while (true)
-        {
-            yield return wait;
-            OnFixedUpdateTick?.Invoke();
-        }
     }
 }
