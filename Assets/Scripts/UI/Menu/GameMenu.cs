@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -7,26 +9,35 @@ public class GameMenu : MonoBehaviour
 
     [Header("Dependencies")]
     [SerializeField] PlayerInput _playerInput;
-    
+
     bool _isGamePaused = false;
 
-    void Update()
+    private void Start()
     {
-        if (_playerInput.actions["Pause"].WasPressedThisFrame())
+        StartCoroutine(WaitForPlayerInput());
+    }
+
+    IEnumerator WaitForPlayerInput()
+    {
+        while (_playerInput == null)
         {
-            if (_playerInput != null)
-            {
-                _isGamePaused = !_isGamePaused;
-                PauseGame();
-            }
-            else
-            {
-                _playerInput = Object.FindFirstObjectByType<PlayerInput>();
-            }
+            _playerInput = Object.FindFirstObjectByType<PlayerInput>();
+            yield return null;
         }
     }
 
-    void PauseGame()
+    private void Update()
+    {
+        if (_playerInput == null) return;
+
+        if (_playerInput.actions["Pause"].WasPressedThisFrame())
+        {
+            _isGamePaused = !_isGamePaused;
+            PauseGame();
+        }
+    }
+
+    private void PauseGame()
     {
         if (_isGamePaused)
         {
@@ -40,5 +51,10 @@ public class GameMenu : MonoBehaviour
             _pausePanel.SetActive(false);
             Application.targetFrameRate = 120;
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

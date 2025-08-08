@@ -39,6 +39,7 @@ public class StateController
 
         if (hits.Length > 0 && hits[0].TryGetComponent<PlayerCharacter>(out var player))
         {
+            Debug.Log($"Player detected by {enemy.name} at position {player.transform.position}");
             ChangeState(new ChaseState(enemy, player.transform));
         }
         else if (_currentState is not PatrolState)

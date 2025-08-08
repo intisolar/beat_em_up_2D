@@ -106,5 +106,13 @@ public class PlayerCharacter : CharacterBase
         }
 
         Debug.Log($"{gameObject.name} ha recibido {amount} de daño. Salud actual: {CurrentHealth}");
+
+        if (CurrentHealth <= 0)
+        {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.TriggerGameOver();
+            }
+        }
     }
 }
