@@ -1,14 +1,16 @@
 using TMPro;
 using UnityEngine;
 
-/// <summary>
-/// Description: Manages the user interface (UI) of the game, including the HUD and menus.
-/// </summary>
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
+
+    [Header("Score")]
     [SerializeField] private int _score;
     [SerializeField] private TextMeshProUGUI _textUI;
+
+    [Header("Health Bar")]
+    [SerializeField] private HealthBar _healthBar;
 
     private void Awake()
     {
@@ -26,5 +28,13 @@ public class UIManager : MonoBehaviour
     {
         _score += scoreToAdd;
         _textUI.text = _score.ToString();
+    }
+
+    public void UpdateHealthBar(float currentHealth, float maxHealth)
+    {
+        if (_healthBar != null)
+        {
+            _healthBar.UpdateHealthBar(currentHealth, maxHealth);
+        }
     }
 }

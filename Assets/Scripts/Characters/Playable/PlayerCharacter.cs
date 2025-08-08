@@ -2,11 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Handlers;
 
-/***
- * Represents the playable characters.
- * 
- * It manages generic behavior of player subclasses
- ***/
 public class PlayerCharacter : CharacterBase
 {
     [Header("Movement Limits")]
@@ -104,6 +99,12 @@ public class PlayerCharacter : CharacterBase
     public override void TakeDamage(byte amount, Transform attackerTransform)
     {
         base.TakeDamage(amount, attackerTransform);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateHealthBar(CurrentHealth, MaxHealth);
+        }
+
         Debug.Log($"{gameObject.name} ha recibido {amount} de daño. Salud actual: {CurrentHealth}");
     }
 }

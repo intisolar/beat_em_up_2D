@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068bfc3250400cc49be68e5681708142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attackPower: 1
 --- !u!1 &2899891666890468426
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade0f6defa3c8d44a7a4769bcea85bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 1
+  _maxLife: 5
   _moveSpeed: 1
   _rigidbody: {fileID: 1103861090347909396}
   _maxPosition: 0.5
