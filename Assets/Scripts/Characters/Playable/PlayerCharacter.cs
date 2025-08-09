@@ -50,10 +50,7 @@ public class PlayerCharacter : CharacterBase
 
     private void Update()
     {
-        if (_playerInput.actions["Attack"].triggered)
-        {
-            StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0));
-        }
+        Attack();
     }
 
     private void FixedUpdate()
@@ -93,6 +90,14 @@ public class PlayerCharacter : CharacterBase
         else if (horizontalInput > 0)
         {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    private void Attack()
+    {
+        if (_playerInput.actions["Attack"].triggered)
+        {
+            StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0));
         }
     }
 

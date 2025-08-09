@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField] GameObject _pausePanel;
+    [SerializeField] private GameObject _pausePanel;
 
     [Header("Dependencies")]
-    [SerializeField] PlayerInput _playerInput;
+    [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private GameObject _finish;
 
-    bool _isGamePaused = false;
+    private bool _isGamePaused = false;
 
     private void Start()
     {

@@ -3,8 +3,9 @@ using UnityEngine;
 public class StateController
 {
     private IState _currentState;
-    private bool _isRotated = false;
     private float _previousX;
+    private bool _hasPrevX;
+    private const float RotationEpsilon = 0.02f;
 
     public StateController(IState initialState)
     {
@@ -33,29 +34,52 @@ public class StateController
         }
     }
 
+    private void SetFacing(Transform transform, bool faceRight)
+    {
+        var rotationEulerAngles = transform.eulerAngles;
+        if (faceRight)
+        {
+            rotationEulerAngles.y = 0f;
+        }
+        else
+        {
+            rotationEulerAngles.y = 180f; // visualmente equivale a -180°
+        }
+        transform.eulerAngles = rotationEulerAngles;
+    }
+
     public void DetectPlayer(EnemyAIController aiController, EnemyCharacter enemy)
     {
-        Collider[] hits = Physics.OverlapSphere(enemy.transform.position, aiController.VisionRadius, LayerMask.GetMask("Player"));
-
-        if (hits.Length > 0 && hits[0].TryGetComponent<PlayerCharacter>(out var player))
+        if (!_hasPrevX)
         {
-            Debug.Log($"Player detected by {enemy.name} at position {player.transform.position}");
-            ChangeState(new ChaseState(enemy, player.transform));
+            _previousX = enemy.transform.position.x;
+            _hasPrevX = true;
         }
-        else if (_currentState is not PatrolState)
+
+        if (enemy.DetectPlayer(aiController, out var playerTransform))
+        {
+            bool faceRight = playerTransform.position.x >= enemy.transform.position.x;
+            SetFacing(enemy.VisualRoot, faceRight);
+            ChangeState(new ChaseState(enemy, playerTransform));
+            return;
+        }
+
+        if (_currentState is not PatrolState)
         {
             ChangeState(new PatrolState(enemy, 0f, aiController.InitialDirection));
         }
 
-        if (enemy.transform.position.x < _previousX && !_isRotated)
+        if (_currentState is PatrolState)
         {
-            enemy.transform.Rotate(0, -180, 0);
-            _isRotated = true;
-        }
-        else if (enemy.transform.position.x > _previousX && _isRotated)
-        {
-            enemy.transform.Rotate(0, 180, 0);
-            _isRotated = false;
+            float deltaX = enemy.transform.position.x - _previousX;
+            if (deltaX < -RotationEpsilon)
+            {
+                SetFacing(enemy.VisualRoot, false); // mirar izquierda
+            }
+            else if (deltaX > RotationEpsilon)
+            {
+                SetFacing(enemy.VisualRoot, true); // mirar derecha
+            }
         }
 
         _previousX = enemy.transform.position.x;

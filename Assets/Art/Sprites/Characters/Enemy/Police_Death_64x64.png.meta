@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb27f0378f62b9249b664a05928a4cb9
+guid: fa1ff1585879a1144a83dd3edc7aeef7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,10 +102,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 52
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -114,28 +114,6 @@ TextureImporter:
       bones: []
       spriteID: ba0c9479381e67950800000000000000
       internalID: 6446587871922602155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Police_Damage_64x64_0
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e4d7ff27fdf9aa47829ca1587c606bc
-      internalID: 1938410793
       vertices: []
       indices: 
       edges: []
@@ -155,7 +133,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Player_52x63_0: 6446587871922602155
-      Police_Damage_64x64_0: 1938410793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
