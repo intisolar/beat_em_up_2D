@@ -31,6 +31,14 @@ public class EnemyAIController : MonoBehaviour
     {
         StateController.UpdateState();
         StateController.DetectPlayer(this, _owner);
+
+        if (_owner.DetectPlayer(this, out Transform playerTransform))
+        {
+            if (_owner.CanAttack())
+            {
+                _owner.Attack();
+            }
+        }
     }
 
     private void InitializeComponents()

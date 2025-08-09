@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /*
@@ -20,6 +21,12 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public float MoveSpeed { get; private set; }
     [SerializeField] private Rigidbody _rigidbody;
     public Rigidbody Rigidbody { get; private set; }
+
+    [Header("Damage Feedback")]
+    [SerializeField] private Color damageColor = Color.red;
+    [SerializeField] private float damageDuration = 0.5f;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
     #endregion
 
     #region Unity Methods
@@ -31,6 +38,16 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         Rigidbody = _rigidbody;
 
         InitializeComponents();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            originalColor = spriteRenderer.color;
+        }
+        else
+        {
+            Debug.LogWarning("SpriteRenderer no está asignado o no existe en el objeto.");
+        }
     }
     #endregion
 
@@ -52,6 +69,12 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         {
             Die();
         }
+
+        if (spriteRenderer != null)
+        {
+            StopAllCoroutines();
+            StartCoroutine(FlashDamageColor());
+        }
     }
 
     public int UpdateHealth(int currentHealth, int damageTaken)
@@ -64,4 +87,11 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
     #endregion
+
+    private IEnumerator FlashDamageColor()
+    {
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(damageDuration);
+        spriteRenderer.color = originalColor;
+    }
 }

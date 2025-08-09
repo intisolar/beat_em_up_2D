@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GuitarPlayer
   m_EditorClassIdentifier: 
   Attacks:
-  - AttackName: Guitar
+  - AttackType: 0
     AttackPower: 1
     AttackDuration: 0.25
-    AttackDelay: 0.2
+    AttackDelay: 0.1

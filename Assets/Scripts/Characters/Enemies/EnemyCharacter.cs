@@ -15,12 +15,29 @@ public class EnemyCharacter : CharacterBase
     [SerializeField] private GameObject _attackHitBox;
     [SerializeField] private float _attackDuration = 0.5f;
 
+    [Header("Attack Control")]
+    [SerializeField] private float _attackCooldown = 1f;
+    private float _lastAttackTime = 0f;
+
     [Header("Detection")]
     [SerializeField] private float _minPlayerDistance = 0.5f;
 
     [Header("Visual")]
-    [SerializeField] private Transform _visualRoot; // opcional: asigna el objeto visual (sprite/modelo)
-    public Transform VisualRoot => _visualRoot != null ? _visualRoot : transform;
+    [SerializeField] private Transform _visualRoot;
+    public Transform VisualRoot
+    {
+        get
+        {
+            if (_visualRoot != null)
+            {
+                return _visualRoot;
+            }
+            return transform;
+        }
+    }
+
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
 
     protected override void Awake()
     {
@@ -60,9 +77,13 @@ public class EnemyCharacter : CharacterBase
 
     public IEnumerator ExecuteAttack()
     {
+        _animator.SetTrigger("Police_Attack");
+
         _attackHitBox.SetActive(true);
         yield return new WaitForSeconds(_attackDuration);
         _attackHitBox.SetActive(false);
+
+        _animator.SetTrigger("Police_Idle");
     }
 
     public override void TakeDamage(byte amount, Transform attackerTransform)
@@ -74,5 +95,15 @@ public class EnemyCharacter : CharacterBase
     {
         UIManager.Instance.AddScore(_scoreValue);
         base.Die();
+    }
+
+    public bool CanAttack()
+    {
+        if (Time.time >= _lastAttackTime + _attackCooldown)
+        {
+            _lastAttackTime = Time.time;
+            return true;
+        }
+        return false;
     }
 }
