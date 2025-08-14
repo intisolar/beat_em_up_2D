@@ -131,3 +131,21 @@ Beat em up 2d_WwiseProject/.backup/
 
 # temp install files
 WwiseUnityIntegration_*_Src.zip
+
+# --- OPS Obfuscator: permitir DLLs necesarias ---
+!Assets/OPS/Obfuscator/Editor/Plugins/OPS.Obfuscator.Editor.dll
+!Assets/OPS/Obfuscator/Editor/Plugins/OPS.Obfuscator.Editor.dll.meta
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Mdb.dll
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Mdb.dll.meta
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Pdb.dll
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Pdb.dll.meta
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Rocks.dll
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Rocks.dll.meta
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.dll
+!Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.dll.meta
+!Assets/OPS/Plugins/Json/OPS.Serialization.Json.dll
+!Assets/OPS/Plugins/Json/OPS.Serialization.Json.dll.meta
+
+# --- OPS Obfuscator: ignorar logs generados ---
+Assets/OPS/Obfuscator/Log/*.txt
+Assets/OPS/Obfuscator/Log/*.log
