@@ -305,6 +305,7 @@ MonoBehaviour:
   _initialDirection: {x: 0, y: 0}
   _owner: {fileID: 6254388331807842388}
   _rigidbody: {fileID: 4167497253087330313}
+  _animator: {fileID: 3547580051468176561}
 --- !u!95 &3547580051468176561
 Animator:
   serializedVersion: 7
