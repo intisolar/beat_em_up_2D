@@ -22,7 +22,7 @@ public class PlayerCharacter : CharacterBase
     private Vector3 _lastPosition;
 
     private AnimationHandler _animationHandler;
-    private MovementHandler _movementHandler;    
+    private MovementHandler _movementHandler; 
 
     protected void Start()
     {

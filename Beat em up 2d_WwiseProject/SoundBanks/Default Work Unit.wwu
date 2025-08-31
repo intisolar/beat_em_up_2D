@@ -4,7 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{1EB0ACE2-99AD-478B-AEED-526A76159ED5}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Ambient" ID="{FAB6A7CD-3A05-49C9-BEB4-7D0EA4F287B6}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Actor-Mixer Hierarchy" ID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" WorkUnitID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

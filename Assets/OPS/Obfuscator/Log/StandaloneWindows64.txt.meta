@@ -5,3 +5,10 @@ TextScriptImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89420
+  packageName: Obfuscator Free
+  packageVersion: 5.7.0
+  assetPath: Assets/OPS/Obfuscator/Log/StandaloneWindows64.txt
+  uploadId: 774162
