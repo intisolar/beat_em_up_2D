@@ -18,6 +18,7 @@ public class EnemyAIController : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private EnemyCharacter _owner;
     [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private Animator _animator;
 
     private void Awake()
     {
@@ -37,7 +38,21 @@ public class EnemyAIController : MonoBehaviour
             if (_owner.CanAttack())
             {
                 _owner.Attack();
+                if (_animator != null)
+                {
+                    _animator.SetTrigger("isAttack");
+                    StartCoroutine(ResetToWalk());
+                }
             }
+        }
+    }
+
+    private System.Collections.IEnumerator ResetToWalk()
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (_animator != null)
+        {
+            _animator.SetTrigger("isWalk");
         }
     }
 
@@ -53,6 +68,12 @@ public class EnemyAIController : MonoBehaviour
         {
             _owner = GetComponent<EnemyCharacter>();
             Debug.LogWarning("EnemyCharacter no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
+
+        if (_animator == null)
+        {
+            _animator = GetComponent<Animator>();
+            Debug.LogWarning("Animator no está asignado en el inspector. Se ha asignado automáticamente.");
         }
     }
 }
