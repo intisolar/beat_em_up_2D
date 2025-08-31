@@ -149,3 +149,12 @@ WwiseUnityIntegration_*_Src.zip
 # --- OPS Obfuscator: ignorar logs generados ---
 Assets/OPS/Obfuscator/Log/*.txt
 Assets/OPS/Obfuscator/Log/*.log
+
+# --- Wwise pesados que no quiero versionar ---
+Assets/Wwise/API/Runtime/Plugins/Mac/
+Assets/Wwise/API/Runtime/Plugins/iOS/
+Assets/Wwise/API/Runtime/Plugins/Android/
+Assets/Wwise/API/Runtime/Plugins/*/Debug/
+Assets/Wwise/API/Runtime/Plugins/*/Profile/
+**/*.dSYM/
+**/*.bundle
