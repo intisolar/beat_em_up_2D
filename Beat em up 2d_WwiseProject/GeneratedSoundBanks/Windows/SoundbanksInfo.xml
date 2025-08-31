@@ -9,9 +9,116 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{A64ECA8C-C361-5306-97AA-AFDA0C287B7E}">
+		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{7607ECCE-0DFC-ED5D-B012-FB4059E27DDA}">
 			<ShortName>Ambient</ShortName>
 			<Path>Ambient.bnk</Path>
+			<Media>
+				<File Id="123875507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_nivel1_loop.wav</ShortName>
+					<CachePath>SFX/amb_nivel1_loop_818F3B66.wem</CachePath>
+				</File>
+				<File Id="133368176" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>death_porra.01.wav</ShortName>
+					<CachePath>SFX/death_porra.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="224018555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>menu_select.wav</ShortName>
+					<CachePath>SFX/menu_select_818F3B66.wem</CachePath>
+				</File>
+				<File Id="248820378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hit_player_gtr.01.wav</ShortName>
+					<CachePath>SFX/hit_player_gtr.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="258161758" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hit_ene_porra.01.wav</ShortName>
+					<CachePath>SFX/hit_ene_porra.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="328219677" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walk_baldo.01.wav</ShortName>
+					<CachePath>SFX/walk_baldo.01_1E69595A.wem</CachePath>
+				</File>
+				<File Id="405321615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>menu_movi.down.wav</ShortName>
+					<CachePath>SFX/menu_movi.down_818F3B66.wem</CachePath>
+				</File>
+				<File Id="548544239" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>wlk_pasto.03.wav</ShortName>
+					<CachePath>SFX/wlk_pasto.03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="552034467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walk_baldo.02.wav</ShortName>
+					<CachePath>SFX/walk_baldo.02_05C4723C.wem</CachePath>
+				</File>
+				<File Id="606709337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>menu_movi.up.wav</ShortName>
+					<CachePath>SFX/menu_movi.up_818F3B66.wem</CachePath>
+				</File>
+				<File Id="623139868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>wlk_pasto.02.wav</ShortName>
+					<CachePath>SFX/wlk_pasto.02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="628712645" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>death_player.01.wav</ShortName>
+					<CachePath>SFX/death_player.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="766611114" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>daño_porra.01.wav</ShortName>
+					<CachePath>SFX/daño_porra.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="768095039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walk_baldo.03.wav</ShortName>
+					<CachePath>SFX/walk_baldo.03_E1A1051B.wem</CachePath>
+				</File>
+				<File Id="895405804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>win_cartel.01.wav</ShortName>
+					<CachePath>SFX/win_cartel.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="934316367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>daño_player.01.wav</ShortName>
+					<CachePath>SFX/daño_player.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="963179055" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>daño_player.02.wav</ShortName>
+					<CachePath>SFX/daño_player.02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="965597456" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>death_cartel.01.wav</ShortName>
+					<CachePath>SFX/death_cartel.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1047207527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>walk_baldo.04.wav</ShortName>
+					<CachePath>SFX/walk_baldo.04_29CBAAB1.wem</CachePath>
+				</File>
+				<File Id="1066708833" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>wlk_pasto.01.wav</ShortName>
+					<CachePath>SFX/wlk_pasto.01_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3559916164" Name="Play_Walk_Switch" DurationType="OneShot" DurationMin="0.39891008" DurationMax="0.401887">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3050293265" Id="47009900" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="328219677"/>
+								<MediaRef Id="552034467"/>
+								<MediaRef Id="768095039"/>
+								<MediaRef Id="1047207527"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="3050293265" Id="47009900" Name="Walk_Concrete"/>
+					</ActionSetSwitch>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3050293265" Name="Walk_Switch_Group">
+					<Switches>
+						<Switch Id="47009900" Name="Walk_Concrete"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
 			<ShortName>Init</ShortName>
@@ -25,7 +132,14 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="3050293265" Name="Walk_Switch_Group">
+					<Switches>
+						<Switch Id="47009900" Name="Walk_Concrete"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{01339841-EDE1-0019-12FA-51DE17F9C623}</FileHash>
+	<FileHash>{717B6E11-EA74-9536-AE88-AB70380D9389}</FileHash>
 </SoundBanksInfo>

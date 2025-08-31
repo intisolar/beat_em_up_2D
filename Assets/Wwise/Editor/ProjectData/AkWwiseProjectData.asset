@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e2acb01ead998b47aeed526a76159ed5
     GuidInternal: 
-    m_lastTime: -8584474968520901181
+    m_lastTime: -8584450112741444950
     List:
     - name: Ambient
       guid: cda7b6fa053ac949beb47d0ea4f287b6
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 52bbf1dcf8cbc04187eddeff70f69608
     GuidInternal: 
-    m_lastTime: -8584474968521086614
-    List: []
+    m_lastTime: -8584452803410541842
+    List:
+    - name: Play_Walk_Switch
+      guid: bcbaacdc8c261841815bb37cfd9875ec
+      id: 3559916164
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 52bbf1dcf8cbc04187eddeff70f69608
+      - ElementName: Play_Walk_Switch
+        ObjectType: 3
+        guid: bcbaacdc8c261841815bb37cfd9875ec
+      Path: Events\Default Work Unit\Play_Walk_Switch
+      maxAttenuation: 0
+      maxDuration: 0.401887
+      minDuration: 0.39891008
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -136,8 +153,42 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d8ce3f75b1d65e4bb1736eb4f8fff7de
     GuidInternal: 
-    m_lastTime: -8584474968520876458
-    List: []
+    m_lastTime: -8584454281616077895
+    List:
+    - name: Walk_Switch_Group
+      guid: 8ba8e723a1fe984b8429cc94c4ca28f3
+      id: 3050293265
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d8ce3f75b1d65e4bb1736eb4f8fff7de
+      - ElementName: Walk_Switch_Group
+        ObjectType: 11
+        guid: 8ba8e723a1fe984b8429cc94c4ca28f3
+      Path: Switches\Default Work Unit\Walk_Switch_Group
+      values:
+      - name: Walk_Concrete
+        guid: 979524f53a48ab47ac44f8107bdd5c9f
+        id: 47009900
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d8ce3f75b1d65e4bb1736eb4f8fff7de
+        - ElementName: Walk_Switch_Group
+          ObjectType: 11
+          guid: 8ba8e723a1fe984b8429cc94c4ca28f3
+        - ElementName: Walk_Concrete
+          ObjectType: 10
+          guid: 979524f53a48ab47ac44f8107bdd5c9f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -153,7 +204,7 @@ MonoBehaviour:
     m_lastTime: -8584474968520876458
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000b0000000c0000000e0000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

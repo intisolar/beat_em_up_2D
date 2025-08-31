@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DCF1BB52-CBF8-41C0-87ED-DEFF70F69608}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{DCF1BB52-CBF8-41C0-87ED-DEFF70F69608}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DCF1BB52-CBF8-41C0-87ED-DEFF70F69608}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Walk_Switch" ID="{DCACBABC-268C-4118-815B-B37CFD9875EC}">
+					<ChildrenList>
+						<Action Name="" ID="{F9C1C520-2B78-489D-9850-37DE0E628FC6}" ShortID="29615568">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Walk_Switch" ID="{6CFBBC35-0760-4F13-A00C-05C0994C608B}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2D988252-92B0-4B05-9F36-E89E83C5038E}" ShortID="157276323">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Walk_Concrete" ID="{F5249597-483A-47AB-AC44-F8107BDD5C9F}" WorkUnitID="{753FCED8-D6B1-4B5E-B173-6EB4F8FFF7DE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

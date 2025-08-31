@@ -1,0 +1,31 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3559916164	Play_Walk_Switch			\Default Work Unit\Play_Walk_Switch	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3050293265	Walk_Switch_Group			\Default Work Unit\Walk_Switch_Group	
+
+Switch	ID	Name	Switch Group			Notes
+	47009900	Walk_Concrete	Walk_Switch_Group			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	123875507	amb_nivel1_loop	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\amb_nivel1_loop_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\amb_nivel1_loop		9055296
+	133368176	death_porra_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\death_porra.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\death_porra_01		66244
+	224018555	menu_select	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\menu_select_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\menu_select		485196
+	248820378	hit_player_gtr_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\hit_player_gtr.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\hit_player_gtr_01		193032
+	258161758	hit_ene_porra_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\hit_ene_porra.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\hit_ene_porra_01		55220
+	328219677	walk_baldo_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\walk_baldo.01_1E69595A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk_Switch\Walk_Concrete\walk_baldo_01		70772
+	405321615	menu_movi_down	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\menu_movi.down_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\menu_movi_down		24188
+	548544239	wlk_pasto_03	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\wlk_pasto.03_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\wlk_pasto_03		74556
+	552034467	walk_baldo_02	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\walk_baldo.02_05C4723C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk_Switch\Walk_Concrete\walk_baldo_02		70988
+	606709337	menu_movi_up	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\menu_movi.up_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\menu_movi_up		24188
+	623139868	wlk_pasto_02	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\wlk_pasto.02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\wlk_pasto_02		53160
+	628712645	death_player_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\death_player.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\death_player_01		512072
+	766611114	daño_porra_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\daño_porra.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\daño_porra_01		44196
+	768095039	walk_baldo_03	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\walk_baldo.03_E1A1051B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk_Switch\Walk_Concrete\walk_baldo_03		70584
+	895405804	win_cartel_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\win_cartel.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\win_cartel_01		1368112
+	934316367	daño_player_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\daño_player.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\daño_player_01		49360
+	963179055	daño_player_02	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\daño_player.02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\daño_player_02		80944
+	965597456	death_cartel_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\death_cartel.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\death_cartel_01		1405760
+	1047207527	walk_baldo_04	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\walk_baldo.04_29CBAAB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk_Switch\Walk_Concrete\walk_baldo_04		70464
+	1066708833	wlk_pasto_01	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\wlk_pasto.01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\wlk_pasto_01		80812
+

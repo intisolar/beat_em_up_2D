@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 1103861090347909396}
   - component: {fileID: 7417018215568709888}
   - component: {fileID: 2152410633540062239}
+  - component: {fileID: 6121698157450947067}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -371,6 +372,22 @@ MonoBehaviour:
   _attackHitBox: {fileID: 2614287518544926260}
   _playerInput: {fileID: 7429457434887231096}
   _animator: {fileID: 1683023680169870211}
+--- !u!114 &6121698157450947067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899891666890468426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748f5577fc03adc4fb2f265c94d79f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 05e10523710736d42b35e1f02d51d131, type: 2}
 --- !u!1 &3869394416707640863
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2279465958503153910}
   - component: {fileID: 7922235894839630293}
-  - component: {fileID: 2287197771170667504}
   - component: {fileID: 6870855497035766244}
   - component: {fileID: 2487436238971770735}
   - component: {fileID: 2304115234448913147}
@@ -458,14 +474,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2287197771170667504
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3869394416707640863}
-  m_Enabled: 1
 --- !u!114 &6870855497035766244
 MonoBehaviour:
   m_ObjectHideFlags: 0
