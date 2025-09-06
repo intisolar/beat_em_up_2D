@@ -4,9 +4,27 @@
 		<WorkUnit Name="Default Work Unit" ID="{08846868-A474-450F-8752-E0D7696214C8}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="Level1" ID="{FA4B9662-DED2-46BA-9253-23684DFA3C08}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Game_Music" ID="{E4A2644A-97F7-4DC5-85A7-4945B1AC8203}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Menu_Music" ID="{02AF4DEC-7B6A-4AF0-B916-6F88C616CDD7}" WorkUnitID="{DCF1BB52-CBF8-41C0-87ED-DEFF70F69608}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Level_1_Music" ID="{3AA1B29F-CE9D-4D45-9D47-CB65A8376E10}" WorkUnitID="{DCF1BB52-CBF8-41C0-87ED-DEFF70F69608}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Level" ID="{9CCE1197-BFE6-4586-BC66-A2391EF37B4A}"/>
+						<CurrentStateRef Name="None" ID="{57654F26-8B18-4E2A-8D01-F33B9C2AEF4B}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="L1_Enemy_Path_Music" ID="{24095FD1-4E19-4396-94BF-55BC45863DFB}"/>
 						<CurrentSwitchRef Name="Walk_Concrete" ID="{F5249597-483A-47AB-AC44-F8107BDD5C9F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

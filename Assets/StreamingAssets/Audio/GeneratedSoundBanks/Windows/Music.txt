@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4141037488	Play_Game_Music			\Default Work Unit\Play_Game_Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	258110631	Game_Music			\Default Work Unit\Game_Music	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Game_Music			
+	2607556080	Menu	Game_Music			
+	2782712965	Level	Game_Music			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	111173173	SE ACABA menu loop	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\SE ACABA menu loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Game_Music\Menu_Music\SE ACABA menu loop\SE ACABA menu loop		9408096
+	209486218	SE ACABA level loop	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\SE ACABA level loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Game_Music\Level_1_Enemy_Path\Enemy_Path\SE ACABA level loop		7526496
+
