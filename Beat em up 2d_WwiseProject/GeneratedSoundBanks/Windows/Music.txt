@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	814842324	Play_Level_1_Music			\Default Work Unit\Play_Level_1_Music	
+	2228153899	Play_Menu_Music			\Default Work Unit\Play_Menu_Music	
+	2283933274	Pause_Level_1_Music			\Default Work Unit\Pause_Level_1_Music	
+	3821537291	Resume_Level_1_Music			\Default Work Unit\Resume_Level_1_Music	
+	3945748993	Stop_Menu_Music			\Default Work Unit\Stop_Menu_Music	
+	4087450626	Stop_Level_1_Music			\Default Work Unit\Stop_Level_1_Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	362844960	Level_1_Switch			\Default Work Unit\Level_1_Switch	
+
+Switch	ID	Name	Switch Group			Notes
+	3017016093	L1_Enemy_Path_Music	Level_1_Switch			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	111173173	SE ACABA menu loop	E:\Documents\02 PROGRAMACIÓN\00 PROYECTOS\Beat em up 2d\beat_em_up_2D\Beat em up 2d_WwiseProject\.cache\Windows\SFX\SE ACABA menu loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Music\SE ACABA menu loop\SE ACABA menu loop		9408096
+

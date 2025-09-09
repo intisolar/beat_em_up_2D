@@ -120,7 +120,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{425009CD-B582-3CD2-C73F-1E5AE85C7139}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -132,7 +132,27 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<StateGroups>
+				<StateGroup Id="258110631" Name="Game_Music">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2782712965" Name="Level"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="540886892" Name="L1_Music">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1507777823" Name="Enemy_Path"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="362844960" Name="Level_1_Switch">
+					<Switches>
+						<Switch Id="3017016093" Name="L1_Enemy_Path_Music"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="3050293265" Name="Walk_Switch_Group">
 					<Switches>
 						<Switch Id="47009900" Name="Walk_Concrete"/>
@@ -140,6 +160,39 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{EEF64838-51D7-25E8-EC37-7BB8F19D8093}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="111173173" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SE ACABA menu loop.wav</ShortName>
+					<CachePath>SFX/SE ACABA menu loop_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2283933274" Name="Pause_Level_1_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="814842324" Name="Play_Level_1_Music" DurationType="Infinite"/>
+				<Event Id="2228153899" Name="Play_Menu_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="111173173"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3821537291" Name="Resume_Level_1_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4087450626" Name="Stop_Level_1_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3945748993" Name="Stop_Menu_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="111173173"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="362844960" Name="Level_1_Switch">
+					<Switches>
+						<Switch Id="3017016093" Name="L1_Enemy_Path_Music"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{717B6E11-EA74-9536-AE88-AB70380D9389}</FileHash>
+	<FileHash>{54DFC526-6B12-1E36-57CC-25884AD2EA3C}</FileHash>
 </SoundBanksInfo>

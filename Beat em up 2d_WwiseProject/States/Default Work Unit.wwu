@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6B4AD500-3468-4B38-BD61-EBE17E1B3DBD}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{6B4AD500-3468-4B38-BD61-EBE17E1B3DBD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6B4AD500-3468-4B38-BD61-EBE17E1B3DBD}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Game_Music" ID="{F41C7EE5-78F4-44D9-9249-8903F7060C96}">
+					<ChildrenList>
+						<State Name="None" ID="{DC4004CC-044E-4E68-8ED9-3E814D7DA673}"/>
+						<State Name="Menu" ID="{E1B9E79A-63B0-4170-921B-335CB1995546}"/>
+						<State Name="Level" ID="{9CCE1197-BFE6-4586-BC66-A2391EF37B4A}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="L1_Music" ID="{377B1F30-4E55-4B80-A406-FEADF10EC854}">
+					<ChildrenList>
+						<State Name="None" ID="{57654F26-8B18-4E2A-8D01-F33B9C2AEF4B}"/>
+						<State Name="Enemy_Path" ID="{4DE5F998-36E2-43BC-A247-6FDEAE47E3AB}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

@@ -24,6 +24,95 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Level_1_Music" ID="{3AA1B29F-CE9D-4D45-9D47-CB65A8376E10}">
+					<ChildrenList>
+						<Action Name="" ID="{325F914A-E631-4B2C-B905-5974D70B2330}" ShortID="228172516">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_1_Enemy_Path" ID="{19C55B0C-B591-4E24-8154-CA382BCAC400}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Level_1_Music" ID="{0D27B2EA-A804-40E7-BC3C-645133E96882}">
+					<ChildrenList>
+						<Action Name="" ID="{1DAB6CF0-8CEC-4B5B-BA9E-FF4A910857C7}" ShortID="748882351">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_1_Enemy_Path" ID="{19C55B0C-B591-4E24-8154-CA382BCAC400}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Level_1_Music" ID="{B18A3C9C-1E6F-4801-A6E4-2A2FF52A93BA}">
+					<ChildrenList>
+						<Action Name="" ID="{2D2011B7-4DDB-414C-9CFB-D66444BAB53F}" ShortID="148141302">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_1_Enemy_Path" ID="{19C55B0C-B591-4E24-8154-CA382BCAC400}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Level_1_Music" ID="{F6512FF4-D540-40C4-996D-687639E88225}">
+					<ChildrenList>
+						<Action Name="" ID="{B39F11CC-70AC-4263-A3B8-008E89FAAA37}" ShortID="544380009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_1_Enemy_Path" ID="{19C55B0C-B591-4E24-8154-CA382BCAC400}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Music" ID="{02AF4DEC-7B6A-4AF0-B916-6F88C616CDD7}">
+					<ChildrenList>
+						<Action Name="" ID="{E8009431-0D77-4064-9CD6-CB14557C5C5D}" ShortID="577519702">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Music" ID="{56379686-D4E5-4B05-97F0-01D2F407540B}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Menu_Music" ID="{1D346BA5-0BF2-48BB-8D19-F3E13049F327}">
+					<ChildrenList>
+						<Action Name="" ID="{17A1A39A-3617-407E-91FA-C5D91C81A253}" ShortID="938895235">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Music" ID="{56379686-D4E5-4B05-97F0-01D2F407540B}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Game_Music" ID="{F5309974-15B8-4433-9EB0-0F7783B2A4CD}">
+					<ChildrenList>
+						<Action Name="" ID="{3036F885-6D57-4A0E-AFA1-FCD0C5043A72}" ShortID="289988101">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Game_Music" ID="{E4A2644A-97F7-4DC5-85A7-4945B1AC8203}" WorkUnitID="{283E872C-820B-44CF-88EF-371E12118202}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
