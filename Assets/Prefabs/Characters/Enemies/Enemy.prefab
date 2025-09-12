@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxLife: 3
-  _moveSpeed: 0.4
+  _moveSpeed: 1
   _rigidbody: {fileID: 4167497253087330313}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
