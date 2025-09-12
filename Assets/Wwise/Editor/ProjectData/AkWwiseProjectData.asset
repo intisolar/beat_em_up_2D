@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f3bd47ae4a8bb946839be66cb336b49a
     GuidInternal: 
-    m_lastTime: -8584474968520876458
+    m_lastTime: -8584439595223691369
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5cae9e2ceddfa44e84cbf0a995af9d76
     GuidInternal: 
-    m_lastTime: -8584474968520976769
+    m_lastTime: -8584439595231161217
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e2acb01ead998b47aeed526a76159ed5
     GuidInternal: 
-    m_lastTime: -8584447527030634930
+    m_lastTime: -8584439595223966047
     List:
     - name: Ambient
       guid: cda7b6fa053ac949beb47d0ea4f287b6
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 52bbf1dcf8cbc04187eddeff70f69608
     GuidInternal: 
-    m_lastTime: -8584444916954565517
+    m_lastTime: -8584439595233949629
     List:
     - name: Pause_Level_1_Music
       guid: 9c3c8ab16f1e0148a6e42a2ff52a93ba
@@ -125,8 +125,8 @@ MonoBehaviour:
         guid: 9c3c8ab16f1e0148a6e42a2ff52a93ba
       Path: Events\Default Work Unit\Pause_Level_1_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Game_Music
       guid: 749930f5b81533449eb00f7783b2a4cd
       id: 4141037488
@@ -210,8 +210,8 @@ MonoBehaviour:
         guid: f42f51f640d5c440996d687639e88225
       Path: Events\Default Work Unit\Resume_Level_1_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Level_1_Music
       guid: eab2270d04a8e740bc3c645133e96882
       id: 4087450626
@@ -227,8 +227,8 @@ MonoBehaviour:
         guid: eab2270d04a8e740bc3c645133e96882
       Path: Events\Default Work Unit\Stop_Level_1_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Menu_Music
       guid: a56b341df20bbb488d19f3e13049f327
       id: 3945748993
@@ -244,8 +244,8 @@ MonoBehaviour:
         guid: a56b341df20bbb488d19f3e13049f327
       Path: Events\Default Work Unit\Stop_Menu_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9eab0066f4ca6c45802e9dc7b524562c
     GuidInternal: 
-    m_lastTime: -8584474968521076426
+    m_lastTime: -8584439595233944533
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -272,7 +272,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 00d54a6b6834384bbd61ebe17e1b3dbd
     GuidInternal: 
-    m_lastTime: -8584447665816840076
+    m_lastTime: -8584439595223761646
     List:
     - name: Game_Music
       guid: e57e1cf4f478d94492498903f7060c96
@@ -402,7 +402,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d8ce3f75b1d65e4bb1736eb4f8fff7de
     GuidInternal: 
-    m_lastTime: -8584447539531606148
+    m_lastTime: -8584439595223706408
     List:
     - name: Level_1_Switch
       guid: abfd3fcd15606046b177338fb007316c
@@ -484,7 +484,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d41e2ac26ef0bb42b391daae6d346381
     GuidInternal: 
-    m_lastTime: -8584474968520876458
+    m_lastTime: -8584439595223706408
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 010000000500000006000000070000000b0000000c0000000e0000000f000000100000001100000012000000130000001400000015000000

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.145, y: 0, z: 0}
-  m_LocalScale: {x: 0.57, y: 0.5, z: 0.4}
+  m_LocalScale: {x: 1.33, y: 0.95, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 567161569928203562}
@@ -347,7 +347,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.6, z: 0.2}
+  m_Size: {x: 0.4, y: 1.05, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2152410633540062239
 MonoBehaviour:
@@ -362,12 +362,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxLife: 25
-  _moveSpeed: 1
+  _moveSpeed: 1.75
   _rigidbody: {fileID: 1103861090347909396}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
-  _maxPosition: 0.5
-  _minPosition: -1
+  _maxPosition: 1
+  _minPosition: -2
   _attackData: {fileID: 11400000, guid: 7da66823b7552a6488141251d57fe171, type: 2}
   _attackHitBox: {fileID: 2614287518544926260}
   _playerInput: {fileID: 7429457434887231096}
@@ -458,7 +458,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
