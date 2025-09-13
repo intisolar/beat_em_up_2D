@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{DC342D8D-755F-2056-2906-9E7DADADB8C0}">
+		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{8FD190BA-2866-A0AA-4672-96CA10C49E97}">
 			<ShortName>Ambient</ShortName>
 			<Path>Ambient.bnk</Path>
 			<Media>
@@ -134,11 +134,6 @@
 						<MediaRef Id="1036251186"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343822798" Name="Play_da_o_porra_01" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
-					<MediaRefs>
-						<MediaRef Id="766611114"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1126428493" Name="Play_Damage_P1" DurationType="OneShot" DurationMin="0.27927437" DurationMax="0.458322">
 					<MediaRefs>
 						<MediaRef Id="934316367"/>
@@ -163,6 +158,11 @@
 				<Event Id="2783266843" Name="Play_hit_player_gtr_01" DurationType="OneShot" DurationMin="0.84523624" DurationMax="0.84523624">
 					<MediaRefs>
 						<MediaRef Id="248820378"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3228731110" Name="Play_hurt_porra_01" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="766611114"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3559916164" Name="Play_Walk_Switch" DurationType="OneShot" DurationMin="0.39891008" DurationMax="0.401887">
@@ -272,5 +272,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3F8C2DD3-6B1D-145C-D8C7-3D68E538B91D}</FileHash>
+	<FileHash>{8181BCE1-2E09-DC50-32DB-9E73C47C0BCF}</FileHash>
 </SoundBanksInfo>

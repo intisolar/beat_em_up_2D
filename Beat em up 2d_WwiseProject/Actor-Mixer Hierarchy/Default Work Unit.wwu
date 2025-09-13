@@ -180,7 +180,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-17</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
