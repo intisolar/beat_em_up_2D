@@ -11,12 +11,14 @@ namespace Handlers
      ***/
     public static class CombatHandler
     {
-        public static void ExecuteMeleeAttack(MonoBehaviour coroutineRunner, GameObject hitboxObject, float duration, byte attackPower)
+        public static void ExecuteMeleeAttack(MonoBehaviour coroutineRunner, GameObject hitboxObject, 
+            float duration, byte attackPower, PlayerAnimationSFXController _sFXController)
         {
-            coroutineRunner.StartCoroutine(AttackCoroutine(hitboxObject, duration, attackPower));
+            coroutineRunner.StartCoroutine(AttackCoroutine(hitboxObject, duration, attackPower, _sFXController));
         }
 
-        private static IEnumerator AttackCoroutine(GameObject hitboxObject, float duration, byte attackPower)
+        private static IEnumerator AttackCoroutine(GameObject hitboxObject, float duration, byte attackPower,
+            PlayerAnimationSFXController _sFXController)
         {
             hitboxObject.SetActive(true);
             var hitBoxComponent = hitboxObject.GetComponent<AttackHitBox>();
@@ -24,6 +26,7 @@ namespace Handlers
             if (hitBoxComponent != null)
             {
                 hitBoxComponent.SetAttackPower(attackPower);
+               // _sFXController.PlayHit();
             }
             
             yield return new WaitForSeconds(duration);

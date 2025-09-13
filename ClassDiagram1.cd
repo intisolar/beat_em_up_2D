@@ -3,7 +3,7 @@
   <Class Name="CharacterBase" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQQAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAACAECAABAGDAiAAAAAAQAAAACAAAQAAAAwCAACEA=</HashCode>
       <FileName>Assets\Scripts\Characters\CharacterBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -30,10 +30,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="EnemyCharacter" Collapsed="true">
-    <Position X="7.5" Y="2" Width="1.5" />
+    <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Characters\EnemyCharacter.cs</FileName>
+      <HashCode>AAAAAAIEAAAAAgAgIAAAQAAQAIAAABCAIAQAwAAEAEA=</HashCode>
+      <FileName>Assets\Scripts\Characters\Enemies\EnemyCharacter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DrummerPlayer" Collapsed="true">
@@ -51,16 +51,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerCharacter" Collapsed="true">
-    <Position X="2" Y="2" Width="1.5" />
+    <Position X="4.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Characters\PlayerCharacter.cs</FileName>
+      <HashCode>AASAgABAAqAAEAAAAAEAAAAAAIAQCBAAIIEAoAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\Playable\PlayerCharacter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CameraFollow" Collapsed="true">
     <Position X="15.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAACAAAICAAAAAKAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\CameraFollow.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -81,7 +81,7 @@
   <Class Name="EnemyAIController" Collapsed="true">
     <Position X="14" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQggAACAIAAEAQAgBAAICgAAAAAIAAAIAAAACAAAEA=</HashCode>
       <FileName>Assets\Scripts\Controllers\EnemyAIController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -89,7 +89,7 @@
     <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Items\BeerPickUp.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Items\BeerPickUp.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -97,7 +97,7 @@
     <Position X="2.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Items\FlyerPickUp.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Items\FlyerPickUp.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -105,27 +105,27 @@
     <Position X="1.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Items\ItemPickUp.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Items\ItemPickUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AudioManager" Collapsed="true">
     <Position X="14" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAIAAAAAAAAAAEAAAAAAAAAQAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Managers\AudioManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameManager" Collapsed="true">
     <Position X="17.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Managers\GameManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UIManager" Collapsed="true">
     <Position X="17.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAQAgAAAAAAAAAAAAAAAAEBQBAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Managers\UIManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -139,7 +139,7 @@
   <Class Name="DestroyableObject" Collapsed="true">
     <Position X="5.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>ACAACAQCAAAAAAAAAAEAAAAAAAAAAAAAIAAAgAAACEA=</HashCode>
       <FileName>Assets\Scripts\Objects\DestroyableObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -148,13 +148,13 @@
     <Position X="15.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\UI\HUD\EnergyBar.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\UI\HUD\EnergyBar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HealthBar" Collapsed="true">
     <Position X="12.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\UI\HUD\HealthBar.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -175,36 +175,36 @@
   <Class Name="AttackData" Collapsed="true">
     <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Utility\AttackData.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scriptables\Attacks\AttackData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="IAggressive" Collapsed="true">
     <Position X="12.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Interfaces\IAggressive.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Interfaces\IAggressive.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="IDamageable" Collapsed="true">
     <Position X="14" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Interfaces\IDamageable.cs</FileName>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ToBeImplemented\Interfaces\IDamageable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="IGenerous" Collapsed="true">
     <Position X="15.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Interfaces\IGenerous.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Interfaces\IGenerous.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="IPickable" Collapsed="true">
     <Position X="17.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Interfaces\IPickable.cs</FileName>
+      <FileName>Assets\Scripts\ToBeImplemented\Interfaces\IPickable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

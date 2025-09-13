@@ -14,7 +14,7 @@ namespace Handlers
             _attackHitBox = attackHitBox;
         }
 
-        public IEnumerator ExecuteAttack(AttackData attackData, int attackIndex)
+        public IEnumerator ExecuteAttack(AttackData attackData, int attackIndex, PlayerAnimationSFXController _sFXController)
         {
             if (!IsValidAttackIndex(attackData, attackIndex)) yield break;
 
@@ -25,7 +25,8 @@ namespace Handlers
                 _animationHandler.Animator.gameObject.GetComponent<MonoBehaviour>(),
                 _attackHitBox,
                 selectedAttack.AttackDuration,
-                selectedAttack.AttackPower
+                selectedAttack.AttackPower,
+                _sFXController
             );
         }
 
