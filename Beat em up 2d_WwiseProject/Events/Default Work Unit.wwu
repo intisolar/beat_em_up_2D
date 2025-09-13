@@ -113,6 +113,83 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_hit_player_gtr_01" ID="{D4C4986A-5F6C-4AAF-A192-D287C4111EBD}">
+					<ChildrenList>
+						<Action Name="" ID="{6E2ABA0C-2AD6-47C2-913C-80B3FF47D46B}" ShortID="571597356">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="hit_player_gtr_01" ID="{040B3E10-E0BE-4C83-B64D-E617B14E28CF}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_death_player_01" ID="{0C1B9274-E094-415C-974C-ED8AC041A513}">
+					<ChildrenList>
+						<Action Name="" ID="{2623F2AF-1C0B-4D2A-984B-8A4D683DF6DB}" ShortID="584127299">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="death_player_01" ID="{DA28C84F-8940-44DF-BB17-A84B9C7528C4}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Damage_P1" ID="{B941E8E9-A313-47A4-9700-B66B6B6EE38A}">
+					<ChildrenList>
+						<Action Name="" ID="{A1D22AE1-F0C4-432A-9EEA-390B5DBEF521}" ShortID="357742414">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage_P1" ID="{25E1C53D-5B2B-4003-985E-4385132DD5CA}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Attack_P1" ID="{6F7C04CE-269A-4FA7-B7E2-A276DBA0AA8D}">
+					<ChildrenList>
+						<Action Name="" ID="{E585262B-3C1B-49ED-BC35-E4666D7FB311}" ShortID="623478209">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Attack_P1" ID="{FB37226B-C073-4136-BCE9-1FA1220891A6}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_death_porra_01" ID="{BFA1B091-59B8-415E-B6E1-BC02A3434C0C}">
+					<ChildrenList>
+						<Action Name="" ID="{FEB8F306-8521-4411-B6D3-B933A74460BE}" ShortID="860028411">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="death_porra_01" ID="{456B06EF-210E-4B05-BFDF-E43864038274}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_hit_ene_porra_01" ID="{C78CED95-0E38-4F30-8C24-8B4F88A3AA53}">
+					<ChildrenList>
+						<Action Name="" ID="{5EEA5C8F-80EB-44BC-A054-F983408E8291}" ShortID="969464377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="hit_ene_porra_01" ID="{170A338F-6B4A-41D9-80B4-D09991FE3677}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_hurt_porra_01" ID="{74CB87F8-987B-468E-B000-A6E4B682C30F}">
+					<ChildrenList>
+						<Action Name="" ID="{BA2F6B3A-0F6B-400B-AAE9-E380D67F5CE1}" ShortID="869152402">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="hurt_porra_01" ID="{D987167D-3A32-49AB-9320-32F7B5304777}" WorkUnitID="{5D71938D-0054-4B81-99E1-4127E462E492}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

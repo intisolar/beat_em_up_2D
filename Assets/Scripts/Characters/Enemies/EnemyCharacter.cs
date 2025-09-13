@@ -78,7 +78,7 @@ public class EnemyCharacter : CharacterBase
     public IEnumerator ExecuteAttack()
     {
         _animator.SetTrigger("Police_Attack");
-
+        _sFXController.PlayAttack();
         _attackHitBox.SetActive(true);
         yield return new WaitForSeconds(_attackDuration);
         _attackHitBox.SetActive(false);
@@ -88,12 +88,16 @@ public class EnemyCharacter : CharacterBase
 
     public override void TakeDamage(byte amount, Transform attackerTransform)
     {
+        PlayerAnimationSFXController attackerSFX = attackerTransform.GetComponentInParent<PlayerAnimationSFXController>();
+        attackerSFX.PlayHit();
         base.TakeDamage(amount, attackerTransform);
+        _sFXController.PlayHurt();
     }
 
     protected override void Die()
     {
         UIManager.Instance.AddScore(_scoreValue);
+        _sFXController.PlayDeath();
         base.Die();
     }
 

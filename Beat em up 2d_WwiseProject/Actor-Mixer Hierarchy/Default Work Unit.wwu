@@ -125,50 +125,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="daño_player_01" ID="{5E3C6ECE-CB60-44EF-8215-4C04D4EB09B3}" ShortID="873634994">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="daño_player_01" ID="{48F4395E-3AE9-4E9A-AB2E-0B6F0A1FFACF}">
-									<Language>SFX</Language>
-									<AudioFile>daño_player.01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="934316367"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="daño_player_01" ID="{48F4395E-3AE9-4E9A-AB2E-0B6F0A1FFACF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="daño_player_02" ID="{D21F06E6-8392-4C91-8AD5-0E74AB15ED3A}" ShortID="522974349">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="daño_player_02" ID="{CC64E03A-304F-4F15-B447-523372F55CA2}">
-									<Language>SFX</Language>
-									<AudioFile>daño_player.02.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="963179055"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="daño_player_02" ID="{CC64E03A-304F-4F15-B447-523372F55CA2}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="death_cartel_01" ID="{145FAC90-269B-4D11-8AD4-1F6C0D43FE81}" ShortID="111245072">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -192,6 +148,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="death_player_01" ID="{DA28C84F-8940-44DF-BB17-A84B9C7528C4}" ShortID="415562506">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
@@ -214,6 +177,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="hit_player_gtr_01" ID="{040B3E10-E0BE-4C83-B64D-E617B14E28CF}" ShortID="246345440">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
@@ -224,6 +194,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="hit_player_gtr_01" ID="{D05F1994-FDF3-4145-88BB-2EE5AEA15E4A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.50726118363633"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.845236263022042"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>hit_player_gtr.01.wav</AudioFile>
 									<MediaIDList>
@@ -450,6 +425,283 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<RandomSequenceContainer Name="Damage_P1" ID="{25E1C53D-5B2B-4003-985E-4385132DD5CA}" ShortID="217581698">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="daño_player_01" ID="{5E3C6ECE-CB60-44EF-8215-4C04D4EB09B3}" ShortID="873634994">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="daño_player_01" ID="{48F4395E-3AE9-4E9A-AB2E-0B6F0A1FFACF}">
+											<Language>SFX</Language>
+											<AudioFile>daño_player.01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="934316367"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="daño_player_01" ID="{48F4395E-3AE9-4E9A-AB2E-0B6F0A1FFACF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="daño_player_02" ID="{D21F06E6-8392-4C91-8AD5-0E74AB15ED3A}" ShortID="522974349">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="daño_player_02" ID="{CC64E03A-304F-4F15-B447-523372F55CA2}">
+											<Language>SFX</Language>
+											<AudioFile>daño_player.02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="963179055"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="daño_player_02" ID="{CC64E03A-304F-4F15-B447-523372F55CA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Attack_P1" ID="{FB37226B-C073-4136-BCE9-1FA1220891A6}" ShortID="466804262">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{0DD09907-DD03-48FE-A47B-B22BB71645C3}" ShortID="811843201">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{4D6C19EA-22B9-40AE-966B-A599F0D3BCD1}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.32661462325043"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.705190663836157"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="522119134"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{4D6C19EA-22B9-40AE-966B-A599F0D3BCD1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_01" ID="{5486F263-7C59-45D4-9BA6-04978B2B794B}" ShortID="72891249">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{40179E8C-6243-4542-98F8-E0FF96D41D8C}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.92999550102527"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.33084072046898"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="662405994"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{40179E8C-6243-4542-98F8-E0FF96D41D8C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_02" ID="{94BEDB05-C4DD-4221-93F8-1F0287428CDD}" ShortID="717753163">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{A08492EF-A3B5-4C76-A3C8-A58D4252A5C4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.42203048451019"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.78576040585726"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1036251186"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{A08492EF-A3B5-4C76-A3C8-A58D4252A5C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_03" ID="{169C88E8-07AB-4B99-8229-BE0FFA9199C4}" ShortID="509202633">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{D793D028-49AF-40EB-ADA8-96B77B50B84B}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.20145174453963"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.61714308322199"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="792066223"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{D793D028-49AF-40EB-ADA8-96B77B50B84B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_04" ID="{7D109CFD-42AA-4EB0-A971-F585D8BBE590}" ShortID="704762687">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{3EFA838F-4A5D-4DA9-A216-13B98951E5AC}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.12933419695562"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.44852576058672"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="338024285"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{3EFA838F-4A5D-4DA9-A216-13B98951E5AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_05" ID="{1ADD812E-99E4-4E2A-BC15-21F9E02D4B2A}" ShortID="763017379">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{EE8DAB22-CDFD-42F5-A8F8-F6F071FC9079}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.22794702061616"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.54713858424726"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="947589464"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{EE8DAB22-CDFD-42F5-A8F8-F6F071FC9079}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_06" ID="{FD053917-B9BC-45C2-BFD2-ECEB6E3DFFAC}" ShortID="188463757">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2C9EAE5C-DFED-4EA4-84CB-F0A995AF9D76}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{C885A64C-B81D-48F4-9DE3-88AEF6FBD1B0}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.83663790940105"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.18552171150946"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="557999301"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50" ID="{C885A64C-B81D-48F4-9DE3-88AEF6FBD1B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Enemy" ID="{8518EC80-CF3A-45FC-BD6E-D62A4B68E3FC}" ShortID="271618764">
@@ -462,7 +714,14 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="daño_porra_01" ID="{D987167D-3A32-49AB-9320-32F7B5304777}" ShortID="891418990">
+						<Sound Name="hurt_porra_01" ID="{D987167D-3A32-49AB-9320-32F7B5304777}" ShortID="891418990">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
@@ -485,6 +744,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="death_porra_01" ID="{456B06EF-210E-4B05-BFDF-E43864038274}" ShortID="1068436852">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>
@@ -507,6 +773,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="hit_ene_porra_01" ID="{170A338F-6B4A-41D9-80B4-D09991FE3677}" ShortID="777252099">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B15EE408-8B53-4040-B767-E5D760DAC8E9}"/>

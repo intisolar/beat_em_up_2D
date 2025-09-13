@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Handlers;
+using UnityEditor.Recorder.Input;
 
 public class PlayerCharacter : CharacterBase
 {
@@ -22,15 +23,17 @@ public class PlayerCharacter : CharacterBase
     private Vector3 _lastPosition;
 
     private AnimationHandler _animationHandler;
-    private MovementHandler _movementHandler; 
+    private MovementHandler _movementHandler;
+
 
     protected void Start()
     {
         InitializeComponents();
     }
 
-    private void InitializeComponents()
+    protected override void InitializeComponents()
     {
+        base.InitializeComponents();
         if (_playerInput == null)
         {
             _playerInput = GetComponent<PlayerInput>();
@@ -97,13 +100,16 @@ public class PlayerCharacter : CharacterBase
     {
         if (_playerInput.actions["Attack"].triggered)
         {
-            StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0));
+            StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0, _sFXController));
         }
     }
 
     public override void TakeDamage(byte amount, Transform attackerTransform)
     {
+        PlayerAnimationSFXController attackerSFX = attackerTransform.GetComponentInParent<PlayerAnimationSFXController>();
+        attackerSFX.PlayHit();
         base.TakeDamage(amount, attackerTransform);
+        _sFXController.PlayHurt();
 
         if (UIManager.Instance != null)
         {
@@ -114,6 +120,7 @@ public class PlayerCharacter : CharacterBase
 
         if (CurrentHealth <= 0)
         {
+            _sFXController.PlayDeath();
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.TriggerGameOver();

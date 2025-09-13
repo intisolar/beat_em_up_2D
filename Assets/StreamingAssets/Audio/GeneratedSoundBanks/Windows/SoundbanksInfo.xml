@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{7607ECCE-0DFC-ED5D-B012-FB4059E27DDA}">
+		<SoundBank Id="77978275" Type="User" Language="SFX" Hash="{DC342D8D-755F-2056-2906-9E7DADADB8C0}">
 			<ShortName>Ambient</ShortName>
 			<Path>Ambient.bnk</Path>
 			<Media>
@@ -27,7 +27,7 @@
 				</File>
 				<File Id="248820378" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hit_player_gtr.01.wav</ShortName>
-					<CachePath>SFX/hit_player_gtr.01_818F3B66.wem</CachePath>
+					<CachePath>SFX/hit_player_gtr.01_4BA769D4.wem</CachePath>
 				</File>
 				<File Id="258161758" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hit_ene_porra.01.wav</ShortName>
@@ -37,9 +37,17 @@
 					<ShortName>walk_baldo.01.wav</ShortName>
 					<CachePath>SFX/walk_baldo.01_1E69595A.wem</CachePath>
 				</File>
+				<File Id="338024285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_6A908B1F.wem</CachePath>
+				</File>
 				<File Id="405321615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>menu_movi.down.wav</ShortName>
 					<CachePath>SFX/menu_movi.down_818F3B66.wem</CachePath>
+				</File>
+				<File Id="522119134" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_65567A29.wem</CachePath>
 				</File>
 				<File Id="548544239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>wlk_pasto.03.wav</ShortName>
@@ -48,6 +56,10 @@
 				<File Id="552034467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>walk_baldo.02.wav</ShortName>
 					<CachePath>SFX/walk_baldo.02_05C4723C.wem</CachePath>
+				</File>
+				<File Id="557999301" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_EA8C2C48.wem</CachePath>
 				</File>
 				<File Id="606709337" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>menu_movi.up.wav</ShortName>
@@ -61,6 +73,10 @@
 					<ShortName>death_player.01.wav</ShortName>
 					<CachePath>SFX/death_player.01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="662405994" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_F7F8B321.wem</CachePath>
+				</File>
 				<File Id="766611114" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>daño_porra.01.wav</ShortName>
 					<CachePath>SFX/daño_porra.01_818F3B66.wem</CachePath>
@@ -68,6 +84,10 @@
 				<File Id="768095039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>walk_baldo.03.wav</ShortName>
 					<CachePath>SFX/walk_baldo.03_E1A1051B.wem</CachePath>
+				</File>
+				<File Id="792066223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_B1BBC807.wem</CachePath>
 				</File>
 				<File Id="895405804" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>win_cartel.01.wav</ShortName>
@@ -77,6 +97,10 @@
 					<ShortName>daño_player.01.wav</ShortName>
 					<CachePath>SFX/daño_player.01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="947589464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_A26F8DB9.wem</CachePath>
+				</File>
 				<File Id="963179055" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>daño_player.02.wav</ShortName>
 					<CachePath>SFX/daño_player.02_818F3B66.wem</CachePath>
@@ -84,6 +108,10 @@
 				<File Id="965597456" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>death_cartel.01.wav</ShortName>
 					<CachePath>SFX/death_cartel.01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1036251186" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50.wav</ShortName>
+					<CachePath>SFX/Sword_Swishes_Through_Air_Fast_Whooshes_OCP-0139-50_CFAAFCD0.wem</CachePath>
 				</File>
 				<File Id="1047207527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>walk_baldo.04.wav</ShortName>
@@ -95,6 +123,48 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3539171364" Name="Play_Attack_P1" DurationType="OneShot" DurationMin="0.31919158" DurationMax="0.41569135">
+					<MediaRefs>
+						<MediaRef Id="338024285"/>
+						<MediaRef Id="522119134"/>
+						<MediaRef Id="557999301"/>
+						<MediaRef Id="662405994"/>
+						<MediaRef Id="792066223"/>
+						<MediaRef Id="947589464"/>
+						<MediaRef Id="1036251186"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2343822798" Name="Play_da_o_porra_01" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="766611114"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1126428493" Name="Play_Damage_P1" DurationType="OneShot" DurationMin="0.27927437" DurationMax="0.458322">
+					<MediaRefs>
+						<MediaRef Id="934316367"/>
+						<MediaRef Id="963179055"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3657816106" Name="Play_death_player_01" DurationType="OneShot" DurationMin="2.9023583" DurationMax="2.9023583">
+					<MediaRefs>
+						<MediaRef Id="628712645"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2420521725" Name="Play_death_porra_01" DurationType="OneShot" DurationMin="0.37498868" DurationMax="0.37498868">
+					<MediaRefs>
+						<MediaRef Id="133368176"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3770963407" Name="Play_hit_ene_porra_01" DurationType="OneShot" DurationMin="0.31249434" DurationMax="0.31249434">
+					<MediaRefs>
+						<MediaRef Id="258161758"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2783266843" Name="Play_hit_player_gtr_01" DurationType="OneShot" DurationMin="0.84523624" DurationMax="0.84523624">
+					<MediaRefs>
+						<MediaRef Id="248820378"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3559916164" Name="Play_Walk_Switch" DurationType="OneShot" DurationMin="0.39891008" DurationMax="0.401887">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -202,5 +272,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6D11726B-6E7D-B4FF-D5D8-E448C3A4D8CE}</FileHash>
+	<FileHash>{3F8C2DD3-6B1D-145C-D8C7-3D68E538B91D}</FileHash>
 </SoundBanksInfo>

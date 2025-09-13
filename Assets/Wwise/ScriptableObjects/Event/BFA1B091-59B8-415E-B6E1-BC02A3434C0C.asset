@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3325d3ba495594785d2dc0a2896d85, type: 3}
+  m_Name: BFA1B091-59B8-415E-B6E1-BC02A3434C0C
+  m_EditorClassIdentifier: 
+  objectName: Play_death_porra_01
+  id: 2420521725
+  guid: BFA1B091-59B8-415E-B6E1-BC02A3434C0C

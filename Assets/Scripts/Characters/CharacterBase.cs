@@ -28,7 +28,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     #endregion
-
+    protected PlayerAnimationSFXController _sFXController;
     #region Unity Methods
     protected virtual void Awake()
     {
@@ -51,12 +51,16 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     }
     #endregion
 
-    private void InitializeComponents()
+    protected virtual void InitializeComponents()
     {
         if (Rigidbody == null)
         {
             Rigidbody = GetComponent<Rigidbody>();
             Debug.LogWarning("Rigidbody no está asignado en el inspector. Se ha asignado automáticamente.");
+        }
+        if (_sFXController == null)
+        {
+            _sFXController = GetComponent<PlayerAnimationSFXController>();
         }
     }
 

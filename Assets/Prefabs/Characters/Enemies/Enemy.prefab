@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 6254388331807842388}
   - component: {fileID: 1683028298510713046}
   - component: {fileID: 3547580051468176561}
+  - component: {fileID: 7903652183786467772}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -328,3 +329,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7903652183786467772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423006400012467409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748f5577fc03adc4fb2f265c94d79f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 05e10523710736d42b35e1f02d51d131, type: 2}
+  hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21dd00c50fe869641a382aca7d7cf391, type: 2}
+  meleeAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc99bb4fc58ac1444a8e26e4cf430015, type: 2}
+  hurt:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0defd61097db1e942a0414de64ffd1ae, type: 2}
+  death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b70ebde589831ad4ea29081c50a20572, type: 2}

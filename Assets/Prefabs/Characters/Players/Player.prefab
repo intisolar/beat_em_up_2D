@@ -388,6 +388,22 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 05e10523710736d42b35e1f02d51d131, type: 2}
+  hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d68d4f34fb3f1e64baec13b6ced68bed, type: 2}
+  meleeAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc99bb4fc58ac1444a8e26e4cf430015, type: 2}
+  hurt:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cdca4014399856d498084ddda528e24a, type: 2}
+  death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 69b282271911146498e0c323fa046b9c, type: 2}
 --- !u!1 &3869394416707640863
 GameObject:
   m_ObjectHideFlags: 0
