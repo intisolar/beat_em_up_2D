@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Handlers;
-using UnityEditor.Recorder.Input;
 
 public class PlayerCharacter : CharacterBase
 {

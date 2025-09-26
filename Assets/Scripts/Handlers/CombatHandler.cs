@@ -26,7 +26,7 @@ namespace Handlers
             if (hitBoxComponent != null)
             {
                 hitBoxComponent.SetAttackPower(attackPower);
-               // _sFXController.PlayHit();
+               // _sFXController.PlayHit(); --played in animation
             }
             
             yield return new WaitForSeconds(duration);

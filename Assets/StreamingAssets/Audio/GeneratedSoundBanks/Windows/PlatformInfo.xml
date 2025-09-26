@@ -2,11 +2,11 @@
 <PlatformInfo>
 	<Platform Name="Windows" BasePlatform="Windows" Generator="2023.1.5.8522"/>
 	<RootPaths>
-		<ProjectRoot>../../../../../Beat em up 2d_WwiseProject</ProjectRoot>
-		<SourceFilesRoot>../../../../../Beat em up 2d_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../../Beat em up 2d_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DefaultAlign>16</DefaultAlign>
 	<Settings>
@@ -28,5 +28,5 @@
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{777BFC16-C95F-4A5E-178D-1F6C30F92636}</FileHash>
+	<FileHash>{005B3F6A-5563-3E9D-8DCB-D6BEB9FE0978}</FileHash>
 </PlatformInfo>
