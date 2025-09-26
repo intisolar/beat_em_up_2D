@@ -107,7 +107,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5862325038097080115
 MonoBehaviour:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade0f6defa3c8d44a7a4769bcea85bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 25
+  _maxLife: 30
   _moveSpeed: 1.75
   _rigidbody: {fileID: 1103861090347909396}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
@@ -306,7 +306,6 @@ MonoBehaviour:
   _minPosition: -2
   _attackData: {fileID: 11400000, guid: 7da66823b7552a6488141251d57fe171, type: 2}
   _attackHitBox: {fileID: 2614287518544926260}
-  _playerInput: {fileID: 0}
   _animator: {fileID: 1683023680169870211}
 --- !u!1 &3869394416707640863
 GameObject:
