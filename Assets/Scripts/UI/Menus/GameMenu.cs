@@ -27,7 +27,7 @@ public class GameMenu : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (_playerInput == null) return;
 
@@ -36,7 +36,7 @@ public class GameMenu : MonoBehaviour
             _isGamePaused = !_isGamePaused;
             PauseGame();
         }
-    }
+    }*/
 
     private void PauseGame()
     {

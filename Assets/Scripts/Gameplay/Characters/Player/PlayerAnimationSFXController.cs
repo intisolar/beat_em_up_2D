@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerAnimationSFXController : MonoBehaviour
 {
-
     [SerializeField]
     private AK.Wwise.Event step;
 
@@ -41,6 +40,4 @@ public class PlayerAnimationSFXController : MonoBehaviour
     {
         death.Post(gameObject);
     }
-
-
 }

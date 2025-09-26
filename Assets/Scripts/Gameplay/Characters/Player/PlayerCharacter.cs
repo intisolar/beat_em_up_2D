@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Handlers;
-using UnityEditor.Recorder.Input;
 
 public class PlayerCharacter : CharacterBase
 {
@@ -16,7 +14,6 @@ public class PlayerCharacter : CharacterBase
     private AttackHandler _attackHandler;
 
     [Header("Dependencies")]
-    [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private Animator _animator;
 
     private bool _canMoveY = false;
@@ -34,10 +31,10 @@ public class PlayerCharacter : CharacterBase
     protected override void InitializeComponents()
     {
         base.InitializeComponents();
-        if (_playerInput == null)
+
+        if (GameManager.Instance._playerInput == null)
         {
-            _playerInput = GetComponent<PlayerInput>();
-            Debug.LogWarning("PlayerInput no está asignado en el inspector. Se ha asignado automáticamente.");
+            Debug.LogError("PlayerInput no está asignado.");
         }
 
         if (_animator == null)
@@ -70,7 +67,7 @@ public class PlayerCharacter : CharacterBase
 
     private void Move()
     {
-        Vector2 input = _playerInput.actions["Move"].ReadValue<Vector2>();
+        Vector2 input = GameManager.Instance._playerInput.actions["Move"].ReadValue<Vector2>();
         Vector3 currentPosition = Rigidbody.position;
 
         _canMoveY = Mathf.Abs(currentPosition.z - _lastPosition.z) > Mathf.Epsilon;
@@ -98,7 +95,7 @@ public class PlayerCharacter : CharacterBase
 
     private void Attack()
     {
-        if (_playerInput.actions["Attack"].triggered)
+        if (GameManager.Instance._playerInput.actions["Attack"].triggered)
         {
             StartCoroutine(_attackHandler.ExecuteAttack(_attackData, 0, _sFXController));
         }

@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 567161569928203562}
   - component: {fileID: 4240063934872661443}
-  - component: {fileID: 7429457434887231096}
   - component: {fileID: 1683023680169870211}
   - component: {fileID: 1103861090347909396}
   - component: {fileID: 7417018215568709888}
@@ -216,36 +215,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7429457434887231096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2899891666890468426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!95 &1683023680169870211
 Animator:
   serializedVersion: 7
@@ -337,7 +306,7 @@ MonoBehaviour:
   _minPosition: -2
   _attackData: {fileID: 11400000, guid: 7da66823b7552a6488141251d57fe171, type: 2}
   _attackHitBox: {fileID: 2614287518544926260}
-  _playerInput: {fileID: 7429457434887231096}
+  _playerInput: {fileID: 0}
   _animator: {fileID: 1683023680169870211}
 --- !u!1 &3869394416707640863
 GameObject:
