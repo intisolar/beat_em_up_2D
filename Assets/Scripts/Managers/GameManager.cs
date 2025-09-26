@@ -24,4 +24,9 @@ public class GameManager : MonoBehaviour
             _playerInput = GetComponent<PlayerInput>();
         }
     }
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
 }

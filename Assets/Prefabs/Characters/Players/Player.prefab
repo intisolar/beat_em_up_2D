@@ -307,7 +307,6 @@ MonoBehaviour:
   _minPosition: -2
   _attackData: {fileID: 11400000, guid: 7da66823b7552a6488141251d57fe171, type: 2}
   _attackHitBox: {fileID: 2614287518544926260}
-  _playerInput: {fileID: 0}
   _animator: {fileID: 1683023680169870211}
 --- !u!114 &6121698157450947067
 MonoBehaviour:

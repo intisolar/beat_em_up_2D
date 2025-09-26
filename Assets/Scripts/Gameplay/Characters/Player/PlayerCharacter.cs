@@ -1,6 +1,7 @@
 using UnityEngine;
 using Handlers;
 
+[RequireComponent(typeof(Animator))]
 public class PlayerCharacter : CharacterBase
 {
     [Header("Movement Limits")]
@@ -35,12 +36,6 @@ public class PlayerCharacter : CharacterBase
         if (GameManager.Instance._playerInput == null)
         {
             Debug.LogError("PlayerInput no está asignado.");
-        }
-
-        if (_animator == null)
-        {
-            _animator = GetComponent<Animator>();
-            Debug.LogWarning("Animator no está asignado en el inspector. Se ha asignado automáticamente.");
         }
 
         _animationHandler = new AnimationHandler(_animator);
@@ -118,9 +113,9 @@ public class PlayerCharacter : CharacterBase
         if (CurrentHealth <= 0)
         {
             _sFXController.PlayDeath();
-            if (GameManager.Instance != null)
+            if (GameOver.Instance != null)
             {
-                //GameManager.Instance.TriggerGameOver();
+                GameOver.Instance.TriggerGameOver();
             }
         }
     }
