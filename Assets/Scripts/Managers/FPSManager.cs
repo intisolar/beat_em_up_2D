@@ -5,6 +5,8 @@ public class FPSManager : MonoBehaviour
     public static FPSManager Instance { get; private set; }
 
     [SerializeField] private int _limitFPS = 120;
+
+    [Header("Dependencies")]
     [SerializeField] private FPSCounter _FPSCounter;
     
     private void Awake()

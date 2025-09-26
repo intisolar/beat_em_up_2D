@@ -60,9 +60,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "Options",
                     "type": "Button",
-                    "id": "21a123d9-5f61-43c7-b2cf-cd01b0e54848",
+                    "id": "b5666386-71c1-443b-9a32-42b182ee480e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -323,12 +323,23 @@
                 },
                 {
                     "name": "",
-                    "id": "bf87ee88-7829-457d-8bdd-94fa59516abc",
+                    "id": "a1c12af6-72ba-4887-b096-8a2faa28e9b2",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Pause",
+                    "action": "Options",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2beaeda-149d-4ffc-b727-200e411fbbda",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad;Touch",
+                    "action": "Options",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

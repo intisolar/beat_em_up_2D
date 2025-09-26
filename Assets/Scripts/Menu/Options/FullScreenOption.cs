@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class FullScreenOption : MonoBehaviour
 {
-    [SerializeField] Toggle _toggleFullScreenMode;
+    [SerializeField] private Toggle _toggleFullScreenMode;
 
-    void Start()
+    private void Start()
     {
         if (Screen.fullScreen)
         {
