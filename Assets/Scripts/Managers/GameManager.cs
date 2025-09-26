@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerInput))]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    
-    [Header("Game Over")]
-    [SerializeField] private GameObject _gameOverScreen;
+
+    [SerializeField] public PlayerInput _playerInput;
 
     private void Awake()
     {
-        Time.timeScale = 1;
-
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -19,18 +18,10 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
 
-    public void TriggerGameOver()
-    {
-        if (_gameOverScreen != null)
+        if (_playerInput == null)
         {
-            _gameOverScreen.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Debug.LogWarning("GameOverScreen no está asignado en el GameManager.");
+            _playerInput = GetComponent<PlayerInput>();
         }
     }
 }

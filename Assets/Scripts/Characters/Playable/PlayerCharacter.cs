@@ -123,7 +123,7 @@ public class PlayerCharacter : CharacterBase
             _sFXController.PlayDeath();
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.TriggerGameOver();
+                //GameManager.Instance.TriggerGameOver();
             }
         }
     }
