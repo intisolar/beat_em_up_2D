@@ -108,8 +108,6 @@ public class PlayerCharacter : CharacterBase
             UIManager.Instance.UpdateHealthBar(CurrentHealth, MaxHealth);
         }
 
-        Debug.Log($"{gameObject.name} ha recibido {amount} de daño. Salud actual: {CurrentHealth}");
-
         if (CurrentHealth <= 0)
         {
             _sFXController.PlayDeath();

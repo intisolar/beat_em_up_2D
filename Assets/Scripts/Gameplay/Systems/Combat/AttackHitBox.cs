@@ -24,8 +24,6 @@ namespace Handlers
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log($"Colisión detectada con: {other.gameObject.name}");
-
             if (other.TryGetComponent<IDamageable>(out var target))
             {
                 target.TakeDamage(_attackPower, transform);
