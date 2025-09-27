@@ -14,7 +14,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     [Header("Status Health")]
     [SerializeField] private int _maxLife = 10;
     public int MaxHealth { get; private set; }
-    public int CurrentHealth { get; private set; }
+    public int CurrentHealth { get; protected set; }
     
     [SerializeField] private Color damageColor = Color.red;
     [SerializeField] private float damageDuration = 0.5f;

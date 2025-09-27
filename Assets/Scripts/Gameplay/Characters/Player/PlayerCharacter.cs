@@ -117,4 +117,14 @@ public class PlayerCharacter : CharacterBase
             }
         }
     }
+
+    public void IncreaseHealth(int amount)
+    {
+        CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateHealthBar(CurrentHealth, MaxHealth);
+        }
+    }
 }

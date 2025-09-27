@@ -2435,6 +2435,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 4893505078211323583}
   _stateCount: 5
+  _dropChance: 100
+  _itemPrefab: {fileID: 4022185853902529829, guid: 744dfdf9c2b7d0c4f9ffba96378dfe43, type: 3}
 --- !u!483693784 &1309320057409972700
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2574,6 +2576,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 4691224885828180218}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!114 &1396574214877898249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2589,6 +2593,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 4691224886082074612}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!1 &1762698338101995068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,6 +3254,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 8596013972528564150}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!1 &2736595463895632451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3339,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 8482672794680031731}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!114 &2865332809705408256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3346,6 +3356,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 8482672794967201533}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!1 &2882198273415493886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3674,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 9190726505104408229}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!114 &3388005613163036179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,6 +3691,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 9043133300515549166}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!114 &3388005614490390813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,6 +3708,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 9043133302375579872}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!1 &3444923767551675669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,6 +3788,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 7355409995777771354}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!114 &3776442694540704169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3785,6 +3805,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 7355409996564605012}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!20 &3922773712878833844
 Camera:
   m_ObjectHideFlags: 0
@@ -3851,6 +3873,8 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 7268817183546725905}
   _stateCount: 5
+  _dropChance: 25
+  _itemPrefab: {fileID: 0}
 --- !u!212 &4169500909813119265
 SpriteRenderer:
   m_ObjectHideFlags: 0
