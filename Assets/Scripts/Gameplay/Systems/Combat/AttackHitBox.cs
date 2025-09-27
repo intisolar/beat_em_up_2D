@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace Handlers
 {
-    public class AttackHitBox : MonoBehaviour
+    public abstract class AttackHitBox : MonoBehaviour
     {
-        [SerializeField] private byte _attackPower = 1;
+        [SerializeField] protected byte _attackPower = 1;
         private GameObject _owner;
 
         private void Awake()
@@ -20,14 +20,6 @@ namespace Handlers
         public void SetOwner(GameObject owner)
         {
             _owner = owner;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent<IDamageable>(out var target))
-            {
-                target.TakeDamage(_attackPower, transform);
-            }
         }
     }
 }

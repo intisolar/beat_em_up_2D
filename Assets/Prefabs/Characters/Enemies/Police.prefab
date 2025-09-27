@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 909201771251904295}
   - component: {fileID: 469050781817356482}
   - component: {fileID: 1307707056003818711}
-  - component: {fileID: 1895859277228110764}
+  - component: {fileID: 5227195727482252898}
   m_Layer: 0
   m_Name: Fist
   m_TagString: Untagged
@@ -109,7 +109,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1895859277228110764
+--- !u!114 &5227195727482252898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 115340568480680631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068bfc3250400cc49be68e5681708142, type: 3}
+  m_Script: {fileID: 11500000, guid: 1afe9b22e3a56c34a9946ded5f98cf61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _attackPower: 1
@@ -326,9 +326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialDelayMin: 0
-  _initialDelayMax: 3
+  _initialDelayMax: 2.25
   _initialDirection: {x: -1, y: 0}
-  _visionRadius: 2
+  _visionRadius: 4
   _attackRadius: 1
   _owner: {fileID: 718907325720047383}
   _rigidbody: {fileID: 4167497253087330313}
