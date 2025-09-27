@@ -11,22 +11,21 @@ using UnityEngine;
 public abstract class CharacterBase : MonoBehaviour, IDamageable
 {
     #region Variables
-    [Header("Health")]
+    [Header("Status Health")]
     [SerializeField] private int _maxLife = 10;
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get; private set; }
+    
+    [SerializeField] private Color damageColor = Color.red;
+    [SerializeField] private float damageDuration = 0.5f;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
 
     [Header("Movement")]
     [SerializeField] private float _moveSpeed = 1f;
     public float MoveSpeed { get; private set; }
     [SerializeField] private Rigidbody _rigidbody;
     public Rigidbody Rigidbody { get; private set; }
-
-    [Header("Damage Feedback")]
-    [SerializeField] private Color damageColor = Color.red;
-    [SerializeField] private float damageDuration = 0.5f;
-    private SpriteRenderer spriteRenderer;
-    private Color originalColor;
     #endregion
     protected PlayerAnimationSFXController _sFXController;
     #region Unity Methods
