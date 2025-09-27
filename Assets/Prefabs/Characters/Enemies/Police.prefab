@@ -301,7 +301,7 @@ MonoBehaviour:
   _maxLife: 5
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
-  _moveSpeed: 1
+  _moveSpeed: 1.2
   _rigidbody: {fileID: 4167497253087330313}
   _scoreValue: 100
   _attackHitBox: {fileID: 115340568480680631}
