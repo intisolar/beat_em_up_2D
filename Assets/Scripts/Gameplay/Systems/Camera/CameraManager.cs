@@ -23,6 +23,10 @@ public class CameraManager : MonoBehaviour
 
     [Header("Camera Transition")]
     [SerializeField] private float _cameraTransitionSpeed = 5f;
+    [SerializeField] private bool _enableCameraSmoothing = true;
+
+    [Header("Enemy Spawn")]
+    [SerializeField] private float _enemySpawnOffsetX = 7.5f;
 
     private readonly List<GameObject> _activeEnemies = new();
     private Vector3 _targetCameraPosition;
@@ -58,12 +62,20 @@ public class CameraManager : MonoBehaviour
         float camX = Mathf.Clamp(playerTransform.position.x, 0, currentSectionData.MaxBoundX);
         _targetCameraPosition = new Vector3(camX, _targetCameraPosition.y, _targetCameraPosition.z);
 
-        // Interpolación suave hacia la posición objetivo
-        _targetCamera.transform.position = Vector3.Lerp(
-            _targetCamera.transform.position,
-            _targetCameraPosition,
-            Time.deltaTime * _cameraTransitionSpeed
-        );
+        if (_enableCameraSmoothing)
+        {
+            // Interpolación suave hacia la posición objetivo
+            _targetCamera.transform.position = Vector3.Lerp(
+                _targetCamera.transform.position,
+                _targetCameraPosition,
+                Time.deltaTime * _cameraTransitionSpeed
+            );
+        }
+        else
+        {
+            // Movimiento instantáneo hacia la posición objetivo
+            _targetCamera.transform.position = _targetCameraPosition;
+        }
     }
 
     #endregion Enemy Handling
@@ -84,8 +96,8 @@ public class CameraManager : MonoBehaviour
         {
             for (int i = 0; i < enemyInfo.Quantity; i++)
             {
-                // Generar enemigos en MaxBoundX de la sección actual
-                Vector3 spawnLocation = new Vector3(sectionData.MaxBoundX, 0, 0);
+                // Generar enemigos en MaxBoundX + _enemySpawnOffsetX de la sección actual
+                Vector3 spawnLocation = new Vector3(sectionData.MaxBoundX + _enemySpawnOffsetX, 0, 0);
                 GameObject enemy = Instantiate(enemyInfo.Prefab, spawnLocation, Quaternion.identity);
                 _activeEnemies.Add(enemy);
             }

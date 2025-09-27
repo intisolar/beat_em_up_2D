@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1837921085598526970, guid: 3489f7ede3ff3774fa6ebcfbcf993194, type: 3}
+      propertyPath: _dropChance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9101857850388137867, guid: 3489f7ede3ff3774fa6ebcfbcf993194, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -472,6 +476,9 @@ MonoBehaviour:
   _showNextUIOnLastSection: 1
   _playerParent: {fileID: 6969118436811001194}
   _targetCamera: {fileID: 3922773712878833844}
+  _cameraTransitionSpeed: 5
+  _enableCameraSmoothing: 1
+  _enemySpawnOffsetX: 5
 --- !u!1 &530713872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2743,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5, g: 0.625, b: 0.85, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

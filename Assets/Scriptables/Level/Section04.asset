@@ -15,4 +15,4 @@ MonoBehaviour:
   Enemies:
   - Prefab: {fileID: 7423006400012467409, guid: 803016aeb2ccbbf4fbda7fcbef4152f9, type: 3}
     Quantity: 1
-  MaxBoundX: 15
+  MaxBoundX: 17.5
