@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class CameraManager : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] private float _limitsExtra;
+
+    [Header("UI")]
+    [SerializeField] private GameObject _nextUI;
+    [SerializeField] private float _nextUIDuration = 2f;
+    [SerializeField] private bool _showNextUIOnLastSection = true;
 
     [Header("Dependencies")]
     [SerializeField] private GameObject _playerParent;
@@ -80,11 +86,26 @@ public class CameraManager : MonoBehaviour
         if (_currentSection < _sections.Length)
         {
             Debug.Log("Sección completada, avanzando a la siguiente.");
+            StartCoroutine(ShowNextUI());
             SpawnEnemies(_sections[_currentSection]);
         }
         else
         {
             Debug.Log("¡Nivel Completado!");
+            if (_showNextUIOnLastSection)
+            {
+                StartCoroutine(ShowNextUI());
+            }
+        }
+    }
+
+    private IEnumerator ShowNextUI()
+    {
+        if (_nextUI != null)
+        {
+            _nextUI.SetActive(true);
+            yield return new WaitForSeconds(_nextUIDuration);
+            _nextUI.SetActive(false);
         }
     }
 
