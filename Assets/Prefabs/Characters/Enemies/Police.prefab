@@ -298,19 +298,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb31e094203cc5640b291cdc051e9446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 10
-  _moveSpeed: 1
-  _rigidbody: {fileID: 4167497253087330313}
+  _maxLife: 5
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
+  _moveSpeed: 1
+  _rigidbody: {fileID: 4167497253087330313}
   _scoreValue: 100
   _attackHitBox: {fileID: 115340568480680631}
   _attackDuration: 0.5
   _attackCooldown: 1
-  _minPlayerDistance: 0.5
   _visualRoot: {fileID: 3175196398005965868}
   _animator: {fileID: 3547580051468176561}
   _sFXController: {fileID: 7903652183786467772}
+  _minPlayerDistance: 0.5
+  _distanceUpdateDelay: 0.2
+  _attackDelay: 1.5
 --- !u!114 &1683028298510713046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,8 +327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialDelayMin: 0
   _initialDelayMax: 3
-  _visionRadius: 1
-  _initialDirection: {x: 0, y: 0}
+  _initialDirection: {x: -1, y: 0}
+  _visionRadius: 2
+  _attackRadius: 1
   _owner: {fileID: 718907325720047383}
   _rigidbody: {fileID: 4167497253087330313}
   _animator: {fileID: 3547580051468176561}
