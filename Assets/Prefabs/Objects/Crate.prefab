@@ -180,5 +180,5 @@ MonoBehaviour:
   _life: 10
   _animator: {fileID: 8070873079011776990}
   _stateCount: 5
-  _dropChance: 20
+  _dropChance: 50
   _itemPrefab: {fileID: 4022185853902529829, guid: 744dfdf9c2b7d0c4f9ffba96378dfe43, type: 3}

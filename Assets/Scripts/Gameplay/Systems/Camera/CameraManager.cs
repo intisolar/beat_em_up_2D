@@ -21,7 +21,11 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private GameObject _playerParent;
     [SerializeField] private Camera _targetCamera;
 
+    [Header("Camera Transition")]
+    [SerializeField] private float _cameraTransitionSpeed = 5f;
+
     private readonly List<GameObject> _activeEnemies = new();
+    private Vector3 _targetCameraPosition;
     #endregion
 
     #region Player Handling
@@ -50,8 +54,16 @@ public class CameraManager : MonoBehaviour
         var currentSectionData = _sections[_currentSection];
         Transform playerTransform = GetPlayerTransform();
         if (playerTransform == null) return;
+
         float camX = Mathf.Clamp(playerTransform.position.x, 0, currentSectionData.MaxBoundX);
-        _targetCamera.transform.position = new Vector3(camX, _targetCamera.transform.position.y, _targetCamera.transform.position.z);
+        _targetCameraPosition = new Vector3(camX, _targetCameraPosition.y, _targetCameraPosition.z);
+
+        // Interpolación suave hacia la posición objetivo
+        _targetCamera.transform.position = Vector3.Lerp(
+            _targetCamera.transform.position,
+            _targetCameraPosition,
+            Time.deltaTime * _cameraTransitionSpeed
+        );
     }
 
     #endregion Enemy Handling
@@ -88,6 +100,13 @@ public class CameraManager : MonoBehaviour
             Debug.Log("Sección completada, avanzando a la siguiente.");
             StartCoroutine(ShowNextUI());
             SpawnEnemies(_sections[_currentSection]);
+
+            // Actualizar la posición objetivo de la cámara al inicio de la nueva sección
+            _targetCameraPosition = new Vector3(
+                Mathf.Clamp(_targetCamera.transform.position.x, 0, _sections[_currentSection].MaxBoundX),
+                _targetCamera.transform.position.y,
+                _targetCamera.transform.position.z
+            );
         }
         else
         {
@@ -115,6 +134,8 @@ public class CameraManager : MonoBehaviour
         if (_sections.Length > 0)
         {
             SpawnEnemies(_sections[0]);
+            // Inicializar la posición objetivo de la cámara
+            _targetCameraPosition = _targetCamera.transform.position;
         }
     }
 
