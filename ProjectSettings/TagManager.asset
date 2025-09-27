@@ -42,5 +42,32 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 3668112639
+    locked: 0
+  - name: Clouds
+    uniqueID: 2594179571
+    locked: 0
+  - name: Grass
+    uniqueID: 3157933199
+    locked: 0
+  - name: Bush
+    uniqueID: 225998557
+    locked: 0
+  - name: Road
+    uniqueID: 2284211095
+    locked: 0
+  - name: Posts
+    uniqueID: 3033300709
+    locked: 0
+  - name: Bus
+    uniqueID: 3640726655
+    locked: 0
+  - name: Weels
+    uniqueID: 1908978577
+    locked: 0
+  - name: UI
+    uniqueID: 2185883989
+    locked: 0
   m_RenderingLayers:
   - Default

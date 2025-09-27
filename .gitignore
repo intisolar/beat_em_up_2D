@@ -101,7 +101,7 @@ crashlytics-build.properties
 ##   WWise stuff    ##
 ## ---------------- ##
 
-# project stuff
+# Wwise project cache / backup
 Beat em up 2d_WwiseProject/.cache/
 Beat em up 2d_WwiseProject/*.prof
 Beat em up 2d_WwiseProject/*_WwiseProject.*.validationcache
@@ -109,21 +109,35 @@ Beat em up 2d_WwiseProject/*_WwiseProject.*.wsettings
 Beat em up 2d_WwiseProject/**/*.akd
 Beat em up 2d_WwiseProject/.backup/
 Beat em up 2d_WwiseProject/GeneratedSoundBanks/Mac/
-/Assets/Wwise/LauncherInfo.json*
+Assets/Wwise/LauncherInfo.json*
+logRunSetup.txt
+WwiseUnityIntegration_*_Src.zip
 
+# Ignorar TODO lo que hay en GeneratedSoundBanks
+/Assets/StreamingAssets/Audio/GeneratedSoundBanks/**
 
-!/Assets/Wwise/API/Runtime/Plugins/Windows/**
-/logRunSetup.txt
+# PERMITIR los .meta (Unity los necesita)
+!/Assets/StreamingAssets/Audio/GeneratedSoundBanks/*.meta
 
-# build stuff (unsure?)
-# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
+# PERMITIR la carpeta Windows con TODO su contenido
+!/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/
+!/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/**
 
-# --- Wwise Picker cache (NO debe versionarse) -----------------
-# 1) Ignora sólo el cache del Picker
+# Picker cache: ignorar cache, pero mantener meta para la carpeta
 /Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
-
-# 2) Asegura que la carpeta exista (y Unity no genere un meta nuevo)
 !/Assets/Wwise/Editor/ProjectData.meta
+
+# Permitir runtime plugins Windows (opcional: quitar si no querés versionarlos)
+/Assets/Wwise/API/Runtime/Plugins/Windows/**
+
+# --- Wwise pesados que no quiero versionar ---
+Assets/Wwise/API/Runtime/Plugins/Mac/
+Assets/Wwise/API/Runtime/Plugins/iOS/
+Assets/Wwise/API/Runtime/Plugins/Android/
+Assets/Wwise/API/Runtime/Plugins/*/Debug/
+Assets/Wwise/API/Runtime/Plugins/*/Profile/
+**/*.dSYM/
+**/*.bundle
 
 ## --------------- ##
 ## End WWise Stuff ##
@@ -150,11 +164,3 @@ WwiseUnityIntegration_*_Src.zip
 Assets/OPS/Obfuscator/Log/*.txt
 Assets/OPS/Obfuscator/Log/*.log
 
-# --- Wwise pesados que no quiero versionar ---
-Assets/Wwise/API/Runtime/Plugins/Mac/
-Assets/Wwise/API/Runtime/Plugins/iOS/
-Assets/Wwise/API/Runtime/Plugins/Android/
-Assets/Wwise/API/Runtime/Plugins/*/Debug/
-Assets/Wwise/API/Runtime/Plugins/*/Profile/
-**/*.dSYM/
-**/*.bundle

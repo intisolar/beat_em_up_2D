@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>../../../../../Beat em up 2d_WwiseProject</ProjectRoot>
-		<SourceFilesRoot>../../../../../Beat em up 2d_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<ProjectRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject/.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../../Beat em up 2d_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../02 PROGRAMACIÓN/00 PROYECTOS/Beat em up 2d/beat_em_up_2D/Beat em up 2d_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
@@ -272,5 +272,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8181BCE1-2E09-DC50-32DB-9E73C47C0BCF}</FileHash>
+	<FileHash>{E39A40A5-A9AA-0DC0-5FE4-3E60AB900D02}</FileHash>
 </SoundBanksInfo>
