@@ -31,8 +31,8 @@
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="..\..\..\..\..\WwiseProjects\WwiseBanks\BeatSlappers\GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
-						<Value Platform="Mac">\\</Value>
-						<Value Platform="Windows">Windows\</Value>
+						<Value Platform="Mac">..\..\..\..\..\WwiseProjects\WwiseBanks\BeatSlappers\GeneratedSoundBanks\Mac\</Value>
+						<Value Platform="Windows">..\..\..\..\..\WwiseProjects\WwiseBanks\BeatSlappers\GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">

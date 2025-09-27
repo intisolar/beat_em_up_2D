@@ -163,4 +163,7 @@ WwiseUnityIntegration_*_Src.zip
 # --- OPS Obfuscator: ignorar logs generados ---
 Assets/OPS/Obfuscator/Log/*.txt
 Assets/OPS/Obfuscator/Log/*.log
+Assets/OPS/Obfuscator/Log/
 
+#Assets settings
+Assets/Settings/Build Profiles*
