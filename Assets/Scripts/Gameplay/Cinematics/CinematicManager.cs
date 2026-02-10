@@ -7,11 +7,16 @@ public class CinematicManager : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(LoadNextScene), _delayBeforeNextScene);
+       // Invoke(nameof(LoadNextScene), _delayBeforeNextScene);
     }
 
-    private void LoadNextScene()
+    public static void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public static void LoadLevelOne()
+    {
+        SceneManager.LoadScene("Level");
     }
 }

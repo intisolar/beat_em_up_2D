@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Restart()

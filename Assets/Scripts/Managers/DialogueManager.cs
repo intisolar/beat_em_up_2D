@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _dialogueText;
     private string[] _dialogueArray;
 
-
+    
 
     [Header("Typing")]
     private float _characterDelay = 0.025f;
@@ -27,13 +27,29 @@ public class DialogueManager : MonoBehaviour
     [TextArea]
     [SerializeField] private string FileName;
     [SerializeField]
-    private string[][] _dialogueData = new string[][]
+    string[][] _dialogueData = new string[][]
 {
-    new string[] { "Agus", "Ey amigo… ¿no sabés dónde venden birras?" },
-    new string[] { "Player", "Tranqui… acá tengo una." },
-    new string[] { "Agus", "¡Ey, qué te pasa, alcahuete! Sos boleta." },
-    new string[] { "Player", "Ahora a vos también te duele la cabeza…" }
-};
+    new string[] { null, "Faisán", "Che despertate, me dijiste que ibas a ser copiloto y ni un mate." },
+    new string[] { null, "Quique", "Paraaa no ves que me acosté a las 5, el cuerpo pasa factura. Y ustedes cantando una de iglesia." },
+    new string[] { null, "Quique", "A ver prendé la radio, poné la Rock&Rocker ¡Silencio ahí atrás!" },
+    new string[] { null, "Rock&Rocker", "Fzsshhsh … “¡El tema que no podés dejar de escuchar aunque quieras, aunque lo odies, aunque quieras prender fuego la radio…“" },
+        new string[] { null, "Rock&Rocker", "‘Se Acaba’! Y suena así…" },
+    new string[] { "PlayMenuSong", null, "Suena la canción de Tour Nocturno del menú del juego." },
+    new string[] { null, "Quique", "Fua, ¿y esta mierda?" },
+    new string[] { null, "Faisán", "No se bro, estuvo sonando toda la semana, insoportable." },
+    new string[] { null, "Michi", "¿No son los que cierran el festival?" },
+    new string[] { null, "Quique", "¡Sí! Los Noctámbulos ¿no?" },
+    new string[] { null, "Michi", "Noctámbulo es un juego hecho por Ota Pxl ¡Está re bueno!" },
+    new string[] { null, "Quique", "¡No! Tour Nocturno. Fui a la secundaria con el guitarrista. Un nabo. Se la re creía. Me robó a mi novia." },
+    new string[] { null, "Faisán", "Igual fue en segundo año, teníamos 13." },
+    new string[] { null, "Michi", "…El protagonista es un conejito re picante que…" },
+    new string[] { null, "Quique", "¡Y todavía me duele! El amor de mi vida." },
+    new string[] { null, "Faisán", "Ya lo vamos a agarrar solo a ese…" },
+    new string[] { null, "Quique", "¡Apagá la radio, loco!" },
+    new string[] { null, "Faisán", "Dale. Vos seguí con la misa fogonera esa." },
+    new string[] { "ResumeTrip", null, "Retoma Michi la de ir de paseo en un auto feo" }};
+
+
     void Awake()
     {
         if (_dialogueText == null)
@@ -42,6 +58,7 @@ public class DialogueManager : MonoBehaviour
 
             _dialogueText.text = "";
         }
+
     }
     private void Start()
     {
@@ -72,12 +89,14 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string speaker = _dialogueData[_currentIndex][0];
-        string line = _dialogueData[_currentIndex][1];
+        string speaker = _dialogueData[_currentIndex][1];
+        string line = _dialogueData[_currentIndex][2];
+        SetPortrait(speaker);
         _currentIndex++;
 
         if (_typingRoutine != null) StopCoroutine(_typingRoutine);
-        _typingRoutine = StartCoroutine(TypeLine($"{speaker}: {line}"));
+        string fullLine = speaker != null ? $"{speaker}: {line}" : line;
+        _typingRoutine = StartCoroutine(TypeLine(fullLine));
     }
     private IEnumerator TypeLine(string _fullLine)
     {
@@ -99,8 +118,8 @@ public class DialogueManager : MonoBehaviour
         if (!_isTyping) return;
         if (_typingRoutine != null) StopCoroutine(_typingRoutine);
 
-        string speaker = _dialogueData[_currentIndex - 1][0];
-        string line = _dialogueData[_currentIndex - 1][1];
+        string speaker = _dialogueData[_currentIndex - 1][1];
+        string line = _dialogueData[_currentIndex - 1][2];
         _dialogueText.text = $"{speaker}: {line}";
 
         _isTyping = false;
@@ -114,5 +133,12 @@ public class DialogueManager : MonoBehaviour
         _typingRoutine = null;
         _dialogueText.text = "";
         OnDialogueEnd?.Invoke();
+        CinematicManager.LoadLevelOne();
     }
+
+    private void SetPortrait(string speaker)
+    {
+
+    }
+
 }
