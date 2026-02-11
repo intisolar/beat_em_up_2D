@@ -108,8 +108,6 @@ public class PlayerCharacter : CharacterBase
             UIManager.Instance.UpdateHealthBar(CurrentHealth, MaxHealth);
         }
 
-        Debug.Log($"{gameObject.name} ha recibido {amount} de daño. Salud actual: {CurrentHealth}");
-
         if (CurrentHealth <= 0)
         {
             _sFXController.PlayDeath();
@@ -117,6 +115,16 @@ public class PlayerCharacter : CharacterBase
             {
                 GameOver.Instance.TriggerGameOver();
             }
+        }
+    }
+
+    public void IncreaseHealth(int amount)
+    {
+        CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateHealthBar(CurrentHealth, MaxHealth);
         }
     }
 }

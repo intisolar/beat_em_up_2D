@@ -4,16 +4,19 @@ public class EnemyAIController : MonoBehaviour
 {
     public StateController StateController { get; private set; }
 
-    [Header("Patrol and Detect")]
+    [Header("Patrol")]
     [SerializeField] private float _initialDelayMin = 0f;
     [SerializeField] private float _initialDelayMax = 3f;
-    [SerializeField] private float _visionRadius = 1f;
     [SerializeField] private Vector2 _initialDirection;
 
-    public float VisionRadius => _visionRadius;
-    public float InitialDelayMin => _initialDelayMin;
-    public float InitialDelayMax => _initialDelayMax;
     public Vector2 InitialDirection => _initialDirection;
+
+    [Header("Detection")]
+    [SerializeField] private float _visionRadius = 1f;
+    [SerializeField] private float _attackRadius = 0.5f;
+
+    public float VisionRadius => _visionRadius;
+    public float AttackRadius => _attackRadius;
 
     [Header("Dependencies")]
     [SerializeField] private EnemyCharacter _owner;
@@ -35,7 +38,8 @@ public class EnemyAIController : MonoBehaviour
 
         if (_owner.DetectPlayer(this, out Transform playerTransform))
         {
-            if (_owner.CanAttack())
+            float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+            if (distanceToPlayer <= _attackRadius && _owner.CanAttack())
             {
                 _owner.Attack();
                 if (_animator != null)
@@ -75,5 +79,14 @@ public class EnemyAIController : MonoBehaviour
             _animator = GetComponent<Animator>();
             Debug.LogWarning("Animator no está asignado en el inspector. Se ha asignado automáticamente.");
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, GetComponent<EnemyAIController>().VisionRadius);
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, GetComponent<EnemyAIController>().AttackRadius);
     }
 }
